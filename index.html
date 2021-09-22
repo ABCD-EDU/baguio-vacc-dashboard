@@ -4,48 +4,118 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/nav.css">
     <title>Activity 2 - Covid Monitoring System</title>
-    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
     <header>
-        <h1 class="logo">ABCD - Covid Feed</h1>
-
+        <div class="logo">
+            <h2><a href="./index.html"> COVID VACCINATIONS</a></h2>
+            <h5>Baguio City</h5>
+        </div>
         <nav>
             <ul class="nav-link">
-                <li class="nav-link-trans"><a href="./index.html">Home</a></li>
+                <li class="nav-link-trans"><a href="./index.html">Dashboard</a></li>
                 <li class="nav-link-trans"><a href="./public/announcement.html">Announcements</a></li>
                 <li class="nav-link-trans"><a href="./public/vaccination.html">Vaccination</a></li>
             </ul>
         </nav>
     </header>
-    <h2><a href="./public/announcement.html">Announcements</a></h2>
-    <p>
-        This page shows the most recent news in relation to COVID-19 in the city of Baguio<br>
-        Most of the information shown here came from <a href="https://www.facebook.com/pio.baguio/">Baguio's Public
-            Information Office's Facebook Page</a>
-    </p>
 
-    <h2><a href="./public/vaccination.html">Vaccination Information</a></h2>
-    <p>
-        This page shows information regarding vaccination in the city of Baguio<br>
+    <div class="titleBar"><span class="headerText">DASHBOARD</span></div>
 
-        Information includes:
-    </p>
-    <ul>
-        <li>Vaccination Sites</li>
-        <li>Schedule</li>
-        <li>Requirements</li>
-        <li>Stats</li>
-    </ul>
+    <div class="grid-container">
+        <!--Announcement Div-->
+        <div class="announcement-container">
+            <h5>LATEST ANNOUNCEMENTS</h5>
+            <br>
+            <ul>
+                <li>
+                    September 14, 2021
+                    <br>
+                    Even after getting vaccinated against COVID-19, keep taking precautions to protect yourself, family
+                    and friends.
+                </li>
+            </ul>
+            <br>
+        </div>
+        <div class="read-more"><a href="./public/vaccination.html">read more announcements</a> </div>
 
-    <hr>
-    <p>
-        Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
-        <a href="https://www.who.int/news-room/q-a-detail/coronavirus-disease-covid-19-how-is-it-transmitted">Learn
-            more on who.int</a>
-    </p>
+        <div class="vaccinated-container-1">
+            <h5> Total # of Vaccinated Individuals (First Dose)
+            </h5>
+            <br>
+            <h2>
+                420,690
+            </h2>
+        </div>
+        <div class="vaccinated-container-2">
+            <h5> Total # of Vaccinated Individuals (Second Dose)
+            </h5>
+            <br>
+            <h2>
+                420,690
+            </h2>
+        </div>
+        <div class="vaccinated-container-3">
+            <h5> Total # of Vaccinated Individuals (Entire Philippines)
+            </h5>
+            <br>
+            <h2>
+                420,690
+            </h2>
+        </div>
+        <div class="row-flex-container">
+            <div class="vaccination-site-container">
+                <h3>VACCINATION SITES</h3>
+                <h5>(as of September 2021)</h5>
+                <br>
+                First and Second Dose
+                <ol>
+                    <li>SM B1 Parking</li>
+                    <li>University of Baguio Gym</li>
+                    <li>St. Louis University Gym</li>
+                </ol>
+            </div>
+            <div class="vaccination-schedule-container">
+                <h3>VACCINATION SCHEDULES</h3>
+                <h5>(as of September 2021)</h5>
+                <br>
+                <ul>
+                    <li> Monday, September 6, 2021 - 9:00AM - 5:00PM </li>
+                    <li> Monday, September 27, 2021 - 9:00AM - 5:00PM</li>
+                    <li> Friday, September 13, 2021 - 9:00AM - 5:00PM</li>
+                    <li> Monday, September 20, 2021 - 9:00AM - 5:00PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="notes">
+            <ul>
+                <li>Haven’t registered yet? Visit <a
+                        href="https://bakuna.baguio.gov.ph/registration">https://bakuna.baguio.gov.ph/</a> to get
+                    started.</li>
+                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.</li>
+                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est
+                    laborum.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim
+                    id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.</li>
+                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est
+                    laborum.sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+
+
 </body>
 
 </html>
