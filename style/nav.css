@@ -1,6 +1,12 @@
-/* Change fonts used to font that is available in your local machine upon submission of the project*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+   font-family: Montserrat;
+   src: url(../res/font/Montserrat-Regular.ttf);
+}
 
+@font-face {
+   font-family: Roboto;
+   src: url(../res/font/Roboto-Regular.ttf);
+}
 
 * {
    box-sizing: border-box;

@@ -1,3 +1,13 @@
+@font-face {
+   font-family: Montserrat;
+   src: url(../res/font/Montserrat-Regular.ttf);
+}
+
+@font-face {
+   font-family: Roboto;
+   src: url(../res/font/Roboto-Regular.ttf);
+}
+
 /* declare border radius variable*/
 :root {
    --border-radius: 5px;

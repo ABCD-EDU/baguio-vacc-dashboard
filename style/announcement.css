@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../res/font/Montserrat-Regular.ttf);
+ }
+ 
+ @font-face {
+    font-family: Roboto;
+    src: url(../res/font/Roboto-Regular.ttf);
+ }
+
 .titleBar {
    grid-area: title;
    margin: 0 auto;
