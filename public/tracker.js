@@ -1,3 +1,16 @@
+
+function initializeBarangaySelector() {
+    let selector = document.getElementById("barangaySelector");
+    for (let i = 0; i < 5; i++) {
+        let opt = document.createElement('option');
+        opt.value = i;
+        opt.innerHTML = i;
+        selector.appendChild(opt);
+    }
+}
+
+initializeBarangaySelector();
+
 function getMaxBarangayVaccine(data) {
     let max = 0;
     for (let [key, value] of Object.entries(data)) {
