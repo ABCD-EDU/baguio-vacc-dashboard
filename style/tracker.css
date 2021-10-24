@@ -142,7 +142,7 @@ hr {
     width: 200px;
     height: 150px;
 
-    background: #12779D;
+background: #1CB876;
     border-radius: 5px;
 }
 
@@ -156,6 +156,19 @@ hr {
 
     background: #E7F1F5;
     border-radius: 5px;
+}
+
+.dataContainer span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #333333;
 }
 
 #vaccinatedContainer span {

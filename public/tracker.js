@@ -1,15 +1,31 @@
+initializeBarangaySelector();
 
-function initializeBarangaySelector() {
+async function initializeBarangaySelector() {
+    let barangays = await getBarangayNames();
     let selector = document.getElementById("barangaySelector");
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < barangays.length; i++) {
         let opt = document.createElement('option');
-        opt.value = i;
-        opt.innerHTML = i;
+        opt.value = barangays[i];
+        opt.innerHTML = barangays[i];
         selector.appendChild(opt);
     }
+    onBarangayChange();
 }
 
-initializeBarangaySelector();
+
+async function onBarangayChange() {
+    let barangay = document.getElementById("barangaySelector").value;
+    let data = await getBarangayData(barangay);
+    data = data["category"];
+
+    let keys = Object.keys(data);
+    for (let i = 0; i < keys.length; i++) {
+        let category = keys[i];
+        document.getElementById(category + "-Data").textContent=data[category];
+    }
+    
+}
+
 
 function getMaxBarangayVaccine(data) {
     let max = 0;

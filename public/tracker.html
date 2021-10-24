@@ -6,7 +6,8 @@
         <title>Activity 2 - Covid Monitoring System</title>
         <link rel="stylesheet" href="../style/tracker.css">
         <link rel="stylesheet" href="../style/nav.css">
-        <script defer type="text/javascript" src="tracker.js"></script>
+        <script defer src="./helper/jsonParser.js"></script>
+        <script defer src="tracker.js"></script>
     </head>
     <body>
 
@@ -27,7 +28,7 @@
 
         <div class="titleBar"><span class="headerText">VACCINATION TRACKER</span></div>
 
-        <div id="barangaySelectorContainer">
+        <div id="barangaySelectorContainer" onchange="onBarangayChange()">
             <label id="barangaySelectorLabel">Barangay</label>
             <select id="barangaySelector">
             
@@ -73,32 +74,30 @@
                     <span>Fully Vaccinated</span>
                 </div>
                 <div class="dataContainer">
-                    <span id="A1-Data">69</span>
+                    <span id="A1-Data"></span>
                 </div>
                 <div class="dataContainer">
-                    <span id="A2-Data">69</span>
+                    <span id="A2-Data"></span>
                 </div>
                 <div class="dataContainer">
-                    <span id="A3-Data">69</span>
+                    <span id="A3-Data"></span>
                 </div>
                 <div class="dataContainer">
-                    <span id="A4-Data">69</span>
+                    <span id="A4-Data"></span>
                 </div>
                 <div class="dataContainer">
-                    <span id="A5-Data">69</span>
+                    <span id="A5-Data"></span>
                 </div>
                 <div class="dataContainer">
-                    <span id="B&C-Data">69</span>
+                    <span id="B&C-Data"></span>
                 </div>
             </div>
         </div>
 
-
-<!-- 
         <div id="brgyContainer">
             <script defer src="./helper/jsonParser.js"></script>
             <script defer src="tracker.js"></script>
-        </div> -->
+        </div>
 
     </body>
 </html>
