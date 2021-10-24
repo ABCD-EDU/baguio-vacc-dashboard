@@ -1,0 +1,47 @@
+.vaccine-percentage-main-container {
+   display: flex;
+   flex-direction: column;
+   font-size: 15px;
+}
+
+.barangay-with-percentage-container {
+   display: flex;
+   flex-direction: row;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.barangay-name {
+   width: 30%;
+   text-align: right;
+   align-items: right;
+   font-size: 15px;
+}
+
+.all-percent-container {
+   display: flex;
+   /* align-items: left; */
+   margin-left: 20px;
+   width: 1000px;
+   height: 40px;
+
+
+}
+
+.percent-container {
+   display: flex;
+   align-items: center;
+   border-radius: 4px;
+   text-align: center;
+   margin: 0.1px;
+
+   /* width: 100%; */
+}
+
+.percent-content {
+   width: 100%;
+   text-align: center;
+   justify-content: center;
+   color: #FFFFFF;
+   vertical-align: center;
+}

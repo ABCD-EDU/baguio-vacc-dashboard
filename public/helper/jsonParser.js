@@ -1,4 +1,23 @@
-async function getBarangayData(location) {
+
+export async function getBarangayNames() {
+    const res = await fetch('../res/data/output.json')
+
+    const data = await res.json();
+    let names = []
+    for (var i = 0; i < data.length; i++) {
+        names.push(data[i].name)
+    }
+    return names
+}
+
+export async function getData() {
+    const res = await fetch('../res/data/output.json')
+
+    const data = await res.json();
+    return data;
+}
+
+export async function getBarangayData(location) {
     const res = await fetch('../res/data/output.json');
 
     const data = await res.json();
@@ -9,37 +28,37 @@ async function getBarangayData(location) {
     }
 }
 
-async function getVaccineTypeData(location) {
+export async function getVaccineTypeData(location) {
     const barangayData = await getBarangayData(location);
     return barangayData.vaccineType;
 }
 
-async function getAgeGroupData(location) {
+export async function getAgeGroupData(location) {
     const barangayData = await getBarangayData(location);
     return barangayData.AgeGroup;
 }
 
-async function getCategoryData(location) {
+export async function getCategoryData(location) {
     const barangayData = await getBarangayData(location);
     return barangayData.Category;
 }
 
-async function getSexData(location) {
+export async function getSexData(location) {
     const barangayData = await getBarangayData(location);
     return barangayData.perSex;
 }
 
-async function getBarangayPopulationData(location) {
+export async function getBarangayPopulationData(location) {
     const barangayData = await getBarangayData(location);
     return barangayData.population;
 }
 
-async function getBarangayVaccinatedData(location) {
+export async function getBarangayVaccinatedData(location) {
     const barangayData = await getBarangayData(location);
     return barangayData.vaccinated;
 }
 
-async function getMaxBarangayVaccine(location) {
+export async function getMaxBarangayVaccine(location) {
     const barangayData = await getBarangayData(location);
     const data = barangayData.vaccineType;
 
