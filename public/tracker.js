@@ -51,7 +51,6 @@ getVaccineTypeData("Ambiong")
 
         brgyContainer.appendChild(leftContainer);
         brgyContainer.appendChild(rightContainer);
-        let values = [];
         for (let [key, value] of Object.entries(data)) {
 
             vaccineValues[count] = value;

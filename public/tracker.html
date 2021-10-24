@@ -1,114 +1,102 @@
 <!DOCTYPE html>
 <html lang="en" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Activity 2 - Covid Monitoring System</title>
-        <link rel="stylesheet" href="../style/tracker.css">
-        <link rel="stylesheet" href="../style/nav.css">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Activity 2 - Covid Monitoring System</title>
+    <link rel="stylesheet" href="../style/tracker.css">
+    <link rel="stylesheet" href="../style/nav.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h2><a href="./index.html"> COVID VACCINATIONS</a></h2>
+            <h5>Baguio City</h5>
+        </div>
+        <nav>
+            <ul class="nav-link">
+                <li class="nav-link-trans"><a href="../index.html">Dashboard</a></li>
+                <li class="nav-link-trans"><a href="./announcement.html">Announcements</a></li>
+                <li class="nav-link-trans"><a href="./vaccination.html">Vaccination</a></li>
+                <li class="nav-link-trans"><a href="./tracker.html">Tracker</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="titleBar"><span class="headerText">VACCINATION TRACKER</span></div>
+
+    <div id="barangaySelectorContainer" onchange="onBarangayChange()">
+        <label id="barangaySelectorLabel">Barangay</label>
+        <select id="barangaySelector">
+
+        </select>
+    </div>
+
+    <hr id="topHr">
+
+    <div id="categoriesMainContainer">
+        <div id="categoriesContainer">
+            <div id="priorityGroupContainer">
+                <span>PRIORITY GROUP</span>
+            </div>
+            <div class="categoryContainer">
+                <span class="categoryLabel">A1</span>
+                <span class="categorySubLabel">Frontline Healthcare Workds, Expanded Pop.</span>
+            </div>
+            <div class="categoryContainer">
+                <span class="categoryLabel">A2</span>
+                <span class="categorySubLabel">Senior Citizens</span>
+            </div>
+            <div class="categoryContainer">
+                <span class="categoryLabel">A3</span>
+                <span class="categorySubLabel">Persons w/ Comorbidities, Expanded Pop.</span>
+            </div>
+            <div class="categoryContainer">
+                <span class="categoryLabel">A4</span>
+                <span class="categorySubLabel">Frontliners in Essential Sectors</span>
+            </div>
+            <div class="categoryContainer">
+                <span class="categoryLabel">A5</span>
+                <span class="categorySubLabel">Indigent Population</span>
+            </div>
+            <div class="categoryContainer">
+                <span class="categoryLabel">B&C</span>
+                <span class="categorySubLabel">Rest of the Population</span>
+            </div>
+        </div>
+
+        <div id="dataContainer">
+            <div id="vaccinatedContainer">
+                <span>VACCINATED</span>
+                <span>Fully Vaccinated</span>
+            </div>
+            <div class="dataContainer">
+                <span id="A1-Data"></span>
+            </div>
+            <div class="dataContainer">
+                <span id="A2-Data"></span>
+            </div>
+            <div class="dataContainer">
+                <span id="A3-Data"></span>
+            </div>
+            <div class="dataContainer">
+                <span id="A4-Data"></span>
+            </div>
+            <div class="dataContainer">
+                <span id="A5-Data"></span>
+            </div>
+            <div class="dataContainer">
+                <span id="B&C-Data"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="brgyContainer">
         <script defer src="./helper/jsonParser.js"></script>
         <script defer src="tracker.js"></script>
-    </head>
-    <body>
+    </div>
+</body>
 
-        <header>
-            <div class="logo">
-                <h2><a href="./index.html"> COVID VACCINATIONS</a></h2>
-                <h5>Baguio City</h5>
-            </div>
-            <nav>
-                <ul class="nav-link">
-                    <li class="nav-link-trans"><a href="../index.html">Dashboard</a></li>
-                    <li class="nav-link-trans"><a href="./announcement.html">Announcements</a></li>
-                    <li class="nav-link-trans"><a href="./vaccination.html">Vaccination</a></li>
-                    <li class="nav-link-trans"><a href="./tracker.html">Tracker</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="titleBar"><span class="headerText">VACCINATION TRACKER</span></div>
-
-        <div id="barangaySelectorContainer" onchange="onBarangayChange()">
-            <label id="barangaySelectorLabel">Barangay</label>
-            <select id="barangaySelector">
-            
-            </select>
-        </div>
-
-        <hr id="topHr">
-
-        <div id="categoriesMainContainer">
-            <div id="categoriesContainer">
-                <div id="priorityGroupContainer">
-                    <span>PRIORITY GROUP</span>
-                </div>
-                <div class="categoryContainer">
-                    <span class="categoryLabel">A1</span>
-                    <span class="categorySubLabel">Frontline Healthcare Workds, Expanded Pop.</span>
-                </div>
-                <div class="categoryContainer">
-                    <span class="categoryLabel">A2</span>
-                    <span class="categorySubLabel">Senior Citizens</span>
-                </div>
-                <div class="categoryContainer">
-                    <span class="categoryLabel">A3</span>
-                    <span class="categorySubLabel">Persons w/ Comorbidities, Expanded Pop.</span>
-                </div>
-                <div class="categoryContainer">
-                    <span class="categoryLabel">A4</span>
-                    <span class="categorySubLabel">Frontliners in Essential Sectors</span>
-                </div>
-                <div class="categoryContainer">
-                    <span class="categoryLabel">A5</span>
-                    <span class="categorySubLabel">Indigent Population</span>
-                </div>
-                <div class="categoryContainer">
-                    <span class="categoryLabel">B&C</span>
-                    <span class="categorySubLabel">Rest of the Population</span>
-                </div>
-            </div>
-
-            <div id="dataContainer">
-                <div id="vaccinatedContainer">
-                    <span>VACCINATED</span>
-                    <span>Fully Vaccinated</span>
-                </div>
-                <div class="dataContainer">
-                    <span id="A1-Data"></span>
-                </div>
-                <div class="dataContainer">
-                    <span id="A2-Data"></span>
-                </div>
-                <div class="dataContainer">
-                    <span id="A3-Data"></span>
-                </div>
-                <div class="dataContainer">
-                    <span id="A4-Data"></span>
-                </div>
-                <div class="dataContainer">
-                    <span id="A5-Data"></span>
-                </div>
-                <div class="dataContainer">
-                    <span id="B&C-Data"></span>
-                </div>
-            </div>
-        </div>
-
-<<<<<<< Updated upstream
-        <div id="brgyContainer">
-            <script defer src="./helper/jsonParser.js"></script>
-            <script defer src="tracker.js"></script>
-        </div>
-=======
-
-
-        <script defer src="./helper/jsonParser.js"></script>
-        <script defer src="tracker.js"></script>
-        <div id="brgyContainer">
-        </div>
-
-        <div id="ageGroupContainer"></div>
->>>>>>> Stashed changes
-
-    </body>
 </html>
