@@ -57,7 +57,7 @@ hr {
     border-right: transparent;
 }
 
-#brgyContainer {
+#brgyContainer, #ageGroupContainer {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -187,3 +187,15 @@ background: #1CB876;
     font-size: 12px;
     line-height: 15px;
 }
+<<<<<<< Updated upstream
+=======
+
+#ageGroupContainer {
+    width: 100%;
+    display: flex;
+}
+
+.body {
+    display: inline-block;
+}
+>>>>>>> Stashed changes
