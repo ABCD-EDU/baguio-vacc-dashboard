@@ -1,7 +1,8 @@
 async function getBarangayNames() {
-    const res = await fetch('../res/data/output.json')
+    const res = await fetch('../res/data/test.json')
 
-    const data = await res.json();
+    const masterData = await res.json();
+    const data = masterData["barangays"];
     let names = []
     for (var i = 0; i < data.length; i++) {
         names.push(data[i].name)
@@ -10,16 +11,24 @@ async function getBarangayNames() {
 }
 
 async function getData() {
-    const res = await fetch('../res/data/output.json')
+    const res = await fetch('../res/data/test.json')
 
     const data = await res.json();
     return data;
 }
 
-async function getBarangayData(location) {
-    const res = await fetch('../res/data/output.json');
+async function getAllBarangayData() {
+    const res = await fetch('../res/data/test.json')
+    const masterData = await res.json();
+    const data = masterData["barangays"];
+    return data;
+}
 
-    const data = await res.json();
+async function getBarangayData(location) {
+    const res = await fetch('../res/data/test.json');
+
+    const masterData = await res.json();
+    const data = masterData["barangays"];
     for (var i = 0; i < data.length; i++) {
         if (data[i].name == location) {
             return data[i]
