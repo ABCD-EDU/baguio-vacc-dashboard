@@ -1,4 +1,7 @@
-var vaccineValues = []
+var vaccineValues = [];
+var ageGroupValues = [];
+var vaccineMax = 0;
+var ageGroupMax = 0;
 
 async function initializeBarangaySelector() {
     const selector = document.getElementById("barangaySelector");
@@ -32,7 +35,7 @@ async function onBarangayChange() {
     }
 }
 
-function getMaxBarangayVaccine(data) {
+function getMaxValue(data) {
     let max = 0;
     for (let [key, value] of Object.entries(data)) {
         max = Math.max(max, value);
@@ -44,8 +47,7 @@ getVaccineTypeData("Ambiong")
     .then(data => {
         const brgyContainer = document.getElementById("brgyContainer");
         var count = 0;
-        max = getMaxBarangayVaccine(data);
-        console.log(max)
+        vaccineMax = getMaxValue(data);
         const leftContainer = document.createElement("div");
         leftContainer.id = "leftContainer"
         const rightContainer = document.createElement("div");
@@ -62,7 +64,7 @@ getVaccineTypeData("Ambiong")
             rightContainer.innerHTML += `<div class=\"bar\">${value}</div>`
 
             const BASE_WIDTH = document.body.clientWidth - 670;
-            const NEW_WIDTH = (value / max) * BASE_WIDTH;
+            const NEW_WIDTH = (value / vaccineMax) * BASE_WIDTH;
 
             let vaccine = document.getElementsByClassName("vaccine")
             let bar = document.getElementsByClassName("bar");
@@ -89,48 +91,54 @@ getVaccineTypeData("Ambiong")
         console.log(err);
     })
 
-// getAgeGroupData("Ambiong")
-// .then(data => {
-//     const brgyContainer = document.getElementById("ageGroupContainer");
-//     var count = 0;
-//     var max = getMaxBarangayVaccine(data);
-//     console.log(max)
-//     const leftContainer = document.createElement("div");
-//     leftContainer.id = "leftContainer"
-//     const rightContainer = document.createElement("div");
-//     rightContainer.id = "rightContainer"
+    getAgeGroupData("Ambiong")
+    .then(data => {
+        const brgyContainer = document.getElementById("ageGroupContainer");
 
-//     leftContainer.style.width = "300px";
+        var count = 0;
+        ageGroupMax = getMaxValue(data);
+        const leftContainer = document.createElement("div");
+        leftContainer.id = "ageLeftContainer"
+        const rightContainer = document.createElement("div");
+        rightContainer.id = "ageRightContainer"
 
-//     brgyContainer.appendChild(leftContainer);
-//     brgyContainer.appendChild(rightContainer);
-//     for (let [key, value] of Object.entries(data)) {
-//         leftContainer.innerHTML += `<span class=\"ageGroup\">${key}</span>`
-//         rightContainer.innerHTML += `<div class=\"bar\">${value}</div>`
+        leftContainer.style.width = "300px";
 
-//         const BASE_WIDTH = 1150;
-//         const NEW_WIDTH = (value / max) * BASE_WIDTH;
+        brgyContainer.appendChild(leftContainer);
+        brgyContainer.appendChild(rightContainer);
+        for (let [key, value] of Object.entries(data)) {
 
-//         document.getElementById(`bar`).style.backgroundColor = "#FFD57B";
-//         document.getElementById(`bar`).style.width = `${NEW_WIDTH}px`;
-//         document.getElementById(`bar`).style.display = "flex";
-//         document.getElementById(`bar`).style.justifyContent = "center";
-//         document.getElementById(`bar`).style.alignItems = "center";
-//         document.getElementById(`bar`).style.margin = "0.5rem";
-//         document.getElementById(`bar`).style.borderRadius = "5px";
-//         document.getElementById(`bar`).style.height = "35px";
+            ageGroupValues[count] = value;
+            leftContainer.innerHTML += `<span class=\"ageGroup\">${key}</span>`
+            rightContainer.innerHTML += `<div class=\"ageBar\">${value}</div>`
 
-//         document.getElementById(`vaccine`).style.display = "block";
-//         document.getElementById(`vaccine`).style.paddingTop = "0.8rem";
-//         document.getElementById(`vaccine`).style.paddingBottom = "0.45rem";
-//         document.getElementById(`vaccine`).style.fontFamily = "Roboto";
-//         document.getElementById(`vaccine`).style.fontSize = "20px";
-//         count++;
-//     }
-// })
-// .catch(err => {
-//     console.log(err);
-// })
+            const BASE_WIDTH = document.body.clientWidth - 670;
+            const NEW_WIDTH = (value / ageGroupMax) * BASE_WIDTH;
+
+            let ageGroup = document.getElementsByClassName("ageGroup")
+            let bar = document.getElementsByClassName("ageBar");
+
+            bar[count].style.backgroundColor = "#FFD57B";
+            bar[count].style.width = `${NEW_WIDTH}px`;
+            bar[count].style.display = "flex";
+            bar[count].style.justifyContent = "center";
+            bar[count].style.alignItems = "center";
+            bar[count].style.margin = "0.5rem";
+            bar[count].style.borderRadius = "5px";
+            bar[count].style.height = "35px";
+
+            ageGroup[count].style.display = "block";
+            ageGroup[count].style.paddingTop = "0.8rem";
+            ageGroup[count].style.paddingBottom = "0.45rem";
+            ageGroup[count].style.fontFamily = "Roboto";
+            ageGroup[count].style.fontSize = "20px";
+
+            count++;
+        }
+    })
+    .catch(err => {
+        console.log(err);
+    })
 
 /**
  * @title MAGIC FUNCTION TO MAKE BAR CHART RESPONSIVE
@@ -145,10 +153,20 @@ window.onresize = function () {
     for (var i = 0; i < vaccineValues.length; i++) {
         // Compute new width based on client's width
         const BASE_WIDTH = document.body.clientWidth - 670;
-        const NEW_WIDTH = (vaccineValues[i] / max) * BASE_WIDTH;
+        const NEW_WIDTH = (vaccineValues[i] / vaccineMax) * BASE_WIDTH;
 
         // set new width for each bar
         let bar = document.getElementsByClassName("bar");
+        bar[i].style.width = `${NEW_WIDTH}px`;
+    }
+
+    for (var i = 0; i < ageGroupValues.length; i++) {
+        // Compute new width based on client's width
+        const BASE_WIDTH = document.body.clientWidth - 670;
+        const NEW_WIDTH = (ageGroupValues[i] / ageGroupMax) * BASE_WIDTH;
+
+        // set new width for each bar
+        let bar = document.getElementsByClassName("ageBar");
         bar[i].style.width = `${NEW_WIDTH}px`;
     }
 };

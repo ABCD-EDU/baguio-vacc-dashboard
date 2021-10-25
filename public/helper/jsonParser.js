@@ -50,7 +50,7 @@ async function getVaccineTypeData(location) {
 
 async function getAgeGroupData(location) {
     const barangayData = await getBarangayData(location);
-    return barangayData.AgeGroup;
+    return barangayData.ageGroup;
 }
 
 async function getCategoryData(location) {

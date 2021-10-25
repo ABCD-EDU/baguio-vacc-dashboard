@@ -187,15 +187,31 @@ background: #1CB876;
     font-size: 12px;
     line-height: 15px;
 }
-<<<<<<< Updated upstream
-=======
 
 #ageGroupContainer {
-    width: 100%;
+    width: 80%;
     display: flex;
+}
+
+#brgyContainerHeader, #ageGroupContainerHeader {
+    display: flex;
+}
+
+#brgyContainerHeader > span, #ageGroupContainerHeader > span {
+    margin: 1.5rem auto;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
 }
 
 .body {
     display: inline-block;
 }
->>>>>>> Stashed changes
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
