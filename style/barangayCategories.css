@@ -1,0 +1,160 @@
+#barangaySelectorContainer {
+    display: flex;
+    flex-direction: column;
+    /* background-color: gray; */
+    margin: auto;
+    margin-top: 3px;
+    width: 80%;
+}
+
+#barangaySelectorLabel {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 5px;
+
+    color: #FFFFFF;
+}
+
+#barangaySelector {
+    background: #FFD57B;
+    border-radius: 5px;
+    width: 800px;
+    height: 40px;
+    /* color: transparent; */
+    /* text-shadow: 0 0 0 #000; */
+    align-self: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    margin-top: 5px;
+}
+
+#categoriesMainContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    column-gap: 5px;
+}
+
+#categoriesContainer {
+    display: flex;
+    align-content: flex-start;
+    gap: 5px;
+}
+
+#priorityGroupContainer {
+    display: flex;
+    height: 96px;
+    width: 200px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #FFFFFF;
+}
+
+#priorityGroupContainer span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #222222;
+}
+
+.categoryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 215px;
+    height: 96px;
+}
+
+.categoryContainer span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #222222;
+}
+
+.categoryContainer span + span {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#dataContainer {
+    display: flex;
+    align-content: flex-start;
+    gap: 5px;
+}
+
+#vaccinatedContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+
+    background: #1CB876;
+    border-radius: 5px;
+}
+
+.dataContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 215px;
+    height: 150px;
+
+    background: #FFD57B;
+    border-radius: 5px;
+}
+
+.dataContainer span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #333333;
+}
+
+#vaccinatedContainer span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#vaccinatedContainer span + span {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+}
