@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../style/tracker/totalCards.css">
     <link rel="stylesheet" href="../style/tracker/barangayCategories.css">
     <link rel="stylesheet" href="../style/tracker/graphs.css">
+    <link rel="stylesheet" href="../style/vaccinePercentage.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
     </header>
 
     <div class="titleBar"><span class="headerText">VACCINATION TRACKER</span></div>
-    
+
     <h3 id="vac-summary-title">Baguio City Vaccination Summary</h3>
     <div class="total-cards-container">
         <div class="total-card1" id="total-card1"></div>
@@ -105,12 +106,12 @@
         </div>
 
         <hr>
-    </div> 
+    </div>
 
     <div id="perBrandMainContainer">
         <div class="dataFlipContainer"></div>
-            <div id="brgyContainerHeader"><span>Top Vaccinations per Brand</span></div>
-            <div id="brgyContainer">
+        <div id="brgyContainerHeader"><span>Top Vaccinations per Brand</span></div>
+        <div id="brgyContainer">
         </div>
         <hr>
     </div>
@@ -122,8 +123,21 @@
         <div id="ageGroupContainer"></div>
     </div>
 
+    <div>
+        <div>
+            <span>Percentages of the type of vaccine used in a barangay</span>
+        </div>
+
+        <div class="vaccine-percentage-main-container">
+
+        </div>
+        <div id="vaccine-type-legend-container"></div>
+        <hr>
+    </div>
+
     <script defer src="./components/dataFlip.js"></script>
     <script defer src="./helper/jsonParser.js"></script>
+    <script src="vaccinePercentage.js" type="module"></script>
     <script defer src="tracker.js"></script>
 
 </body>
