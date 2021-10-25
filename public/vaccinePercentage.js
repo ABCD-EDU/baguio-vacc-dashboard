@@ -73,6 +73,7 @@ async function displayPercentageGraphs() {
 
          percentContainer.style.backgroundColor = `#${barColors[j]}`
          percentContainer.style.width = `${(vaccinePercent * 1000) / 100}px`
+         // console.log(`${barangayNames[i]}-${percentContainer.style.width}`);
 
          percentContainer.innerHTML = `
          <span class="percent-content">
