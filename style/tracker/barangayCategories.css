@@ -53,41 +53,90 @@
     color: #FFFFFF;
 }
 
-#categoriesMainContainer {
+.categoriesContainer {
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    column-gap: 5px;
     margin-bottom: 50px;
-}
-
-#categoriesContainer {
-    display: flex;
-    align-content: flex-start;
+    display: grid;
     gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: 
+    "emptySpace category1 category2 category3 category4 category5 category6"
+    "vaccinatedContainer data1 data2 data3 data4 data5 data6";
 }
 
-#priorityGroupContainer {
-    display: flex;
-    height: 96px;
-    width: 200px;
-    min-width: 150px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: #FFFFFF;
+@media only screen and (max-width:600px) {
+    .categoriesContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+        grid-template-areas: 
+        "emptySpace"
+        "vaccinatedContainer"
+        "category1"
+        "data1"
+        "category2"
+        "data2"
+        "category3"
+        "data3"
+        "category4"
+        "data4"
+        "category5"
+        "data5"
+        "category6"
+        "data6";
+    }
+    #categoriesLabel {
+        margin-bottom: 0px;
+    }
+    #emptySpace {
+        height: 1px;
+    }
 }
 
-#priorityGroupContainer span {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-
-    color: #222222;
+#emptySpace {
+    grid-area: emptySpace;
+    background-color: #12779D;
+}
+#category1 {
+    grid-area: category1;
+}
+#category2 {
+    grid-area: category2;
+}
+#category3 {
+    grid-area: category3;
+}
+#category4 {
+    grid-area: category4;
+}
+#category5 {
+    grid-area: category5;
+}
+#category6 {
+    grid-area: category6;
+}
+#vaccinatedContainer {
+    grid-area: vaccinatedContainer;
+    background: #1CB876;
+}
+#data1 {
+    grid-area: data1;
+}
+#data2 {
+    grid-area: data2;
+}
+#data3 {
+    grid-area: data3;
+}
+#data4 {
+    grid-area: data4;
+}
+#data5 {
+    grid-area: data5;
+}
+#data6 {
+    grid-area: data6;
 }
 
 .categoryContainer {
@@ -97,7 +146,6 @@
     align-items: center;
     background: #ffffff;
     border-radius: 5px;
-    width: 215px;
     height: 96px;
 }
 
@@ -118,31 +166,11 @@
     line-height: 16px;
 }
 
-#dataContainer {
-    display: flex;
-    align-content: flex-start;
-    gap: 5px;
-}
-
-#vaccinatedContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    min-width: 150px;
-    height: 150px;
-
-    background: #1CB876;
-    border-radius: 5px;
-}
-
 .dataContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 215px;
     height: 150px;
 
     background: #FFD57B;
