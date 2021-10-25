@@ -178,3 +178,37 @@
     font-size: 12px;
     line-height: 15px;
 }
+
+#ageGroupContainer {
+    width: 80%;
+    display: flex;
+}
+
+#brgyContainerHeader, #ageGroupContainerHeader {
+    display: flex;
+}
+
+#brgyContainerHeader > span, #ageGroupContainerHeader > span {
+    margin: 1.5rem auto;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+/* .body {
+    display: inline-block;
+} */
+
+/* hr.solid {
+    border-top: 3px solid #bbb;
+} */
+
+.dataFlipContainer {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
