@@ -56,7 +56,8 @@ async function displayPercentageGraphs() {
 
       const allPercentContainer = document.createElement('div')
       allPercentContainer.classList.add('all-percent-container')
-      allPercentContainer.style.width = '1000px'
+      allPercentContainer.setAttribute('id', `all-percent-container-${barangayNames[i]}`)
+      allPercentContainer.style.maxWidth = '1000px'
 
       // allPercentContainer.style.setProperty("--currentWindowWidth", '1000')
 
@@ -66,18 +67,17 @@ async function displayPercentageGraphs() {
 
          const percentContainer = document.createElement('div')
          percentContainer.classList.add('percent-container')
+         percentContainer.setAttribute('id', `percent-container-${barangayNames[i]}-${vaccineTypes[j]}`)
+
          percentContainer.style.backgroundColor = `#${barColors[j]}`
          percentContainer.style.width = `${(vaccinePercent * 1000) / 100}px`
-
-         console.log(barangayNames[i]);
-
 
          percentContainer.innerHTML = `
             <span class="percent-content" >
                ${Math.round(vaccinePercent * 100) / 100} %
             </span >
             `;
-
+         console.log(percentContainer);
          allPercentContainer.appendChild(percentContainer)
       }
 
@@ -108,14 +108,23 @@ displayPercentageGraphs();
 displayVaccineTypeLegend();
 
 window.onresize = function (event) {
-   for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
-      for (let i = 0; i < vaccineTypes.length; i++) {
-         percentContainer.querySelector()
-      }
 
-      percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100}px`
-      console.log(barangayNames[i]);
-      console.log(true);
-      console.log(window.getComputedStyle(percentContainer).getPropertyValue('width'));
+
+   for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
+
+      const allPercentContainer = document.getElementById(`all-percent-container-${barangayNames[i]}`);
+
+
+      // Fetch the percentages of vaccines in a barangay
+      const barangayVaccineTypeDataInPercent = vaccineTypeDataInPercent[barangayNames[i]]
+      for (let j = 0; j < vaccineTypes.length; j++) {
+
+         //Query the barangay-vaccine-type percent container using an ID assigned earlier
+         const percentContainer = document.getElementById(`percent-container-${barangayNames[i]}-${vaccineTypes[j]}`)
+         // Get the percentage for a specific vaccine in a barangay
+         const vaccinePercent = barangayVaccineTypeDataInPercent[vaccineTypes[j]]
+         // Set width for barangay-vaccine-type percent container
+         percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100}px`
+      }
    }
 };
