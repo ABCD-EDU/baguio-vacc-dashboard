@@ -41,9 +41,9 @@
 
     <div id="barangayCategorySelectionMainContainer">
 
-        <div id="barangaySelectorContainer" >
+        <div id="barangaySelectorContainer">
             <label id="barangaySelectorLabel">Location</label>
-            <select id="barangaySelector"onchange="onBarangayChange()">
+            <select id="barangaySelector" onchange="onBarangayChange()">
 
             </select>
         </div>
@@ -121,16 +121,11 @@
         <div id="ageGroupContainerHeader"><span>Total Vaccinations per Age Group</span></div>
         <div id="ageGroupDataFlip"></div>
         <div id="ageGroupContainer"></div>
-    
-    <hr class="solid">
-    <div class="dataFlipContainer"></div>
-    <div id="brgyContainerHeader"><span>Top Vaccinations per Brand</span></div>
-    <div id="brgyContainer">
-    </div>
 
-    <div>
-        <div>
-            <span>Percentages of the type of vaccine used in a barangay</span>
+        <hr class="solid">
+
+
+        <div id="barangayVaccinePercentageHeader"><span>Percentages of the type of vaccine used in a barangay</span>
         </div>
 
         <div class="vaccine-percentage-main-container">
@@ -139,7 +134,7 @@
         <div id="vaccine-type-legend-container"></div>
         <hr>
     </div>
-    
+
     <script defer src="./components/dataFlip.js"></script>
     <script defer src="./helper/jsonParser.js"></script>
     <script defer src="vaccinePercentage.js" type="module"></script>

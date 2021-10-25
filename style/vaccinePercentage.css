@@ -23,6 +23,9 @@
    justify-content: right;
    text-align: right;
    font-size: 15px;
+   font-family: Montserrat;
+   font-style: normal;
+   color: #FFFFFF;
 }
 
 .all-percent-container {
@@ -47,6 +50,8 @@
    width: 100%;
    text-align: center;
    justify-content: center;
+   font-family: Montserrat;
+   font-style: normal;
    color: #FFFFFF;
    vertical-align: center;
 
@@ -63,6 +68,9 @@
 
 #vaccine-type-legend-container .vaccine-type-span {
    margin: 10px;
+   font-family: Montserrat;
+   font-style: normal;
+   color: #FFFFFF;
 }
 
 #vaccine-type-legend-container .vaccine-type-span::before {
@@ -73,4 +81,19 @@
    border-radius: 50%;
 
    background-color: var(--backgroundColor);
+}
+
+#barangayVaccinePercentageHeader {
+   display: flex;
+}
+
+#barangayVaccinePercentageHeader>span {
+   margin: 1.5rem auto;
+
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 20px;
+   line-height: 24px;
+   text-align: center;
 }

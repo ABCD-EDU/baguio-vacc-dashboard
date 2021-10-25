@@ -6,9 +6,9 @@ const barangayNames = await getBarangayNames()
 let vaccinatedData = {}//All Barangays Vaccinated
 let vaccineTypeData = {} //All Barangays Vaccine Type 
 let vaccineTypeDataInPercent = {} // All Barangays Vaccine Type Percentage
-
+console.log();
 const vaccineTypes = ["Astrazeneca", "Sputnik", "Pfizer", "Moderna", "Johnson & Johnson's Janssen", "Gamaleya", "Novavax", "Sinovac",]
-
+// for (var i = 0; i < barangayNames.length; i++) {
 for (var i = 0; i < 10; i++) {
    vaccinatedData[barangayNames[i]] = await getBarangayVaccinatedData(barangayNames[i]);
 
@@ -73,7 +73,6 @@ async function displayPercentageGraphs() {
 
          percentContainer.style.backgroundColor = `#${barColors[j]}`
          percentContainer.style.width = `${(vaccinePercent * 1000) / 100}px`
-         console.log(`${barangayNames[i]}-${percentContainer.style.width}`);
 
          percentContainer.innerHTML = `
          <span class="percent-content">
@@ -118,7 +117,7 @@ function displayVaccineTypeLegend() {
 displayPercentageGraphs();
 displayVaccineTypeLegend();
 
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
    for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
       //Get the bar that contains the barangay name and all the vaccine
       const barangayWithPercentContainer = document.getElementById(`barangay-with-percentage-container-${barangayNames[i]}`)
@@ -135,7 +134,8 @@ window.addEventListener("resize", function() {
          // justify - content: right;
          // text - align: right;
          barangayWithPercentContainer.style.flexDirection = 'column'
-         barangayNameContainer.style.justify = 'none'
+         barangayNameContainer.style.textAlign = 'left'
+         barangayNameContainer.style.justifyContent = 'left'
          barangayNameContainer.style.width = '70%'
 
          // barangayWithPercentContainer.style.
@@ -143,6 +143,9 @@ window.addEventListener("resize", function() {
          allPercentContainer.style.paddingRight = '0'
       } else {
          barangayWithPercentContainer.style.flexDirection = 'row';
+         barangayNameContainer.style.textAlign = 'right'
+         barangayNameContainer.style.justifyContent = 'right'
+
          allPercentContainer.style.maxWidth = `${document.body.clientWidth - 200}px`;
          allPercentContainer.style.width = '60%'
          allPercentContainer.style.paddingRight = '15%'
@@ -168,4 +171,4 @@ window.addEventListener("resize", function() {
          percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100}px`
       }
    }
- });
+});
