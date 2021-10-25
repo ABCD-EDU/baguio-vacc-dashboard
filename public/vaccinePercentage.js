@@ -118,8 +118,7 @@ function displayVaccineTypeLegend() {
 displayPercentageGraphs();
 displayVaccineTypeLegend();
 
-window.onresize = function (event) {
-
+window.addEventListener("resize", function() {
    for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
       //Get the bar that contains the barangay name and all the vaccine
       const barangayWithPercentContainer = document.getElementById(`barangay-with-percentage-container-${barangayNames[i]}`)
@@ -169,4 +168,4 @@ window.onresize = function (event) {
          percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100}px`
       }
    }
-};
+ });

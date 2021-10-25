@@ -149,7 +149,7 @@ getVaccineTypeData("Ambiong")
  * In order to reset the width of the bars, loop over each item
  * and compute new base width and the computed width.
  */
-window.onresize = function () {
+ window.addEventListener("resize", function() {
     for (var i = 0; i < vaccineValues.length; i++) {
         // Compute new width based on client's width
         const BASE_WIDTH = document.body.clientWidth - 670;
@@ -169,4 +169,4 @@ window.onresize = function () {
         let bar = document.getElementsByClassName("ageBar");
         bar[i].style.width = `${NEW_WIDTH}px`;
     }
-};
+});
