@@ -140,6 +140,11 @@ getVaccineTypeData("Ambiong")
         console.log(err);
     })
 
+function onGraphButtonClick(id) {
+    alert(id)
+}
+
+
 /**
  * @title MAGIC FUNCTION TO MAKE BAR CHART RESPONSIVE
  * 

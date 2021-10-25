@@ -67,7 +67,4 @@
 // insertDataFlipper(document.getElementById("brgyDataFlip"))
 // insertDataFlipper(document.getElementById("ageGroupDataFlip"))
 
-function onGraphButtonClick(id) {
-    alert(id)
-}
 
