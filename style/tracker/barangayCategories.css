@@ -4,6 +4,7 @@
     /* background-color: gray; */
     margin: auto;
     margin-top: 3px;
+    margin-bottom: 30px;
     width: 80%;
 }
 
@@ -15,7 +16,7 @@
     line-height: 29px;
     text-align: center;
     margin-bottom: 5px;
-
+    margin-top: 100px;
     color: #FFFFFF;
 }
 
@@ -34,6 +35,22 @@
     line-height: 19px;
     color: #222222;
     margin-top: 5px;
+    outline: 0px;
+    border: 0px;
+    text-align: center;
+}
+
+#categoriesLabel {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    color: #FFFFFF;
 }
 
 #categoriesMainContainer {
@@ -43,6 +60,7 @@
     flex-direction: column;
     gap: 5px;
     column-gap: 5px;
+    margin-bottom: 50px;
 }
 
 #categoriesContainer {
@@ -55,6 +73,7 @@
     display: flex;
     height: 96px;
     width: 200px;
+    min-width: 150px;
     box-sizing: border-box;
     border-radius: 5px;
     background: #FFFFFF;
@@ -111,6 +130,7 @@
     justify-content: center;
     align-items: center;
     width: 200px;
+    min-width: 150px;
     height: 150px;
 
     background: #1CB876;
