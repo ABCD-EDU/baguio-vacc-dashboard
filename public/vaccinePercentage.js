@@ -73,6 +73,7 @@ async function displayPercentageGraphs() {
 
          percentContainer.style.backgroundColor = `#${barColors[j]}`
          percentContainer.style.width = `${(vaccinePercent * 1000) / 100}px`
+         // console.log(`${barangayNames[i]}-${percentContainer.style.width}`);
 
          percentContainer.innerHTML = `
          <span class="percent-content">
@@ -88,6 +89,27 @@ async function displayPercentageGraphs() {
             percentContainer.style.borderBottomRightRadius = borderRadius
             percentContainer.style.borderTopRightRadius = borderRadius
          }
+
+         let toolTipContainer = document.createElement('span')
+         toolTipContainer.classList.add('tooltip-container')
+         toolTipContainer.setAttribute('id', `tooltip-container-${barangayNames[i]}-${vaccineTypes[j]}`)
+         toolTipContainer.innerHTML = `
+         ${vaccineTypes[j]} : ${Math.round(vaccinePercent * 100) / 100}% | ${vaccineTypeData[barangayNames[i]][vaccineTypes[j]]} Vaccinated
+         `
+         toolTipContainer.style.backgroundColor = `#${barColors[j]}`
+         percentContainer.style.zIndex = '0';
+         percentContainer.append(toolTipContainer)
+
+
+         percentContainer.addEventListener("mouseover", function (e) {
+            percentContainer.style.border = "1px solid #FFFFFF"
+         })
+
+         percentContainer.addEventListener("mouseout", function (e) {
+            percentContainer.style.border = "none"
+         })
+
+
          allPercentContainer.appendChild(percentContainer)
       }
 
@@ -156,17 +178,24 @@ window.addEventListener("resize", function () {
 
          //Query the barangay-vaccine-type percent container using an ID assigned earlier
          const percentContainer = document.getElementById(`percent-container-${barangayNames[i]}-${vaccineTypes[j]}`)
+
+         const toolTipContainer = document.getElementById(`tooltip-container-${barangayNames[i]}-${vaccineTypes[j]}`)
+
+
+
          // Get the percentage for a specific vaccine in a barangay
          const vaccinePercent = barangayVaccineTypeDataInPercent[vaccineTypes[j]]
          // Set width for barangay-vaccine-type percent container
          if (document.body.clientWidth < 763) {
-            percentContainer.innerHTML = ''
+            percentContainer.innerHTML = '';
+            percentContainer.appendChild(toolTipContainer)
          } else {
             percentContainer.innerHTML = `
          <span class="percent-content">
          ${Math.round(vaccinePercent * 100) / 100} %
             </span>
       `;
+            percentContainer.appendChild(toolTipContainer)
          }
          percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100}px`
       }
