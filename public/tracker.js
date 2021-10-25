@@ -1,8 +1,9 @@
 var vaccineValues = []
 
 async function initializeBarangaySelector() {
+    const selector = document.getElementById("barangaySelector");
     let barangays = await getBarangayNames();
-    let selector = document.getElementById("barangaySelector");
+    barangays.unshift("Baguio City");
     for (let i = 0; i < barangays.length; i++) {
         let opt = document.createElement('option');
         opt.value = barangays[i];
@@ -15,18 +16,21 @@ async function initializeBarangaySelector() {
 initializeBarangaySelector();
 
 async function onBarangayChange() {
-    let barangay = document.getElementById("barangaySelector").value;
-    let data = await getBarangayData(barangay);
+    const barangay = document.getElementById("barangaySelector").value;
+    let data = null;
+    if (barangay === "Baguio City") {
+        data = await getCityData();
+    }else {
+        data = await getBarangayData(barangay);
+    }
     data = data["category"];
 
     let keys = Object.keys(data);
     for (let i = 0; i < keys.length; i++) {
         let category = keys[i];
-        document.getElementById(category + "-Data").textContent=data[category];
+        document.getElementById(category + "-Data").textContent = data[category];
     }
-    
 }
-
 
 function getMaxBarangayVaccine(data) {
     let max = 0;

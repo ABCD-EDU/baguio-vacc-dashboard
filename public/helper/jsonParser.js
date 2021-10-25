@@ -36,6 +36,13 @@ async function getBarangayData(location) {
     }
 }
 
+async function getCityData() {
+    const res = await fetch('../res/data/test.json');
+    const data = await res.json();
+    delete data["barangays"];
+    return data;
+}
+
 async function getVaccineTypeData(location) {
     const barangayData = await getBarangayData(location);
     return barangayData.vaccineType;

@@ -36,7 +36,7 @@ with open('total.csv','r') as file:
             age_group_data[line[0]] = line[1]
         if category == 3:
             category_data[line[0]] = line[1]
-        if category == 3:
+        if category == 4:
             per_sex_data[line[0]] = line[1]
 
 city_data["vaccineType"] = vaccine_type_data
