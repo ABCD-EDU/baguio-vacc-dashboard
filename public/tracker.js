@@ -3,6 +3,7 @@ var ageGroupValues = [];
 var vaccineMax = 0;
 var ageGroupMax = 0;
 var barSpacing = 0;
+var defaultLocation = "Baguio City";
 
 var width = document.body.clientWidth;
 if (width <= 768) {
@@ -12,6 +13,15 @@ if (width <= 768) {
 } else if (width > 1080) {
     barSpacing = 630;
 }
+
+initializeBarangaySelector();
+initializeVaccineTypeData(defaultLocation);
+initializeAgeGroupData(defaultLocation);
+
+function onGraphButtonClick(id) {
+    alert(id)
+}
+
 async function initializeBarangaySelector() {
     const selector = document.getElementById("barangaySelector");
     let barangays = await getBarangayNames();
@@ -24,8 +34,6 @@ async function initializeBarangaySelector() {
     }
     onBarangayChange();
 }
-
-initializeBarangaySelector();
 
 async function onBarangayChange() {
     const barangay = document.getElementById("barangaySelector").value;
@@ -42,6 +50,8 @@ async function onBarangayChange() {
         let category = keys[i];
         document.getElementById(category + "-Data").textContent = data[category];
     }
+    initializeVaccineTypeData(barangay);
+    initializeAgeGroupData(barangay);
 }
 
 function getMaxValue(data) {
@@ -51,9 +61,6 @@ function getMaxValue(data) {
     }
     return max;
 }
-
-initializeVaccineTypeData("Ambiong");
-initializeAgeGroupData("Ambiong");
 
 function initializeVaccineTypeData(location) {
     getVaccineTypeData(location)
@@ -123,12 +130,6 @@ function initializeAgeGroupData(location) {
         .catch(err => {
             console.log(err);
         })
-}
-
-
-
-function onGraphButtonClick(id) {
-    alert(id)
 }
 
 function addStyleToName(name) {

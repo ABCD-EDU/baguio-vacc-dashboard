@@ -44,11 +44,21 @@ async function getCityData() {
 }
 
 async function getVaccineTypeData(location) {
+    if (location === "Baguio City") {
+        const data = await getCityData();
+        return data.vaccineType;
+    }
+
     const barangayData = await getBarangayData(location);
     return barangayData.vaccineType;
 }
 
 async function getAgeGroupData(location) {
+    if (location === "Baguio City") {
+        const data = await getCityData();
+        return data.ageGroup;
+    }
+    
     const barangayData = await getBarangayData(location);
     return barangayData.ageGroup;
 }
