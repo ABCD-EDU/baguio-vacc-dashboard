@@ -80,6 +80,15 @@ async function displayPercentageGraphs() {
          ${Math.round(vaccinePercent * 100) / 100} %
             </span>
       `;
+         const borderRadius = '5px'
+         if (j == 0) {
+            percentContainer.style.borderBottomLeftRadius = borderRadius
+            percentContainer.style.borderTopLeftRadius = borderRadius
+         }
+         if (j == vaccineTypes.length - 1) {
+            percentContainer.style.borderBottomRightRadius = borderRadius
+            percentContainer.style.borderTopRightRadius = borderRadius
+         }
          allPercentContainer.appendChild(percentContainer)
       }
 
