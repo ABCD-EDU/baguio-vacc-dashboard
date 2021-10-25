@@ -1,3 +1,7 @@
+const vaccinatedContainer1 = document.getElementById("vaccinated-container-1");
+const vaccinatedContainer2 = document.getElementById("vaccinated-container-2");
+const vaccinatedContainer3 = document.getElementById("vaccinated-container-3");
+
 async function getData() {
    const res = await fetch('./output.json')
    const data = await res.json();
@@ -50,9 +54,6 @@ async function getVaccinatedInPriorityGroupsPercentage(data) {
    
    return vaccinatedInPriorityGroupsPercentage;
 }
-const vaccinatedContainer1 = document.getElementById("vaccinated-container-1");
-const vaccinatedContainer2 = document.getElementById("vaccinated-container-2");
-const vaccinatedContainer3 = document.getElementById("vaccinated-container-3");
 
 const data = await getData();
 const totalNumberOfVaccinatedPeople = await getTotalNumberOfVaccinatedPeople(data);

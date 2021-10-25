@@ -135,7 +135,7 @@ totalCard2.innerHTML = `
 <h5> % of Vaccinated Residents from Priority Groups (A1 - A5) </h5>
     <br>
     <h2>
-    ${vaccinatedInPriorityGroupsPercentage}
+    ${vaccinatedInPriorityGroupsPercentage}%
     </h2>`;
 totalCard3.innerHTML = `
 <h5> Most Vaccinated Priority Group <br>(A1 - A5) </h5>
