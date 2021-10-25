@@ -1,4 +1,4 @@
-import { getBarangayNames, getBarangayVaccinatedData, getVaccineTypeData, getData } from './helper/jsonParser.js'
+// import { getBarangayNames, getBarangayVaccinatedData, getVaccineTypeData, getData } from './helper/jsonParser.js'
 
 
 const barangayNames = await getBarangayNames()
@@ -35,16 +35,12 @@ function getPercentages(vaccineTypeData) {
 }
 
 const barColors = ["67B7DC", "8067DC", "DC67CE", "FF715B", "DCD267", "7DDC67", "67DCBB", "80B3F5"]
-
 vaccineTypeDataInPercent = getPercentages(vaccineTypeData)
-
 const vaccinePercentageMainContainer = document.querySelector(".vaccine-percentage-main-container")
 
+
 async function displayPercentageGraphs() {
-
    for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
-
-
       // Data to be displayed
       const barangayVaccineTypeDataInPercent = vaccineTypeDataInPercent[barangayNames[i]]
 
@@ -60,14 +56,22 @@ async function displayPercentageGraphs() {
 
       const allPercentContainer = document.createElement('div')
       allPercentContainer.classList.add('all-percent-container')
+      allPercentContainer.style.width = '1000px'
+
+      // allPercentContainer.style.setProperty("--currentWindowWidth", '1000')
 
       for (let j = 0; j < vaccineTypes.length; j++) {
+
          const vaccinePercent = barangayVaccineTypeDataInPercent[vaccineTypes[j]]
 
          const percentContainer = document.createElement('div')
          percentContainer.classList.add('percent-container')
          percentContainer.style.backgroundColor = `#${barColors[j]}`
          percentContainer.style.width = `${(vaccinePercent * 1000) / 100}px`
+
+         console.log(barangayNames[i]);
+
+
          percentContainer.innerHTML = `
             <span class="percent-content" >
                ${Math.round(vaccinePercent * 100) / 100} %
@@ -84,8 +88,34 @@ async function displayPercentageGraphs() {
    }
 }
 
-function displayVaccineTypeLegend() {
+const vaccineTypeLegendContainer = document.getElementById("vaccine-type-legend-container")
 
+function displayVaccineTypeLegend() {
+   for (let i = 0; i < vaccineTypes.length; i++) {
+      const vaccineTypeSpan = document.createElement('span');
+      vaccineTypeSpan.classList.add('vaccine-type-span')
+      vaccineTypeSpan.style.setProperty("--backgroundColor", `#${barColors[i]}`)
+
+      vaccineTypeSpan.innerHTML =
+         `
+      ${vaccineTypes[i]}
+      `
+      vaccineTypeLegendContainer.appendChild(vaccineTypeSpan)
+   }
 }
 
 displayPercentageGraphs();
+displayVaccineTypeLegend();
+
+window.onresize = function (event) {
+   for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
+      for (let i = 0; i < vaccineTypes.length; i++) {
+         percentContainer.querySelector()
+      }
+
+      percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100}px`
+      console.log(barangayNames[i]);
+      console.log(true);
+      console.log(window.getComputedStyle(percentContainer).getPropertyValue('width'));
+   }
+};

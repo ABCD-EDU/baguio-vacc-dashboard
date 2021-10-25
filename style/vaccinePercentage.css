@@ -6,35 +6,37 @@
 
 .barangay-with-percentage-container {
    display: flex;
+   align-items: center;
    flex-direction: row;
-   margin-top: 10px;
+   margin-top: 1px;
    margin-bottom: 10px;
 }
 
 .barangay-name {
+   display: flex;
    width: 30%;
+   min-width: 80px;
+   align-items: center;
+   justify-content: right;
    text-align: right;
-   align-items: right;
    font-size: 15px;
 }
 
 .all-percent-container {
    display: flex;
-   /* align-items: left; */
-   margin-left: 20px;
+   flex-grow: 1;
+   margin-left: 10px;
    width: 1000px;
-   height: 40px;
-
-
+   min-height: 40px;
 }
 
 .percent-container {
    display: flex;
+   flex-grow: 1;
    align-items: center;
    border-radius: 4px;
    text-align: center;
    margin: 0.1px;
-
    /* width: 100%; */
 }
 
@@ -44,4 +46,28 @@
    justify-content: center;
    color: #FFFFFF;
    vertical-align: center;
+
+}
+
+#vaccine-type-legend-container {
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+
+
+#vaccine-type-legend-container .vaccine-type-span {
+   margin: 10px;
+}
+
+#vaccine-type-legend-container .vaccine-type-span::before {
+   content: '';
+   display: inline-block;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+
+   background-color: var(--backgroundColor);
 }
