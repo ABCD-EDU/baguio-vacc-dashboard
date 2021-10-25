@@ -14,17 +14,12 @@ if (width <= 768) {
     barSpacing = 630;
 }
 
-<<<<<<< HEAD
 initializeBarangaySelector();
-initializeVaccineTypeData(defaultLocation);
-initializeAgeGroupData(defaultLocation);
 
 function onGraphButtonClick(id) {
     alert(id)
 }
 
-=======
->>>>>>> f4aa396523cdac27fe19af6b885b8e3503129226
 async function initializeBarangaySelector() {
     const selector = document.getElementById("barangaySelector");
     let barangays = await getBarangayNames();
@@ -53,8 +48,16 @@ async function onBarangayChange() {
         let category = keys[i];
         document.getElementById(category + "-Data").textContent = data[category];
     }
+    removeChildrenOfGraphContainers();
     initializeVaccineTypeData(barangay);
     initializeAgeGroupData(barangay);
+}
+
+function removeChildrenOfGraphContainers() {
+    const brgayContainer = document.getElementById("brgyContainer");
+    brgayContainer.innerHTML = '';
+    const ageGrpContainer = document.getElementById("ageGroupContainer");
+    ageGrpContainer.innerHTML = '';
 }
 
 function getMaxValue(data) {
