@@ -12,6 +12,7 @@ if (width <= 768) {
 } else if (width > 1080) {
     barSpacing = 630;
 }
+
 async function initializeBarangaySelector() {
     const selector = document.getElementById("barangaySelector");
     let barangays = await getBarangayNames();
@@ -75,7 +76,7 @@ function initializeVaccineTypeData(location) {
                 barContainer.innerHTML += `${value}`;
 
                 addStyleToName(nameContainer);
-                addStyleToBar(barContainer, value);
+                addStyleToBar(barContainer, value, vaccineMax);
 
                 rowContainer.appendChild(nameContainer);
                 rowContainer.appendChild(barContainer);
@@ -93,30 +94,28 @@ function initializeAgeGroupData(location) {
     getAgeGroupData(location)
         .then(data => {
             const brgyContainer = document.getElementById("ageGroupContainer");
-
             var count = 0;
             ageGroupMax = getMaxValue(data);
-            const leftContainer = document.createElement("div");
-            leftContainer.id = "ageLeftContainer"
-            const rightContainer = document.createElement("div");
-            rightContainer.id = "ageRightContainer"
-
-            leftContainer.style.width = "300px";
-
-            brgyContainer.appendChild(leftContainer);
-            brgyContainer.appendChild(rightContainer);
+            const rowContainer = document.createElement("div");
+            rowContainer.id = "brgyRow";
             for (let [key, value] of Object.entries(data)) {
-
                 ageGroupValues[count] = value;
-                leftContainer.innerHTML += `<span class=\"ageGroup\">${key}</span>`
-                rightContainer.innerHTML += `<div class=\"ageBar\">${value}</div>`
+                const nameContainer = document.createElement("div");
+                const barContainer = document.createElement("div");
 
-                let ageGroup = document.getElementsByClassName("ageGroup")
-                let bar = document.getElementsByClassName("ageBar");
+                nameContainer.className = "age";
+                barContainer.className = "ageBar";
 
-                addStyleToBar(bar[count], value);
-                addStyleToName(ageGroup[count]);
+                nameContainer.innerHTML += `${key}`;
+                barContainer.innerHTML += `${value}`;
 
+                addStyleToName(nameContainer);
+                addStyleToBar(barContainer, value, ageGroupMax);
+
+                rowContainer.appendChild(nameContainer);
+                rowContainer.appendChild(barContainer);
+
+                brgyContainer.appendChild(rowContainer);
                 count++;
             }
         })
@@ -139,9 +138,9 @@ function addStyleToName(name) {
     name.style.fontSize = "20px";
 }
 
-function addStyleToBar(bar, value) {
+function addStyleToBar(bar, value, max) {
     const BASE_WIDTH = document.body.clientWidth - barSpacing;
-    const NEW_WIDTH = (value / vaccineMax) * BASE_WIDTH;
+    const NEW_WIDTH = (value / max) * BASE_WIDTH;
 
     bar.style.backgroundColor = "#FFD57B";
     bar.style.width = `${NEW_WIDTH}px`;
@@ -171,12 +170,14 @@ window.addEventListener("resize", function () {
     } else if (width > 1080) {
         barSpacing = 630;
     }
-    console.log(barSpacing)
+    // console.log(barSpacing)
     for (var i = 0; i < vaccineValues.length; i++) {
         // Compute new width based on client's width
         const BASE_WIDTH = document.body.clientWidth - barSpacing;
         const NEW_WIDTH = (vaccineValues[i] / vaccineMax) * BASE_WIDTH;
-        
+
+        console.log(NEW_WIDTH)
+
         // set new width for each bar
         let bar = document.getElementsByClassName("bar");
         bar[i].style.width = `${NEW_WIDTH}px`;
