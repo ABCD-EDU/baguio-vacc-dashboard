@@ -1,12 +1,10 @@
 #brgyContainer, #ageGroupContainer {
-    width: 80%;
     margin: 0 auto;
-    display: flex;
+    display: inline-block;
 }
 
-#ageGroupContainer {
-    width: 80%;
-    display: flex;
+#perBrandMainContainer, #perAgeGroupMainContainer {
+    margin: 0 auto;
 }
 
 #brgyContainerHeader, #ageGroupContainerHeader {
@@ -22,6 +20,16 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+
+    color: white;
+}
+
+#brgyRow, #ageGroupRow {
+    display: flex;
+}
+
+#brgyRow > #vaccine {
+    width: 300px;
 }
 
 #buttonsContainer {
@@ -41,4 +49,31 @@
     padding: 0.5rem 1rem;
     margin: 0px 0.5rem;
     border-radius: 1000px;
+}
+
+@media (max-width: 768px) {
+    #perBrandMainContainer, #perAgeGroupMainContainer {
+        width: 100%;
+        display: block;
+    }
+    
+    #brgyRow, #ageGroupRow {
+        display: block;
+        align-content: center;
+    }
+
+    #vaccine {
+        margin: 0 50%;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    #perBrandMainContainer, #perAgeGroupMainContainer {
+        width: 100%;
+        display: block;
+    }
+}
+
+body {
+    background: #12779D;
 }

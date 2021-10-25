@@ -5,15 +5,6 @@ var ageGroupMax = 0;
 var barSpacing = 0;
 var defaultLocation = "Baguio City";
 
-var width = document.body.clientWidth;
-if (width <= 768) {
-    barSpacing = 100;
-} else if (width > 768 && width <= 1080) {
-    barSpacing = 300;
-} else if (width > 1080) {
-    barSpacing = 630;
-}
-
 initializeBarangaySelector();
 
 function onGraphButtonClick(id) {
@@ -74,9 +65,10 @@ function initializeVaccineTypeData(location) {
             const brgyContainer = document.getElementById("brgyContainer");
             var count = 0;
             vaccineMax = getMaxValue(data);
-            const rowContainer = document.createElement("div");
-            rowContainer.id = "brgyRow";
             for (let [key, value] of Object.entries(data)) {
+                
+                const rowContainer = document.createElement("div");
+                rowContainer.id = "brgyRow";
                 vaccineValues[count] = value;
                 const nameContainer = document.createElement("div");
                 const barContainer = document.createElement("div");
@@ -108,9 +100,10 @@ function initializeAgeGroupData(location) {
             const brgyContainer = document.getElementById("ageGroupContainer");
             var count = 0;
             ageGroupMax = getMaxValue(data);
-            const rowContainer = document.createElement("div");
-            rowContainer.id = "brgyRow";
+            
             for (let [key, value] of Object.entries(data)) {
+                const rowContainer = document.createElement("div");
+                rowContainer.id = "ageGroupRow";
                 ageGroupValues[count] = value;
                 const nameContainer = document.createElement("div");
                 const barContainer = document.createElement("div");
@@ -142,6 +135,10 @@ function addStyleToName(name) {
     name.style.paddingBottom = "0.45rem";
     name.style.fontFamily = "Roboto";
     name.style.fontSize = "20px";
+    name.style.textAlign = "center";
+    name.style.width = "300px";
+
+    name.style.color = "white";
 }
 
 function addStyleToBar(bar, value, max) {
@@ -156,6 +153,15 @@ function addStyleToBar(bar, value, max) {
     bar.style.margin = "0.5rem";
     bar.style.borderRadius = "5px";
     bar.style.height = "35px";
+}
+
+var width = document.body.clientWidth;
+if (width <= 768) {
+    barSpacing = 100;
+} else if (width > 768 && width <= 1080) {
+    barSpacing = 300;
+} else if (width > 1080) {
+    barSpacing = 630;
 }
 
 /**
