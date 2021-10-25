@@ -23,3 +23,22 @@
     line-height: 24px;
     text-align: center;
 }
+
+#buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.graphButton {
+    background-color: rgb(255, 213, 123);
+    border: medium none;
+    font-size: 1rem;
+    font-family: Roboto;
+    font-weight: 500;
+    width: 130px;
+    padding: 0.5rem 1rem;
+    margin: 0px 0.5rem;
+    border-radius: 1000px;
+}
