@@ -7,8 +7,8 @@ body {
 hr {
     margin: auto;
     width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
     border: 1px solid #FFFFFF;
     border-top: transparent;
     transform: rotate(0deg);
@@ -33,6 +33,9 @@ hr {
 
 #barangayCategorySelectionMainContainer {
     background: #12779D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #perBrandMainContainer {
