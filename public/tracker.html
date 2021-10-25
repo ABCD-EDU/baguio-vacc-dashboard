@@ -26,6 +26,7 @@
     </header>
 
     <div class="titleBar"><span class="headerText">VACCINATION TRACKER</span></div>
+    
     <h3 id="vac-summary-title">Baguio City Vaccination Summary</h3>
     <div class="total-cards-container">
         <div class="total-card1" id="total-card1"></div>
@@ -33,82 +34,90 @@
         <div class="total-card3" id="total-card3"></div>
         <div class="total-card4" id="total-card4"></div>
     </div>
-    <div id="barangaySelectorContainer" onchange="onBarangayChange()">
-        <label id="barangaySelectorLabel">Barangay</label>
-        <select id="barangaySelector">
 
-        </select>
-    </div>
+    <div id="barangayCategorySelectionMainContainer">
 
-    <hr id="topHr">
+        <div id="barangaySelectorContainer" onchange="onBarangayChange()">
+            <label id="barangaySelectorLabel">Barangay</label>
+            <select id="barangaySelector">
 
-    <div id="categoriesMainContainer">
-        <div id="categoriesContainer">
-            <div id="priorityGroupContainer">
-                <span>PRIORITY GROUP</span>
+            </select>
+        </div>
+
+        <hr>
+
+        <div id="categoriesMainContainer">
+            <div id="categoriesContainer">
+                <div id="priorityGroupContainer">
+                </div>
+                <div class="categoryContainer">
+                    <span class="categoryLabel">A1</span>
+                    <span class="categorySubLabel">Frontline Healthcare Workds, Expanded Pop.</span>
+                </div>
+                <div class="categoryContainer">
+                    <span class="categoryLabel">A2</span>
+                    <span class="categorySubLabel">Senior Citizens</span>
+                </div>
+                <div class="categoryContainer">
+                    <span class="categoryLabel">A3</span>
+                    <span class="categorySubLabel">Persons w/ Comorbidities, Expanded Pop.</span>
+                </div>
+                <div class="categoryContainer">
+                    <span class="categoryLabel">A4</span>
+                    <span class="categorySubLabel">Frontliners in Essential Sectors</span>
+                </div>
+                <div class="categoryContainer">
+                    <span class="categoryLabel">A5</span>
+                    <span class="categorySubLabel">Indigent Population</span>
+                </div>
+                <div class="categoryContainer">
+                    <span class="categoryLabel">B&C</span>
+                    <span class="categorySubLabel">Rest of the Population</span>
+                </div>
             </div>
-            <div class="categoryContainer">
-                <span class="categoryLabel">A1</span>
-                <span class="categorySubLabel">Frontline Healthcare Workds, Expanded Pop.</span>
-            </div>
-            <div class="categoryContainer">
-                <span class="categoryLabel">A2</span>
-                <span class="categorySubLabel">Senior Citizens</span>
-            </div>
-            <div class="categoryContainer">
-                <span class="categoryLabel">A3</span>
-                <span class="categorySubLabel">Persons w/ Comorbidities, Expanded Pop.</span>
-            </div>
-            <div class="categoryContainer">
-                <span class="categoryLabel">A4</span>
-                <span class="categorySubLabel">Frontliners in Essential Sectors</span>
-            </div>
-            <div class="categoryContainer">
-                <span class="categoryLabel">A5</span>
-                <span class="categorySubLabel">Indigent Population</span>
-            </div>
-            <div class="categoryContainer">
-                <span class="categoryLabel">B&C</span>
-                <span class="categorySubLabel">Rest of the Population</span>
+
+            <div id="dataContainer">
+                <div id="vaccinatedContainer">
+                    <span>Fully Vaccinated</span>
+                </div>
+                <div class="dataContainer">
+                    <span id="A1-Data"></span>
+                </div>
+                <div class="dataContainer">
+                    <span id="A2-Data"></span>
+                </div>
+                <div class="dataContainer">
+                    <span id="A3-Data"></span>
+                </div>
+                <div class="dataContainer">
+                    <span id="A4-Data"></span>
+                </div>
+                <div class="dataContainer">
+                    <span id="A5-Data"></span>
+                </div>
+                <div class="dataContainer">
+                    <span id="B&C-Data"></span>
+                </div>
             </div>
         </div>
 
-        <div id="dataContainer">
-            <div id="vaccinatedContainer">
-                <span>VACCINATED</span>
-                <span>Fully Vaccinated</span>
-            </div>
-            <div class="dataContainer">
-                <span id="A1-Data"></span>
-            </div>
-            <div class="dataContainer">
-                <span id="A2-Data"></span>
-            </div>
-            <div class="dataContainer">
-                <span id="A3-Data"></span>
-            </div>
-            <div class="dataContainer">
-                <span id="A4-Data"></span>
-            </div>
-            <div class="dataContainer">
-                <span id="A5-Data"></span>
-            </div>
-            <div class="dataContainer">
-                <span id="B&C-Data"></span>
-            </div>
+        <hr>
+    </div> 
+
+    <div id="perBrandMainContainer">
+        <div class="dataFlipContainer"></div>
+            <div id="brgyContainerHeader"><span>Top Vaccinations per Brand</span></div>
+            <div id="brgyContainer">
         </div>
-    </div>
-   
-    <hr class="solid">
-    <div class="dataFlipContainer"></div>
-    <div id="brgyContainerHeader"><span>Top Vaccinations per Brand</span></div>
-    <div id="brgyContainer">
+        <hr>
     </div>
 
-    <hr class="solid">
-    <div class="dataFlipContainer"></div>
-    <div id="ageGroupContainerHeader"><span>Total Vaccinations per Age Group</span></div>
-    <div id="ageGroupContainer"></div>
+
+    <div id="perAgeGroupMainContainer">
+        <div class="dataFlipContainer"></div>
+        <div id="ageGroupContainerHeader"><span>Total Vaccinations per Age Group</span></div>
+        <div id="ageGroupContainer"></div>
+    </div>
 
     <script defer src="./components/dataFlip.js"></script>
     <script defer src="./helper/jsonParser.js"></script>

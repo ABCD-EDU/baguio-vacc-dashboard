@@ -1,3 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+}
+
+hr {
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #FFFFFF;
+    border-top: transparent;
+    transform: rotate(0deg);
+}
+
 .titleBar {
     grid-area: title;
     margin: 0 auto;
@@ -20,6 +36,7 @@
     font-size: 95%;
     font-family: Roboto;
 }
+
 .total-cards-container {
     display: flex;
     justify-content: space-between;
@@ -42,6 +59,7 @@
    height: 130px;
    padding-top: 2%;
 }
+
 .total-card2,.total-card3, .total-card4 {
    background: #FFD57B;
    border-radius: 5px;
@@ -54,9 +72,23 @@
    height: 130px;
    padding-top: 2%;
 }
+
 .total-card4 h2 {
     font-size: 100%;
 }
+
+#barangayCategorySelectionMainContainer {
+    background: #12779D;
+}
+
+#perBrandMainContainer {
+    background: #12779D;
+}
+
+#perAgeGroupMainContainer {
+    background: #12779D;
+}
+
 #barangaySelectorContainer {
     display: flex;
     flex-direction: column;
@@ -67,37 +99,32 @@
 }
 
 #barangaySelectorLabel {
-    font-size: 16px;
-    color: #222222;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 5px;
 
+    color: #FFFFFF;
 }
 
 #barangaySelector {
-    background-color: #12779D;
+    background: #FFD57B;
     border-radius: 5px;
-    max-width: 760px;
+    width: 800px;
     height: 40px;
     /* color: transparent; */
     /* text-shadow: 0 0 0 #000; */
-
+    align-self: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 19px;
-    color: #FFFFFF;
-}
-
-hr {
-    margin: auto;
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #12779D;
-    height: 1px;
-    border-bottom: transparent;
-    border-left: transparent;
-    border-right: transparent;
+    color: #222222;
+    margin-top: 5px;
 }
 
 #brgyContainer, #ageGroupContainer {
@@ -125,11 +152,9 @@ hr {
     display: flex;
     height: 96px;
     width: 200px;
-    border: 3px solid #222222;
     box-sizing: border-box;
     border-radius: 5px;
-    align-content: center;
-    align-items: center;
+    background: #FFFFFF;
 }
 
 #priorityGroupContainer span {
@@ -148,7 +173,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #FFD57B;
+    background: #ffffff;
     border-radius: 5px;
     width: 215px;
     height: 96px;
@@ -185,7 +210,7 @@ hr {
     width: 200px;
     height: 150px;
 
-background: #1CB876;
+    background: #1CB876;
     border-radius: 5px;
 }
 
@@ -197,7 +222,7 @@ background: #1CB876;
     width: 215px;
     height: 150px;
 
-    background: #E7F1F5;
+    background: #FFD57B;
     border-radius: 5px;
 }
 
@@ -251,10 +276,10 @@ background: #1CB876;
     text-align: center;
 }
 
-.body {
+/* .body {
     display: inline-block;
-}
+} */
 
-hr.solid {
+/* hr.solid {
     border-top: 3px solid #bbb;
-}
+} */
