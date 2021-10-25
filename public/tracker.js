@@ -52,71 +52,80 @@ function getMaxValue(data) {
     return max;
 }
 
-getVaccineTypeData("Ambiong")
-    .then(data => {
-        const brgyContainer = document.getElementById("brgyContainer");
-        var count = 0;
-        vaccineMax = getMaxValue(data);
-        const rowContainer = document.createElement("div");
-        rowContainer.id = "brgyRow";
-        for (let [key, value] of Object.entries(data)) {
-            vaccineValues[count] = value;
-            const nameContainer = document.createElement("div");
-            const barContainer = document.createElement("div");
+initializeVaccineTypeData("Ambiong");
+initializeAgeGroupData("Ambiong");
 
-            nameContainer.className = "vaccine";
-            barContainer.className = "bar";
+function initializeVaccineTypeData(location) {
+    getVaccineTypeData(location)
+        .then(data => {
+            const brgyContainer = document.getElementById("brgyContainer");
+            var count = 0;
+            vaccineMax = getMaxValue(data);
+            const rowContainer = document.createElement("div");
+            rowContainer.id = "brgyRow";
+            for (let [key, value] of Object.entries(data)) {
+                vaccineValues[count] = value;
+                const nameContainer = document.createElement("div");
+                const barContainer = document.createElement("div");
 
-            nameContainer.innerHTML += `${key}`;
-            barContainer.innerHTML += `${value}`;
+                nameContainer.className = "vaccine";
+                barContainer.className = "bar";
 
-            addStyleToName(nameContainer);
-            addStyleToBar(barContainer, value);
+                nameContainer.innerHTML += `${key}`;
+                barContainer.innerHTML += `${value}`;
 
-            rowContainer.appendChild(nameContainer);
-            rowContainer.appendChild(barContainer);
-            
-            brgyContainer.appendChild(rowContainer);
-            count++;
-        }        
-    })
-    .catch(err => {
-        console.log(err);
-    })
+                addStyleToName(nameContainer);
+                addStyleToBar(barContainer, value);
 
-getAgeGroupData("Ambiong")
-    .then(data => {
-        const brgyContainer = document.getElementById("ageGroupContainer");
+                rowContainer.appendChild(nameContainer);
+                rowContainer.appendChild(barContainer);
 
-        var count = 0;
-        ageGroupMax = getMaxValue(data);
-        const leftContainer = document.createElement("div");
-        leftContainer.id = "ageLeftContainer"
-        const rightContainer = document.createElement("div");
-        rightContainer.id = "ageRightContainer"
+                brgyContainer.appendChild(rowContainer);
+                count++;
+            }
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
 
-        leftContainer.style.width = "300px";
+function initializeAgeGroupData(location) {
+    getAgeGroupData(location)
+        .then(data => {
+            const brgyContainer = document.getElementById("ageGroupContainer");
 
-        brgyContainer.appendChild(leftContainer);
-        brgyContainer.appendChild(rightContainer);
-        for (let [key, value] of Object.entries(data)) {
+            var count = 0;
+            ageGroupMax = getMaxValue(data);
+            const leftContainer = document.createElement("div");
+            leftContainer.id = "ageLeftContainer"
+            const rightContainer = document.createElement("div");
+            rightContainer.id = "ageRightContainer"
 
-            ageGroupValues[count] = value;
-            leftContainer.innerHTML += `<span class=\"ageGroup\">${key}</span>`
-            rightContainer.innerHTML += `<div class=\"ageBar\">${value}</div>`
+            leftContainer.style.width = "300px";
 
-            let ageGroup = document.getElementsByClassName("ageGroup")
-            let bar = document.getElementsByClassName("ageBar");
+            brgyContainer.appendChild(leftContainer);
+            brgyContainer.appendChild(rightContainer);
+            for (let [key, value] of Object.entries(data)) {
 
-            addStyleToBar(bar[count], value);
-            addStyleToName(ageGroup[count]);          
+                ageGroupValues[count] = value;
+                leftContainer.innerHTML += `<span class=\"ageGroup\">${key}</span>`
+                rightContainer.innerHTML += `<div class=\"ageBar\">${value}</div>`
 
-            count++;
-        }
-    })
-    .catch(err => {
-        console.log(err);
-    })
+                let ageGroup = document.getElementsByClassName("ageGroup")
+                let bar = document.getElementsByClassName("ageBar");
+
+                addStyleToBar(bar[count], value);
+                addStyleToName(ageGroup[count]);
+
+                count++;
+            }
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
+
+
 
 function onGraphButtonClick(id) {
     alert(id)
