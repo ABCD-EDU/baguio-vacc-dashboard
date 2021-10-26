@@ -1,7 +1,21 @@
-// import { getBarangayNames, getBarangayVaccinatedData, getVaccineTypeData, getData } from './helper/jsonParser.js'
+/*
+Arian Carl A. Cayton
 
+This code is responsible in displaying the rainbow graph which contains
+ the percentages of each of the vaccines in the data. The distribution or percentage of the
+ bars color is determined by the count of the vaccine type used relative to the 
+ total vaccinated individuals. 
+*/
+
+/*Only the top 10 most vaccinated barangays will be displayed so a method
+that fetches the mentioned data is created on the helper script
+*/
 const topNVaccinatedBarangays = await getTopNVaccinatedBarangays(10);
 
+/*The method has a locally word in it because it is created in this script 
+and not on the helper and it's job is to return the names of the barangay
+from the variable made above. 
+*/ 
 function getBarangayNamesLocally() {
    const barangayNames = [];
    for (let key in topNVaccinatedBarangays) {
@@ -14,6 +28,8 @@ let vaccinatedData = {}; //All Barangays Vaccinated
 let vaccineTypeData = {}; //All Barangays Vaccine Type
 let vaccineTypeDataInPercent = {}; // All Barangays Vaccine Type Percentage
 
+/* The colors to be used for the rainbow graph
+*/
 const barColors = [
    "67B7DC",
    "8067DC",
@@ -24,6 +40,8 @@ const barColors = [
    "67DCBB",
    "80B3F5",
 ];
+/* The vaccine types similar to contents of the data
+*/
 const vaccineTypes = [
    "Astrazeneca",
    "Sputnik",
@@ -35,6 +53,8 @@ const vaccineTypes = [
    "Sinovac",
 ];
 
+/*Variables declared earlier are populated with the objects to be used on the latter part of the file
+*/
 for (var i = 0; i < 10; i++) {
    const barangayNames = getBarangayNamesLocally();
    vaccinatedData[barangayNames[i]] = await getBarangayVaccinatedData(
@@ -46,9 +66,13 @@ for (var i = 0; i < 10; i++) {
    );
 }
 
+/*Get the percentages of the vaccine types relative to the vaccinated population
+*/
 function getPercentages(vaccineTypeData) {
    const barangayNames = getBarangayNamesLocally();
    const output = {};
+
+
    for (var i = 0; i < Object.keys(vaccineTypeData).length; i++) {
       // Number of vaccinated in a barangay
       const barangayVaccinated = vaccinatedData[barangayNames[i]];
@@ -57,21 +81,34 @@ function getPercentages(vaccineTypeData) {
 
       let vaccineTypePercentage = {};
       for (var j = 0; j < vaccineTypes.length; j++) {
+         //Round-off to two decimal places
          vaccineTypePercentage[vaccineTypes[j]] =
             (Number(barangayVaccineTypes[vaccineTypes[j]]) / barangayVaccinated) *
             100;
       }
-
+      /*
+      output example:
+      "Bakakeng":{
+         "Astrazeneca": "5902",
+         "Sputnik": "1643",
+         "Pfizer": "4374",
+          ....
+      }
+      */
       output[barangayNames[i]] = vaccineTypePercentage;
    }
    return output;
 }
 
 vaccineTypeDataInPercent = getPercentages(vaccineTypeData);
+
+//Retrieve main container of the graph
 const vaccinePercentageMainContainer = document.querySelector(
    ".vaccine-percentage-main-container"
 );
 
+/*This will display the graph 
+*/
 function displayPerPercentageGraph(id) {
    let isPercentage = false;
    if (id === "percentageButton-perPercent") {
