@@ -1,0 +1,46 @@
+#vac-summary-title{
+    margin-left: 10%;
+    color: #12779D;
+    font-size: 95%;
+    font-family: Roboto;
+}
+
+#total-cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    font-family: Roboto;
+    min-width: 500px;
+}
+
+#total-card1{
+   background: #1CB876;
+   border-radius: 5px;
+   padding-top: var(--padding);
+   color: #EDF0F1;
+   font-family: Roboto;
+   padding: 0.8%;
+   text-align: center;
+   width: 24.7%;
+   height: 130px;
+   padding-top: 2%;
+}
+
+#total-card2,#total-card3, #total-card4 {
+   background: #FFD57B;
+   border-radius: 5px;
+   padding-top: var(--padding);
+   color: #222222;
+   font-family: Roboto;
+   padding: 0.8%;
+   text-align: center;
+   width: 24.7%;
+   height: 130px;
+   padding-top: 2%;
+}
+
+#total-card4 h2 {
+    font-size: 100%;
+}
