@@ -4,6 +4,12 @@ var vaccineMax = 0;
 var ageGroupMax = 0;
 var barSpacing = 0;
 var defaultLocation = "Baguio City";
+var selectedLocation = null;
+
+var brandGraphNumerical = true;
+var ageGraphNumerical = true;
+var ageDescending = true;
+var brandDescending = true;
 
 var width = document.body.clientWidth;
 if (width <= 768) {
@@ -17,7 +23,24 @@ if (width <= 768) {
 initializeBarangaySelector();
 
 function onGraphButtonClick(id) {
-    alert(id)
+    if (id === "percentageButton-perAge") {
+        ageGraphNumerical = false;
+    } else if (id === "vaccinatedButton-perAge") {
+        ageGraphNumerical = true;
+    } else if (id === "ascendingButton-perAge") {
+        ageDescending = false;
+    } else if (id === "descendingButton-perAge") {
+        ageDescending = true;
+    } else if (id === "percentageButton-perBrand") {
+        brandGraphNumerical = false;
+    } else if (id === "vaccinatedButton-perBrand") {
+        brandGraphNumerical = true;
+    } else if (id === "ascendingButton-perBrand") {
+        brandDescending = false;
+    } else if (id === "descendingButton-perBrand") {
+        brandDescending = true;
+    }
+
 }
 
 async function initializeBarangaySelector() {
@@ -48,6 +71,7 @@ async function onBarangayChange() {
         let category = keys[i];
         document.getElementById(category + "-Data").textContent = data[category];
     }
+    selectedLocation = barangay;
     removeChildrenOfGraphContainers();
     initializeVaccineTypeData(barangay);
     initializeAgeGroupData(barangay);
