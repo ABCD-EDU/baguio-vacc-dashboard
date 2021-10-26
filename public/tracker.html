@@ -31,13 +31,32 @@
 
     <div class="titleBar"><span class="headerText">VACCINATION TRACKER</span></div>
 
-    Summary Cards Section `
     <h3 id="vac-summary-title">Baguio City Vaccination Summary</h3>
     <div class="total-cards-container">
         <div class="total-card1" id="total-card1"></div>
         <div class="total-card2" id="total-card2"></div>
         <div class="total-card3" id="total-card3"></div>
         <div class="total-card4" id="total-card4"></div>
+    </div>
+
+    <div id="topBarangaysMainContainer">
+        <div id="topBarangaysContainerHeader"><span>Top barangays that have high percentage of vaccination relative to population</span></div>
+        <div id="buttonsMainContainer">
+            <div class="buttonsContainer">
+                <button id="percentageButton-top" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Percentage</button>
+                <button id="vaccinatedButton-top" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Vaccinated</button>
+            </div>
+            <div class="buttonsContainer">
+                <button id="ascendingButton-top" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Ascending</button>
+                <button id="descendingButton-top" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Descending</button>
+            </div>
+        </div>
+        <div id="topBarangaysContainer"></div>
+        <hr>
     </div>
 
     <div id="barangayPerPercentMainContainer">
@@ -133,7 +152,6 @@
                     onClick="onGraphButtonClick(this.id)">Descending</button>
             </div>
         </div>
-        <div id="brgyDataFlip"></div>
         <div id="brgyContainer"></div>
         <hr>
     </div>
@@ -155,7 +173,6 @@
                     onClick="onGraphButtonClick(this.id)">Descending</button>
             </div>
         </div>
-        <div id="ageGroupDataFlip"></div>
         <div id="ageGroupContainer"></div>
         <hr>
     </div>

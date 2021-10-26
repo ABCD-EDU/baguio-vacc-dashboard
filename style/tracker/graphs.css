@@ -1,19 +1,23 @@
+#topBarangaysContainer,
 #brgyContainer,
 #ageGroupContainer {
     margin: 0 auto;
     display: inline-block;
 }
 
+#topBarangaysMainContainer,
 #perBrandMainContainer,
 #perAgeGroupMainContainer {
     margin: 0 auto;
 }
 
+#topBarangaysContainerHeader,
 #brgyContainerHeader,
 #ageGroupContainerHeader {
     display: flex;
 }
 
+#topBarangaysContainerHeader>span,
 #brgyContainerHeader>span,
 #ageGroupContainerHeader>span {
     margin: 1.5rem auto;
@@ -28,6 +32,7 @@
     color: white;
 }
 
+#topBarangayRow,
 #brgyRow,
 #ageGroupRow {
     display: flex;
@@ -78,6 +83,7 @@
         width: 80%;
     }
 
+    .topBarangayName,
     .vaccine,
     .age {
         flex-shrink: 0;

@@ -10,12 +10,15 @@ var brandGraphNumerical = true;
 var ageGraphNumerical = true;
 var ageIsAscending = true;
 var brandIsAscending = true;
+var topIsNumerical = false;
+var topIsAscending = true;
 
 initializeBarangaySelector();
 
 function onGraphButtonClick(id) {
     let ageClicked = false;
     let brandClicked = false;
+    let topClicked = false;
     if (id === "percentageButton-perAge") {
         ageGraphNumerical = false;
         ageClicked = true;
@@ -40,15 +43,32 @@ function onGraphButtonClick(id) {
     } else if (id === "descendingButton-perBrand") {
         brandIsAscending = false;
         brandClicked = true;
+    } else if (id === "percentageButton-top") {
+        topIsNumerical = false;
+        topClicked = true;
+    } else if (id === "vaccinatedButton-top") {
+        topIsNumerical = true;
+        topClicked = true;
+    } else if (id === "ascendingButton-top") {
+        topIsAscending = true;
+        topClicked = true;
+    } else if (id === "descendingButton-top") {
+        topIsAscending = false;
+        topClicked = true;
     }
     if (ageClicked === true) {
         const ageGrpContainer = document.getElementById("ageGroupContainer");
         ageGrpContainer.innerHTML = '';
         initializeAgeGroupData(selectedLocation, ageGraphNumerical, ageIsAscending);
     }else if (brandClicked === true); {
-        const ageGrpContainer = document.getElementById("brgyContainer");
-        ageGrpContainer.innerHTML = '';
+        const brgayContainer = document.getElementById("brgyContainer");
+        brgayContainer.innerHTML = '';
         initializeVaccineTypeData(selectedLocation, brandGraphNumerical, brandIsAscending);
+    }
+    if (topClicked === true) {
+        const topContainer = document.getElementById("topBarangaysContainer");
+        topContainer.innerHTML = '';
+        initializeTopBarangaysData(topIsNumerical, topIsAscending);
     }
 }
 
@@ -84,6 +104,7 @@ async function onBarangayChange() {
     removeChildrenOfGraphContainers();
     initializeVaccineTypeData(barangay, brandGraphNumerical, brandIsAscending);
     initializeAgeGroupData(barangay, ageGraphNumerical, ageIsAscending);
+    initializeTopBarangaysData(topIsNumerical, topIsAscending);
 }
 
 function removeChildrenOfGraphContainers() {
@@ -91,6 +112,8 @@ function removeChildrenOfGraphContainers() {
     brgayContainer.innerHTML = '';
     const ageGrpContainer = document.getElementById("ageGroupContainer");
     ageGrpContainer.innerHTML = '';
+    const topContainer = document.getElementById("topBarangaysContainer");
+    topContainer.innerHTML = '';
 }
 
 function getMaxValue(data) {
@@ -133,6 +156,49 @@ function initializeVaccineTypeData(location, isNumerical, isAscending) {
 
                 addStyleToName(nameContainer);
                 addStyleToBar(barContainer, value, vaccineMax);
+
+                rowContainer.appendChild(nameContainer);
+                rowContainer.appendChild(barContainer);
+
+                brgyContainer.appendChild(rowContainer);
+                count++;
+            }
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
+
+async function initializeTopBarangaysData(isNumerical, isAscending) {
+    let totals = null;
+    if (isNumerical) {
+        totals = await getTop10PercentageBarangaysVaccinated(isAscending);
+    }
+    getTop10PercentageBarangaysPercentages(isAscending)
+        .then(data => {
+            const brgyContainer = document.getElementById("topBarangaysContainer");
+            var count = 0;
+            ageGroupMax = 100;
+
+            for (let [key, value] of Object.entries(data)) {
+                const rowContainer = document.createElement("div");
+                rowContainer.id = "topBarangayRow";
+                ageGroupValues[count] = value;
+                const nameContainer = document.createElement("div");
+                const barContainer = document.createElement("div");
+
+                nameContainer.className = "topBarangayName";
+                barContainer.className = "topBarangayBar";
+
+                nameContainer.innerHTML += `${key}`;
+                if (!isNumerical) {
+                    barContainer.innerHTML += `${roundValue(value)}%`;
+                } else {
+                    barContainer.innerHTML += `${totals[count]}`;
+                }
+
+                addStyleToName(nameContainer);
+                addStyleToBar(barContainer, value, ageGroupMax);
 
                 rowContainer.appendChild(nameContainer);
                 rowContainer.appendChild(barContainer);
@@ -197,6 +263,14 @@ function roundValue(value, totalVaccinated) {
         return val.toFixed(2);
     }else {
         return Math.round(val);
+    }
+}
+
+function roundValue(val) {
+    if (val % 1 !== 0) {
+        return val.toFixed(2);
+    } else {
+        return val;
     }
 }
 

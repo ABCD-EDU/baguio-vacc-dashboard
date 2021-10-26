@@ -22,8 +22,6 @@ for (var i = 0; i < 10; i++) {
    vaccineTypeData[barangayNames[i]] = await getVaccineTypeData(barangayNames[i]);
 }
 
-console.log(vaccinatedData);
-console.log(vaccineTypeData);
 
 function getPercentages(vaccineTypeData) {
    const output = {}

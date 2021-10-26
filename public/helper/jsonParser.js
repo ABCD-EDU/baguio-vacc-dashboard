@@ -9,9 +9,107 @@ async function getBarangayNames() {
     }
     return names
 }
+
 async function getTopNVaccinatedBarangays(barangayCountGiven) {
     const output = await getAllVaccinatedPerBarangay(true)
     return output.slice(0, barangayCountGiven)
+}
+
+console.log("top10");
+// console.log(getTop10PercentageBarangays(false));
+console.log(getTop10PercentageBarangaysPercentages(false));
+console.log(getTop10PercentageBarangaysVaccinated(false));
+
+
+async function getTop10PercentageBarangays(isAscending) {
+    let data = await getAllBarangayData();
+    data.forEach(function (element) {
+        element.percentage = (element.vaccinated / element.population) * 100;
+    });
+    data.sort(sortJSONByValue("percentage",isAscending));
+    data = data.slice(0, 10);
+    return data;
+}
+
+async function getTop10PercentageBarangaysPercentages(isAscending) {
+    let toReturn = {};
+    const data = await getTop10PercentageBarangays(isAscending);
+    data.forEach(e => {
+        toReturn[e.name] = e.percentage;
+    })
+    return toReturn;
+}
+
+async function getTop10PercentageBarangaysVaccinated(isAscending) {
+    let toReturn = [];
+    const data = await getTop10PercentageBarangays(isAscending);
+    data.forEach(e => {
+        toReturn.push(e.vaccinated);
+    })
+    return toReturn;
+}
+
+async function getTopNBarangaysWithVaccinatedNumber(barangayCountGiven, isAscending) {
+    let toReturn = {}
+    let output = await getAllVaccinatedPerBarangay(true);
+    output = output.slice(0, barangayCountGiven);
+    // descending
+    if (!isAscending) {
+        for (let i = 0; i < output.length; i++) {
+            const barangay = output[i];
+            toReturn[barangay.name] = barangay.vaccinated;
+        }
+    }else {
+        for (let i = output.length-1; i > -1; i--) {
+            const barangay = output[i];
+            toReturn[barangay.name] = barangay.vaccinated;
+        }
+    }
+    return toReturn;
+}
+
+async function getPopulationOfTop10VaccinatedBarangays(barangayCountGiven, isAscending) {
+    let toReturn = []
+    let output = await getAllPopulationPerBarangay(true)
+    output =  output.slice(0, barangayCountGiven)
+    console.log(output)
+    if (!isAscending) {
+        for (let i = 0; i < output.length; i++) {
+            const barangay = output[i];
+            toReturn.push(barangay.population);
+        }
+    } else {
+        for (let i = output.length - 1; i > -1; i--) {
+            const barangay = output[i];
+            toReturn.push(barangay.population);
+        }
+    }
+    console.log(toReturn)
+    return toReturn;
+}
+
+async function getAllPopulationPerBarangay(isSorted) {
+
+    const brgyData = await getAllBarangayData();
+    const list = []
+
+    for (let i = 0; i < brgyData.length; i++) {
+        let output = {}
+
+        const name = brgyData[i].name;
+        const vaccinated = brgyData[i].population;
+
+        output["name"] = name;
+        output["population"] = parseInt(vaccinated, 10)
+        list.push(output);
+    }
+
+    if (isSorted) {
+        list.sort(sortJSONByValue("population", false))
+        return list
+    } else {
+        return list
+    };
 }
 
 async function getAllVaccinatedPerBarangay(isSorted) {
