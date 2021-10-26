@@ -266,15 +266,6 @@ async function getMaxBarangayVaccine(location) {
         }
     }
     return max;
-
-    // getVaccineTypeData(location)
-    // .then(data => {
-
-    // })
-    // .catch(err => {
-    //     console.log(err)
-    // })
-
 }
 
 function sortAccordingToKeys(object, isAscending) {
