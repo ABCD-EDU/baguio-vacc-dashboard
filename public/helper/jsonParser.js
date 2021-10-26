@@ -9,6 +9,44 @@ async function getBarangayNames() {
     }
     return names
 }
+async function getMostVaccinatedBarangayNames(barangayCountGiven) {
+
+}
+
+async function getAllVaccinatedPerBarangay(isSorted) {
+
+    const brgyData = await getAllBarangayData();
+    const list = []
+
+    for (let i = 0; i < brgyData.length; i++) {
+        let output = {}
+
+        const name = brgyData[i].name;
+        const vaccinated = brgyData[i].vaccinated;
+        
+        output["name"] = name;
+        output["vaccinated"] = vaccinated
+
+        console.log(output);
+        list.push(output);
+    }
+
+    const sortedList = []
+    if (isSorted) {
+        sortJSONByValue(list, 'vaccinated', true)
+    };
+    console.log(list);
+
+
+
+}
+
+function sortJSONByValue(list, prop, isAscending) {
+    list.sort(function (a, b) {
+        return a.vaccinated.localeCompare(b.vaccinated);
+    });
+}
+
 
 async function getData() {
     const res = await fetch('../res/data/test.json')
@@ -58,7 +96,7 @@ async function getAgeGroupData(location) {
         const data = await getCityData();
         return data.ageGroup;
     }
-    
+
     const barangayData = await getBarangayData(location);
     return barangayData.ageGroup;
 }

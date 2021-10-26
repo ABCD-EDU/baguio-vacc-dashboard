@@ -188,7 +188,7 @@ window.addEventListener("resize", function () {
         const BASE_WIDTH = document.body.clientWidth - barSpacing;
         const NEW_WIDTH = (vaccineValues[i] / vaccineMax) * BASE_WIDTH;
 
-        console.log(NEW_WIDTH)
+        // console.log(NEW_WIDTH)
 
         // set new width for each bar
         let bar = document.getElementsByClassName("bar");

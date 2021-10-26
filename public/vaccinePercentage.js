@@ -59,8 +59,19 @@ async function displayPercentageGraphs() {
       const allPercentContainer = document.createElement('div')
       allPercentContainer.classList.add('all-percent-container')
       allPercentContainer.setAttribute('id', `all-percent-container-${barangayNames[i]}`)
-      allPercentContainer.style.maxWidth = '1000px'
+      allPercentContainer.style.maxWidth = '1200px'
 
+      if (document.body.clientWidth < 763) {
+         barangayWithPercentContainer.style.width = '100%'
+         barangayWithPercentContainer.style.flexDirection = 'column'
+         barangayNameContainer.style.textAlign = 'left'
+         barangayNameContainer.style.justifyContent = 'left'
+         barangayNameContainer.style.width = '70%'
+
+         // barangayWithPercentContainer.style.
+         allPercentContainer.style.width = '100%'
+         allPercentContainer.style.paddingRight = '0px'
+      }
       // allPercentContainer.style.setProperty("--currentWindowWidth", '1000')
 
       for (let j = 0; j < vaccineTypes.length; j++) {
@@ -100,6 +111,11 @@ async function displayPercentageGraphs() {
          percentContainer.style.zIndex = '0';
          percentContainer.append(toolTipContainer)
 
+         if (document.body.clientWidth < 763) {
+            percentContainer.innerHTML = '';
+            percentContainer.appendChild(toolTipContainer)
+         }
+
 
          percentContainer.addEventListener("mouseover", function (e) {
             percentContainer.style.border = "1px solid #FFFFFF"
@@ -122,6 +138,8 @@ async function displayPercentageGraphs() {
 
 const vaccineTypeLegendContainer = document.getElementById("vaccine-type-legend-container")
 
+
+
 function displayVaccineTypeLegend() {
    for (let i = 0; i < vaccineTypes.length; i++) {
       const vaccineTypeSpan = document.createElement('span');
@@ -138,8 +156,15 @@ function displayVaccineTypeLegend() {
 
 displayPercentageGraphs();
 displayVaccineTypeLegend();
+const test = await getAllVaccinatedPerBarangay(true);
+
+function resizeComponentsOnPhoneView() {
+
+}
 
 window.addEventListener("resize", function () {
+
+
    for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
       //Get the bar that contains the barangay name and all the vaccine
       const barangayWithPercentContainer = document.getElementById(`barangay-with-percentage-container-${barangayNames[i]}`)
@@ -152,24 +177,28 @@ window.addEventListener("resize", function () {
 
 
       if (document.body.clientWidth < 763) {
-         // align - items: center;
-         // justify - content: right;
-         // text - align: right;
+         barangayWithPercentContainer.style.width = '100%'
          barangayWithPercentContainer.style.flexDirection = 'column'
+         barangayWithPercentContainer.style.paddingRight = '-100%'
+
          barangayNameContainer.style.textAlign = 'left'
          barangayNameContainer.style.justifyContent = 'left'
          barangayNameContainer.style.width = '70%'
 
          // barangayWithPercentContainer.style.
          allPercentContainer.style.width = '100%'
-         allPercentContainer.style.paddingRight = '0'
+         allPercentContainer.style.paddingRight = '100px'
+
+         barangayWithPercentContainer.style.width = 'auto'
+
       } else {
          barangayWithPercentContainer.style.flexDirection = 'row';
          barangayNameContainer.style.textAlign = 'right'
          barangayNameContainer.style.justifyContent = 'right'
 
          allPercentContainer.style.maxWidth = `${document.body.clientWidth - 200}px`;
-         allPercentContainer.style.width = '60%'
+         // allPercentContainer.style.maxWidth = '1200px'
+         allPercentContainer.style.width = '70%'
          allPercentContainer.style.paddingRight = '15%'
       }
       // Fetch the percentages of vaccines in a barangay
@@ -201,3 +230,4 @@ window.addEventListener("resize", function () {
       }
    }
 });
+
