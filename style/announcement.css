@@ -8,10 +8,15 @@
     src: url(../res/font/Roboto-Regular.ttf);
  }
 
+ :root {
+    --border-radius: 5px;
+    --padding: 10px;
+ }
+
 .titleBar {
    grid-area: title;
    margin: 0 auto;
-   height: 30px;
+   height: 40px;
    margin-top: 1rem;
    margin-bottom: 1rem;
 
@@ -30,30 +35,10 @@
    font-weight: bold;
    font-size: 16px;
    line-height: 20px;
+   user-select: none;
 
    /* identical to box height */
    color: #FFFFFF;
-}
-
-.author {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-
-    /* identical to box height */
-    color: #FFFFFF;
-}
-
-.announcement {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 .date {
@@ -81,12 +66,38 @@
 
 }
 
+.announcement {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px   ;
+    margin-bottom: 1rem;
+}
+
+.announcement:last-child {
+    margin-bottom: 3rem;
+}
+
+.author {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    /* margin-top: ; */
+    padding-left: 1rem;
+
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
 .info {
     max-width: 650px;
     min-width: 650px;
     min-height: 100px;
     max-height: max-content;
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
     border-radius: 5px;
     background-color: #12779D;
 }
@@ -108,10 +119,11 @@
     width: 100%;
 }
 
-@media (max-width: 845px) {
+@media (max-width: 1055px) {
     .announcement {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 5rem;
     }
     .info {
         min-width: 75%;
