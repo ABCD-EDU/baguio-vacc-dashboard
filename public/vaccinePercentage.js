@@ -1,5 +1,5 @@
-/*
-Arian Carl A. Cayton
+/**
+@author Arian Carl A. Cayton
 
 This code is responsible in displaying the rainbow graph which contains
  the percentages of each of the vaccines in the data. The distribution or percentage of the
@@ -15,7 +15,7 @@ const topNVaccinatedBarangays = await getTopNVaccinatedBarangays(10);
 /*The method has a locally word in it because it is created in this script 
 and not on the helper and it's job is to return the names of the barangay
 from the variable made above. 
-*/ 
+*/
 function getBarangayNamesLocally() {
    const barangayNames = [];
    for (let key in topNVaccinatedBarangays) {
@@ -66,7 +66,10 @@ for (var i = 0; i < 10; i++) {
    );
 }
 
-/*Get the percentages of the vaccine types relative to the vaccinated population
+/** 
+ * Get the percentages of the vaccine types relative to the vaccinated population
+ * @param vaccineTypeData contains all the barangays with their respective
+ * vaccine type data
 */
 function getPercentages(vaccineTypeData) {
    const barangayNames = getBarangayNamesLocally();
@@ -107,7 +110,10 @@ const vaccinePercentageMainContainer = document.querySelector(
    ".vaccine-percentage-main-container"
 );
 
-/*This will display the graph 
+/**   This will display the graph depending on the selected content.
+* Whether it be the percentage or the count of the vaccine type used
+* @param id the id of the button clicked. It's either
+* percentageButton-perPercent or vaccinatedButton-perPercent
 */
 function displayPerPercentageGraph(id) {
    let isPercentage = false;
@@ -117,14 +123,15 @@ function displayPerPercentageGraph(id) {
       isPercentage = false;
    }
 
-
    const barangayNames = getBarangayNamesLocally();
+
+   // Will set the default structure and look of the graph on website load/reload
    for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
-      // Data to be displayed
       const barangayVaccineTypeData = vaccineTypeData[barangayNames[i]]
       const barangayVaccineTypeDataInPercent =
          vaccineTypeDataInPercent[barangayNames[i]];
 
+      //Create an element and set the contents
       let barangayWithPercentContainer = document.createElement("div");
       setBarangayWithPercentContainerContent(barangayWithPercentContainer, i);
 
@@ -138,13 +145,13 @@ function displayPerPercentageGraph(id) {
       setBarangayNameContainerStyle(barangayNameContainer);
       setAllPercentContainerStyle(allPercentContainer);
 
-
+      // loop through all the vaccine types 
       for (let j = 0; j < vaccineTypes.length; j++) {
          const vaccinatedByVaccineType = barangayVaccineTypeData[vaccineTypes[j]]
          const vaccinePercent = barangayVaccineTypeDataInPercent[vaccineTypes[j]];
 
          const percentContainer = document.createElement("div");
-
+         // Pass the parameters needed
          setPercentContainerContent(
             percentContainer,
             i,
@@ -169,13 +176,10 @@ function displayPerPercentageGraph(id) {
          toolTipContainer.style.backgroundColor = `#${barColors[j]}`;
 
          percentContainer.append(toolTipContainer);
-
          allPercentContainer.appendChild(percentContainer);
       }
-
       barangayWithPercentContainer.append(barangayNameContainer);
       barangayWithPercentContainer.append(allPercentContainer);
-
       vaccinePercentageMainContainer.appendChild(barangayWithPercentContainer);
    }
 }
@@ -198,6 +202,17 @@ function displayVaccineTypeLegend() {
 
 const barangayNames = getBarangayNamesLocally();
 
+/**
+ * The following methods (setXXXXContainerContent) have similar description in which
+ * they set the contents of the container and assign class
+ * or id to the container and more. 
+ * 
+ * 
+ * Similarly, the methods (setXXXXContainerStyle) does the same job
+ * but only for styling the container
+ */
+
+
 function setBarangayWithPercentContainerContent(
    barangayWithPercentContainer,
    indexI
@@ -211,11 +226,13 @@ function setBarangayWithPercentContainerContent(
    );
 }
 
+
 function setBarangayWithPercentContainerStyle(barangayWithPercentContainer) {
    if (document.body.clientWidth < 763) {
       barangayWithPercentContainer.style.width = "100%";
       barangayWithPercentContainer.style.flexDirection = "column";
    } else {
+      barangayWithPercentContainer.style.width = "100%";
       barangayWithPercentContainer.style.flexDirection = "row";
    }
 }
@@ -238,6 +255,7 @@ function setBarangayNameContainerStyle(barangayNameContainer) {
       barangayNameContainer.style.width = "70%";
    } else {
       barangayNameContainer.style.textAlign = "right";
+      barangayNameContainer.style.width = "30%";
       barangayNameContainer.style.justifyContent = "right";
    }
 }
@@ -320,7 +338,7 @@ function setPercentContainerContent(
 }
 
 function setPercentContainerStyle(percentContainer) {
-   percentContainer.style.zIndex = "0";
+
    if (document.body.clientWidth < 763) {
       percentContainer.innerHTML = ``;
    } else {
@@ -345,7 +363,7 @@ function setTooltipContainerContainerContent(toolTipContainer) { }
 
 
 displayVaccineTypeLegend();
-
+//Change display format when window is resized
 window.addEventListener("resize", function () {
    const barangayNames = getBarangayNamesLocally();
 
@@ -367,8 +385,10 @@ window.addEventListener("resize", function () {
       setBarangayNameContainerStyle(barangayNameContainer);
       setAllPercentContainerStyle(allPercentContainer);
 
+      const barangayVaccineTypeData = vaccineTypeData[barangayNames[i]]
       const barangayVaccineTypeDataInPercent =
          vaccineTypeDataInPercent[barangayNames[i]];
+
       for (let j = 0; j < vaccineTypes.length; j++) {
          //Query the barangay-vaccine-type percent container using an ID assigned earlier
          const percentContainer = document.getElementById(
@@ -380,28 +400,38 @@ window.addEventListener("resize", function () {
          );
 
          // Get the percentage for a specific vaccine in a barangay
+         const vaccinatedByVaccineType = barangayVaccineTypeData[vaccineTypes[j]]
          const vaccinePercent = barangayVaccineTypeDataInPercent[vaccineTypes[j]];
-
+         let isPercentage = true;
          // Set width for barangay-vaccine-type percent container
-         if (document.body.clientWidth < 763) {
-            percentContainer.innerHTML = "";
-            percentContainer.appendChild(toolTipContainer);
-         } else {
-            percentContainer.innerHTML = `
-         <pan class="percent-content" >
-            ${Math.round(vaccinePercent * 100) / 100} %
-            </ span>
-         `;
-            percentContainer.appendChild(toolTipContainer);
-         }
-         percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100
-            }px`;
+         setPercentContainerContent(percentContainer,
+            i,
+            j,
+            vaccineTypes,
+            barColors,
+            vaccinePercent,
+            vaccinatedByVaccineType,
+            isPercentage)
+
+         // if (document.body.clientWidth < 763) {
+         //    percentContainer.innerHTML = "";
+         // } else {
+         //    percentContainer.innerHTML = `
+         //    <span class="percent-content" >
+         //       ${Math.round(vaccinePercent * 100) / 100} %
+         //       </ span>
+         //    `;
+         // }
+         // percentContainer.style.zIndex = "0";
+         percentContainer.appendChild(toolTipContainer);
+         // percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100
+         //    }px`;
       }
    }
 });
 
 
-
+// Add listeners to the buttons
 const percentButtonId = "percentageButton-perPercent";
 const percentButton = document.getElementById(percentButtonId)
 percentButton.addEventListener("click",

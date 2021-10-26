@@ -51,6 +51,7 @@ city_data["persex"] = per_sex_data
 
 # Get barangay data 
 
+# @author Arian Carl A. Cayton
 data = []
 brgy_data = {}
 curr_id_number = 1
@@ -68,11 +69,13 @@ with open('data.csv', 'r') as file:
         brgy_data["population"] = values[1]
         brgy_data["vaccinated"] = values[2]
         vaccine_type_data = {}
+
+        # Inner index is used to access the nested array contents within the base array of the data
         for index_inner, vaccine_type in enumerate(vaccine_type_list):
+            #Some numbers contain a coma so they are removed
             vaccine_type_data[vaccine_type] = int(values[index_inner+4].replace(',', ''))
 
         brgy_data["vaccineType"] = vaccine_type_data
-        print(f"data: {brgy_data['vaccineType']}")
         age_group_data = {}
         for index_inner, age_group in enumerate(age_group_list):
             age_group_data[age_group] = values[index_inner+13]
