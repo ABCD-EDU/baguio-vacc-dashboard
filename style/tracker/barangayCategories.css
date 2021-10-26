@@ -1,32 +1,33 @@
 #barangaySelectorContainer {
-    display: flex;
-    flex-direction: column;
-    /* background-color: gray; */
-    margin: auto;
-    margin-top: 3px;
-    margin-bottom: 30px;
     width: 80%;
+    margin: 0 auto;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr 1fr;
+    grid-template-areas: 
+    "barangaySelectorLabel"
+    "barangaySelector";
+
 }
 
 #barangaySelectorLabel {
+    grid-area: barangaySelectorLabel;
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 29px;
+    font-weight: bold;
+    font-size: 22px;
     text-align: center;
-    margin-bottom: 5px;
-    margin-top: 100px;
     color: #FFFFFF;
+    margin-top: 30px;
+    margin-right: 20px;
 }
 
 #barangaySelector {
+    grid-area: barangaySelector;
     background: #FFD57B;
     border-radius: 5px;
-    width: 800px;
     height: 40px;
-    /* color: transparent; */
-    /* text-shadow: 0 0 0 #000; */
     align-self: center;
     font-family: Roboto;
     font-style: normal;
@@ -34,10 +35,10 @@
     font-size: 16px;
     line-height: 19px;
     color: #222222;
-    margin-top: 5px;
     outline: 0px;
     border: 0px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #categoriesLabel {
@@ -66,7 +67,7 @@
     "vaccinatedContainer data1 data2 data3 data4 data5 data6";
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:768px) {
     .categoriesContainer {
         grid-template-columns: 1fr;
         grid-template-rows: 0.1fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
@@ -91,6 +92,9 @@
     }
     #emptySpace {
         height: 1px;
+    }
+    #barangaySelector {
+        font-size: 12px;
     }
 }
 
@@ -226,14 +230,6 @@
     line-height: 24px;
     text-align: center;
 }
-
-/* .body {
-    display: inline-block;
-} */
-
-/* hr.solid {
-    border-top: 3px solid #bbb;
-} */
 
 .dataFlipContainer {
     width: 80%;
