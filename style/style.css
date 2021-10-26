@@ -14,13 +14,11 @@
    --padding: 10px;
 }
 
-
 .grid-container {
-   margin: auto;
+   margin: 0 auto;
    display: grid;
-   height: 90vh;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-template-rows: 0.1fr 1fr 3fr 3fr 2fr;
+   grid-template-columns: 1.3fr .9fr .9fr .9fr;
+   grid-template-rows: 0.1fr 1fr 3fr 3fr 0.1fr;
    grid-template-areas:
       "title title title title"
       "announce vax1 vax2 vax3"
@@ -28,16 +26,14 @@
       "announce notes notes notes"
       "read-more . . ."
    ;
-
-
-   grid-gap: .5em;
+   grid-gap: 5px;
    width: 80%;
 }
 
 .titleBar {
    grid-area: title;
    margin: 0 auto;
-   height: 30px;
+   height: 40px;
    margin-top: 1rem;
 
    display: flex;
@@ -55,12 +51,11 @@
    font-weight: bold;
    font-size: 16px;
    line-height: 20px;
+   user-select: none;
 
    /* identical to box height */
    color: #FFFFFF;
 }
-
-
 
 .announcement-container {
    grid-area: announce;
@@ -71,28 +66,32 @@
    font-family: Roboto;
    padding-inline: 5px;
 }
-
 .announcement-container h5 {
+   padding-top: 15px;
+   font-size: 17px;
    font-weight: bold;
    text-align: center;
 }
-
 .announcement-container ul {
    list-style-position: inside;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+.announcement-container li {
+   font-size: 14px;
+   padding-bottom: 15px;
 }
 
 .read-more {
    grid-area: read-more;
    text-align: center;
 }
-
 .read-more a {
    font-family: Roboto;
    color: #12779D;
    text-decoration: none;
    font-weight: bold;
    /* align-self: center; */
-
 }
 
 .vaccinated-container-1 {
@@ -129,9 +128,17 @@
 }
 
 .row-flex-container {
+   color: #222222;
    display: flex;
    grid-area: flexbox;
-   gap: 12px;
+   gap: 5px;
+}
+
+.row-flex-container h3 {
+   font-weight: bolder;
+}
+.row-flex-container h5 {
+   font-weight: normal;
 }
 
 .vaccination-site-container {
@@ -139,22 +146,14 @@
    flex: 50%;
    border-radius: var(--border-radius);
    font-family: Roboto;
-   padding: 10px;
+   padding: 20px;
    text-align: center;
    font-weight: normal;
 }
-
-.vaccination-site-container h3 {
-   font-weight: bolder;
-}
-
-.vaccination-site-container h5 {
-   font-weight: normal;
-}
-
 .vaccination-site-container li {
    list-style-position: inside;
    font-size: medium;
+   margin: 10px;
 }
 
 .vaccination-schedule-container {
@@ -162,42 +161,31 @@
    flex: 50%;
    border-radius: var(--border-radius);
    font-family: Roboto;
-   padding: 10px;
+   padding: 20px;
    text-align: center;
    font-weight: normal;
 
 }
-
-.vaccination-schedule-container h3 {
-   font-weight: bolder;
-}
-
-.vaccination-schedule-container h5 {
-   font-weight: normal;
-}
-
 .vaccination-schedule-container li {
-   font-size: medium;
    list-style-type: none;
+   font-size: medium;
    margin: 10px;
 }
 
 .notes {
-   background: #CBEFFA;
    grid-area: notes;
    border-radius: var(--border-radius);
    padding-top: var(--padding);
    list-style-position: inside;
    font-family: Roboto;
+   font-size: 15px;
    padding: var(--padding);
 }
-
 .notes li {
-   margin: 20px;
+   margin: 10px;
 }
 
-
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 800px) {
    .grid-container {
       grid-template-columns: 1fr;
       grid-template-rows: 0.2fr 3fr 0.5fr 0.5fr 0.5fr 1.5fr 2fr;
@@ -214,7 +202,7 @@
    }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 800px) {
    .row-flex-container {
       flex-direction: column;
    }
