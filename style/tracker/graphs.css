@@ -8,28 +8,23 @@
 #topBarangaysMainContainer,
 #perBrandMainContainer,
 #perAgeGroupMainContainer {
-    margin: 0 auto;
+    width: 80%;
+    margin: auto;
 }
 
 #topBarangaysContainerHeader,
 #brgyContainerHeader,
 #ageGroupContainerHeader {
-    display: flex;
-}
-
-#topBarangaysContainerHeader>span,
-#brgyContainerHeader>span,
-#ageGroupContainerHeader>span {
-    margin: 1.5rem auto;
-
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 800;
     font-size: 20px;
+    font-weight: bold;
     line-height: 24px;
     text-align: center;
-
+    margin: 0;
+    display: grid;
     color: white;
+    margin-bottom: 10px;
 }
 
 #topBarangayRow,
@@ -41,8 +36,6 @@
 #buttonsMainContainer {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin: 0px auto;
 }
 
 .buttonsContainer {
@@ -58,8 +51,14 @@
     font-weight: 500;
     width: 130px;
     padding: 0.5rem 1rem;
-    /* margin: 0px 0.5rem; */
     border-radius: 1000px;
+    margin-bottom: 15px;
+}
+
+#buttonsMainContainer2 {
+    margin: auto;
+    display: flex;
+    width: 80%;
 }
 
 @media (max-width: 768px) {

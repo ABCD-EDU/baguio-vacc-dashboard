@@ -32,60 +32,56 @@
 
     <div class="titleBar"><span class="headerText">VACCINATION STATISTICS</span></div>
 
+    
     <h3 id="vac-summary-title">Baguio City Vaccination Summary</h3>
-    <div class="total-cards-container">
-        <div class="total-card1" id="total-card1">
-            <h5>Total Vaccinated Individuals <br>(Baguio City)</h5>
-            <br>
+        <div class="total-cards-container">
+            <div class="total-card1" id="total-card1">
+                <h5>Total Vaccinated Individuals <br>(Baguio City)</h5>
+                <br>
+            </div>
+            <div class="total-card2" id="total-card2">
+                <h5>% of Vaccinated Residents from Priority Groups (A1 - A5)</h5>
+                <br>
+            </div>
+            <div class="total-card3" id="total-card3">
+                <h5>Most Vaccinated Priority Group <br>(A1 - A5)</h5>
+                <br>
+            </div>
+            <div class="total-card4" id="total-card4">
+                <h5>Barangay with the most vaccinated residents</h5>
+                <br>
+            </div>
         </div>
-        <div class="total-card2" id="total-card2">
-            <h5>% of Vaccinated Residents from Priority Groups (A1 - A5)</h5>
-            <br>
-        </div>
-        <div class="total-card3" id="total-card3">
-            <h5>Most Vaccinated Priority Group <br>(A1 - A5)</h5>
-            <br>
-        </div>
-        <div class="total-card4" id="total-card4">
-            <h5>Barangay with the most vaccinated residents</h5>
-            <br>
-        </div>
-    </div>
 
-    <div id="topBarangaysMainContainer">
-        <div id="topBarangaysContainerHeader"><span>Top barangays that have high percentage of vaccination relative to population</span></div>
-        <div id="buttonsMainContainer">
-            <div class="buttonsContainer">
-                <button id="percentageButton-top" class="graphButton"
-                    onClick="onGraphButtonClick(this.id)">Percentage</button>
-                <button id="vaccinatedButton-top" class="graphButton"
-                    onClick="onGraphButtonClick(this.id)">Vaccinated</button>
-            </div>
-            <div class="buttonsContainer">
-                <button id="ascendingButton-top" class="graphButton"
-                    onClick="onGraphButtonClick(this.id)">Ascending</button>
-                <button id="descendingButton-top" class="graphButton"
-                    onClick="onGraphButtonClick(this.id)">Descending</button>
-            </div>
-        </div>
-        <div id="topBarangaysContainer"></div>
         <hr>
-    </div>
 
-    <div id="barangayPerPercentMainContainer">
-        <div id="barangayVaccinePercentageHeader">
-            <span> Top 10 barangay with most vaccinated residents and their vaccine proportion</span>
-        </div>
-        <div id="buttonsMainContainer">
-            <div class="buttonsContainer">
-                <button id="percentageButton-perPercent" class="graphButton">Percentage</button>
-                <button id="vaccinatedButton-perPercent" class="graphButton">Vaccinated</button>
+        <div id="topBarangaysMainContainer">
+            <div id="topBarangaysContainerHeader"><span>Top barangays that have high percentage of vaccination relative to population</span></div>
+            <div id="buttonsMainContainer">
+                <div class="buttonsContainer">
+                    <button id="percentageButton-top" class="graphButton" onClick="onGraphButtonClick(this.id)">Percentage</button>
+                    <button id="vaccinatedButton-top" class="graphButton" onClick="onGraphButtonClick(this.id)">Vaccinated</button>
+                </div>
+                <div class="buttonsContainer">
+                    <button id="ascendingButton-top" class="graphButton" onClick="onGraphButtonClick(this.id)">Ascending</button>
+                    <button id="descendingButton-top" class="graphButton" onClick="onGraphButtonClick(this.id)">Descending</button>
+                </div>
             </div>
+            <div id="topBarangaysContainer"></div>
         </div>
-        <br>
-        <div class=" vaccine-percentage-main-container"></div>
-        <div id="vaccine-type-legend-container"></div>
-    </div>
+        <hr>
+        <div id="barangayPerPercentMainContainer">
+            <div id="barangayVaccinePercentageHeader"><span> Top 10 barangay with most vaccinated residents and their vaccine proportion</span></div>
+            <div id="buttonsMainContainer2">
+                <div class="buttonsContainer">
+                    <button id="percentageButton-perPercent" class="graphButton">Percentage</button>
+                    <button id="vaccinatedButton-perPercent" class="graphButton">Vaccinated</button>
+                </div>
+            </div>
+            <br>
+            <div class=" vaccine-percentage-main-container"></div>
+            <div id="vaccine-type-legend-container"></div>
+        </div>
 
     <div id="barangayCategorySelectionMainContainer">
 
@@ -156,7 +152,7 @@
 
 
     <div id="perBrandMainContainer">
-        <div id="brgyContainerHeader"><span>Top Vaccinations per Brand</span></div>
+        <span id="brgyContainerHeader">Top Vaccinations per Brand</span>
         <div id="buttonsMainContainer">
             <div class="buttonsContainer">
                 <button id="percentageButton-perBrand" class="graphButton"
@@ -172,12 +168,12 @@
             </div>
         </div>
         <div id="brgyContainer"></div>
-        <hr>
     </div>
+    <hr>
 
 
     <div id="perAgeGroupMainContainer">
-        <div id="ageGroupContainerHeader"><span>Total Vaccinations per Age Group</span></div>
+        <span id="ageGroupContainerHeader">Total Vaccinations per Age Group</span>
         <div id="buttonsMainContainer">
             <div class="buttonsContainer">
                 <button id="percentageButton-perAge" class="graphButton"
@@ -193,9 +189,8 @@
             </div>
         </div>
         <div id="ageGroupContainer"></div>
-        <hr>
     </div>
-
+    <hr>
 
 
     <script defer src="./components/dataFlip.js"></script>

@@ -7,8 +7,8 @@ body {
 hr {
     margin: auto;
     width: 80%;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
+    margin-top: 30px;
+    margin-bottom: 50px;
     border: 1px solid #FFFFFF;
     border-top: transparent;
     transform: rotate(0deg);
@@ -30,6 +30,10 @@ hr {
     width: 80%;
  }
 
+ #barangayPerPercentMainContainer {
+    padding-bottom: 20px;
+    background: #12779D;
+}
 
 #barangayCategorySelectionMainContainer {
     background: #12779D;
@@ -43,9 +47,5 @@ hr {
 }
 
 #perAgeGroupMainContainer {
-    background: #12779D;
-}
-
-#barangayPerPercentMainContainer {
     background: #12779D;
 }
