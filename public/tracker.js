@@ -137,6 +137,7 @@ function addStyleToName(name) {
     name.style.fontSize = "20px";
     name.style.textAlign = "center";
     name.style.width = "300px";
+    name.style.flexShrink = "0";
 
     name.style.color = "white";
 }
@@ -159,9 +160,9 @@ var width = document.body.clientWidth;
 if (width <= 768) {
     barSpacing = 100;
 } else if (width > 768 && width <= 1080) {
-    barSpacing = 300;
+    barSpacing = 330;
 } else if (width > 1080) {
-    barSpacing = 630;
+    barSpacing = 700;
 }
 
 /**
@@ -178,9 +179,9 @@ window.addEventListener("resize", function () {
     if (width <= 768) {
         barSpacing = 100;
     } else if (width > 768 && width <= 1080) {
-        barSpacing = 300;
+        barSpacing = 330;
     } else if (width > 1080) {
-        barSpacing = 630;
+        barSpacing = 700;
     }
     // console.log(barSpacing)
     for (var i = 0; i < vaccineValues.length; i++) {
@@ -205,3 +206,7 @@ window.addEventListener("resize", function () {
         bar[i].style.width = `${NEW_WIDTH}px`;
     }
 });
+
+
+initializeVaccineTypeData("Ambiong");
+initializeAgeGroupData("Ambiong");
