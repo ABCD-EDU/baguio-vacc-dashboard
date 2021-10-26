@@ -72,10 +72,19 @@ const vaccinePercentageMainContainer = document.querySelector(
    ".vaccine-percentage-main-container"
 );
 
-async function displayPercentageGraphs() {
+function displayPerPercentageGraph(id) {
+   let isPercentage = false;
+   if (id === "percentageButton-perPercent") {
+      isPercentage = true;
+   } else {
+      isPercentage = false;
+   }
+
+
    const barangayNames = getBarangayNamesLocally();
    for (let i = 0; i < Object.keys(vaccineTypeDataInPercent).length; i++) {
       // Data to be displayed
+      const barangayVaccineTypeData = vaccineTypeData[barangayNames[i]]
       const barangayVaccineTypeDataInPercent =
          vaccineTypeDataInPercent[barangayNames[i]];
 
@@ -92,7 +101,9 @@ async function displayPercentageGraphs() {
       setBarangayNameContainerStyle(barangayNameContainer);
       setAllPercentContainerStyle(allPercentContainer);
 
+
       for (let j = 0; j < vaccineTypes.length; j++) {
+         const vaccinatedByVaccineType = barangayVaccineTypeData[vaccineTypes[j]]
          const vaccinePercent = barangayVaccineTypeDataInPercent[vaccineTypes[j]];
 
          const percentContainer = document.createElement("div");
@@ -103,7 +114,9 @@ async function displayPercentageGraphs() {
             j,
             vaccineTypes,
             barColors,
-            vaccinePercent
+            vaccinePercent,
+            vaccinatedByVaccineType,
+            isPercentage
          );
 
          let toolTipContainer = document.createElement("span");
@@ -119,11 +132,6 @@ async function displayPercentageGraphs() {
          toolTipContainer.style.backgroundColor = `#${barColors[j]}`;
 
          percentContainer.append(toolTipContainer);
-
-         if (document.body.clientWidth < 763) {
-            percentContainer.innerHTML = "";
-            percentContainer.appendChild(toolTipContainer);
-         }
 
          allPercentContainer.appendChild(percentContainer);
       }
@@ -144,7 +152,6 @@ function displayVaccineTypeLegend() {
       const vaccineTypeSpan = document.createElement("span");
       vaccineTypeSpan.classList.add("vaccine-type-span");
       vaccineTypeSpan.style.setProperty("--backgroundColor", `#${barColors[i]}`);
-
       vaccineTypeSpan.innerHTML = `
       ${vaccineTypes[i]}
    `;
@@ -224,7 +231,9 @@ function setPercentContainerContent(
    j,
    vaccineTypes,
    barColors,
-   vaccinePercent
+   vaccinePercent,
+   vaccinatedByVaccineType,
+   isPercentage
 ) {
    percentContainer.classList.add("percent-container");
    percentContainer.setAttribute(
@@ -235,12 +244,25 @@ function setPercentContainerContent(
    percentContainer.style.backgroundColor = `#${barColors[j]}`;
    percentContainer.style.width = `${(vaccinePercent * 1000) / 100}px`;
 
-   percentContainer.innerHTML = `
+
+   if (document.body.clientWidth < 763) {
+      percentContainer.innerHTML = ``
+   } else {
+      if (isPercentage) {
+         percentContainer.innerHTML = `
          <span class="percent-content" >
             ${Math.round(vaccinePercent * 100) / 100} %
             </span >
          `;
+      } else {
+         percentContainer.innerHTML = `
+         <span class="percent-content" >
+            ${vaccinatedByVaccineType}
+            </span >
+         `;
+      }
 
+   }
    const borderRadius = "5px";
    if (j == 0) {
       percentContainer.style.borderBottomLeftRadius = borderRadius;
@@ -284,7 +306,7 @@ function setTooltipContainerContainerStyle(
 
 function setTooltipContainerContainerContent(toolTipContainer) { }
 
-displayPercentageGraphs();
+
 displayVaccineTypeLegend();
 
 window.addEventListener("resize", function () {
@@ -336,7 +358,32 @@ window.addEventListener("resize", function () {
             percentContainer.appendChild(toolTipContainer);
          }
          percentContainer.style.width = `${(vaccinePercent * document.documentElement.clientWidth - 100) / 100
-            } px`;
+            }px`;
       }
    }
 });
+
+
+
+const percentButtonId = "percentageButton-perPercent";
+const percentButton = document.getElementById(percentButtonId)
+percentButton.addEventListener("click",
+   function () {
+      const vaccinePercentageMainContainer = document.querySelector(
+         ".vaccine-percentage-main-container"
+      );
+      vaccinePercentageMainContainer.innerHTML = ''
+      displayPerPercentageGraph(percentButtonId);
+   })
+
+const vaccinatedButtonId = "vaccinatedButton-perPercent"
+document.getElementById(vaccinatedButtonId).addEventListener("click",
+   function () {
+      const vaccinePercentageMainContainer = document.querySelector(
+         ".vaccine-percentage-main-container"
+      );
+      vaccinePercentageMainContainer.innerHTML = ''
+      displayPerPercentageGraph(vaccinatedButtonId);
+   })
+
+displayPerPercentageGraph("percentageButton-perPercent");
