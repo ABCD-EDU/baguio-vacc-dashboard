@@ -93,6 +93,14 @@ function removeChildrenOfGraphContainers() {
     ageGrpContainer.innerHTML = '';
 }
 
+/**
+ * @author Arevalo, Lance Gabrielle S.
+ * 
+ * This function takes a document which will be looped through in order to
+ * find the maximum value.
+ * 
+ * @returns max - highest value in dataset
+ */
 function getMaxValue(data) {
     let max = 0;
     for (let [key, value] of Object.entries(data)) {
@@ -101,6 +109,12 @@ function getMaxValue(data) {
     return max;
 }
 
+/**
+ * @author Arevalo, Lance Gabrielle S.
+ * 
+ * This function creates the bar graph for the vaccine type category.
+ * It creates a container that contains the chart for vaccine:count.
+ */
 function initializeVaccineTypeData(location, isNumerical, isAscending) {
     let totalVaccinated = null
     if (!isNumerical) {
@@ -146,6 +160,12 @@ function initializeVaccineTypeData(location, isNumerical, isAscending) {
         })
 }
 
+/**
+ * @author Arevalo, Lance Gabrielle S.
+ * 
+ * This function creates the bar graph for the age group type category.
+ * It creates a container that contains the chart for group type:count.
+ */
 function initializeAgeGroupData(location, isNumerical, isAscending) {
     let totalVaccinated = null
     if (!isNumerical) {
@@ -200,6 +220,14 @@ function roundValue(value, totalVaccinated) {
     }
 }
 
+/**
+ * @author Arevalo, Lance Gabrielle S.
+ * 
+ * This functions styles a given component. To be used only for 
+ * bar chart's label.
+ * 
+ * @param {value to be styled} name 
+ */
 function addStyleToName(name) {
     name.style.display = "block";
     name.style.paddingTop = "0.8rem";
@@ -213,6 +241,17 @@ function addStyleToName(name) {
     name.style.color = "white";
 }
 
+/**
+ * @author Arevalo, Lance Gabrielle S.
+ * 
+ * This function is used to style the bar for the bar chart. 
+ * It will take three params in order to calculate the width
+ * based on the client's width
+ * 
+ * @param {component to be styled} bar 
+ * @param {to be used for computing width} value 
+ * @param {to be used for computing width} max 
+ */
 function addStyleToBar(bar, value, max) {
     const BASE_WIDTH = document.body.clientWidth - barSpacing;
     const NEW_WIDTH = (value / max) * BASE_WIDTH;
@@ -237,10 +276,9 @@ if (width <= 768) {
 }
 
 /**
- * @title MAGIC FUNCTION TO MAKE BAR CHART RESPONSIVE
+ * @author Arevalo, Lance Gabrielle S.
  * 
- * @how
- * onresize refreshes everytime the window size changes.
+ *  * onresize refreshes everytime the window size changes.
  * 
  * In order to reset the width of the bars, loop over each item
  * and compute new base width and the computed width.
