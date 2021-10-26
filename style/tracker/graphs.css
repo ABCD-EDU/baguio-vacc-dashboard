@@ -38,6 +38,12 @@
     justify-content: space-between;
 }
 
+#buttonsMainContainer2 {
+    margin: auto;
+    display: flex;
+    width: 80%;
+}
+
 .buttonsContainer {
     display: flex;
     gap: 4px;

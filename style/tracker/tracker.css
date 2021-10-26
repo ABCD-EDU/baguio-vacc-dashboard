@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../res/font/Montserrat-Regular.ttf);
+ }
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,7 +22,7 @@ hr {
 .titleBar {
     grid-area: title;
     margin: 0 auto;
-    height: 30px;
+    height: 40px;
     margin-top: 1rem;
     margin-bottom: 1rem;
  
@@ -25,27 +30,29 @@ hr {
     text-align: center;
     align-items: center;
     justify-content: center;
-    background: #12779D;
+    background: #ffffff;
     border-radius: 5px;
     width: 80%;
  }
 
- #barangayPerPercentMainContainer {
-    padding-bottom: 20px;
-    background: #12779D;
-}
+ .headerText {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    user-select: none;
+ 
+    /* identical to box height */
+    color: #222222;
+ }
+
+ #firstSectionContainer {
+     background-color: white;
+ }
 
 #barangayCategorySelectionMainContainer {
-    background: #12779D;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#perBrandMainContainer {
-    background: #12779D;
-}
-
-#perAgeGroupMainContainer {
-    background: #12779D;
 }
