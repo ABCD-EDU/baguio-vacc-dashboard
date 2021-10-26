@@ -4,6 +4,11 @@
 }
 
 @font-face {
+   font-family: MontserratBold;
+   src: url(../res/font/Montserrat-Bold.ttf);
+}
+
+@font-face {
    font-family: Roboto;
    src: url(../res/font/Roboto-Regular.ttf);
 }
@@ -16,12 +21,13 @@
 }
 
 .nav-link {
+   user-select: none;
    list-style: none;
 }
 
 .nav-link li {
    display: inline-block;
-   padding: 0px 20px;
+   padding: 0px 0px 0px 35px;
 }
 
 .nav-link a {
@@ -37,7 +43,7 @@
    content: '';
    display: block;
    margin: auto;
-   height: 6px;
+   height: 3px;
    width: 0px;
    background: #FFBF6B;
    transition: all 0.2s linear;
@@ -48,16 +54,20 @@
 }
 
 .logo a {
-   font-family: "Montserrat", sans-serif;
+   user-select: none;
+   font-family: "MontserratBold", sans-serif;
+   font-size: 20px;
+   font-weight: 500;
    color: #EDF0F1;
    text-decoration: none;
 }
 
 .logo h5 {
-   font-family: "Montserrat",
-      sans-serif;
-   color: #EDF0F1;
+   user-select: none;
+   font-family: "Montserrat", sans-serif;
+   font-size: 16px;
    font-weight: normal;
+   color: #EDF0F1;
 }
 
 
