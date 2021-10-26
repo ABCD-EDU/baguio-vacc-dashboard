@@ -40,10 +40,20 @@
         <div class="total-card4" id="total-card4"></div>
     </div>
 
+
     <div id="barangayPerPercentMainContainer">
         <div id="barangayVaccinePercentageHeader">
             <span> Top 10 barangay with most vaccinated residents and vaccine proportion</span>
         </div>
+        <div id="buttonsMainContainer">
+            <div class="buttonsContainer">
+                <button id="percentageButton-perBrand" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Percentage</button>
+                <button id="vaccinatedButton-perBrand" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Vaccinated</button>
+            </div>
+        </div>
+        <br>
         <div class="vaccine-percentage-main-container"></div>
         <div id="vaccine-type-legend-container"></div>
     </div>
