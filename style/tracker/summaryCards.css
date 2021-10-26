@@ -1,0 +1,62 @@
+#vac-summary-title{
+    font-family: Roboto;
+    font-size: 18px;
+    color: #ffffff;
+    margin-left: 10.5%;
+    margin-bottom: 5px;
+}
+
+.total-cards-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "totalCard1 totalCard2 totalCard3 totalCard4"
+    ;
+}
+
+@media only screen and (max-width:768px) {
+    .total-cards-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "totalCard1"
+        "totalCard2"
+        "totalCard3"
+        "totalCard4";
+    }
+}
+
+.total-card1, .total-card2, .total-card3, .total-card4 {
+   height: 190px; 
+   background: #FFD57B;
+   color: #222222;
+   font-family: Roboto;
+   border-radius: 5px;
+   padding: 0.8%;
+   padding-top: var(--padding);
+   padding-top: 2%;
+   text-align: center;
+}
+
+.total-card1 {
+    grid-area: totalCard1;
+    background-color: #1CB876;
+    color: #EDF0F1;
+}
+.total-card2 {
+    grid-area: totalCard2;
+}
+.total-card3 {
+    grid-area: totalCard3;
+}
+.total-card4 {
+    grid-area: totalCard4;
+}
+.total-card4 h2 {
+    font-size: 100%;
+}
