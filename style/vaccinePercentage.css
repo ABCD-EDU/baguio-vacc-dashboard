@@ -1,10 +1,9 @@
 .vaccine-percentage-main-container {
+   display: flex;
    flex-direction: column;
-   margin: 0 auto;
    font-size: 15px;
    justify-content: center;
-   background-color: #12779D;
-   width: 80%;
+   width: 90%;
 }
 
 .barangay-with-percentage-container {
@@ -13,53 +12,16 @@
    flex-direction: row;
    margin-top: 1px;
    margin-bottom: 10px;
-   margin-right: 0 auto;
+
 }
-
-@media (max-width: 763px) {
-   .barangay-with-percentage-container {
-      width: 100%;
-      flex-direction: column;
-   }
-
-   .barangay-name {
-      text-align: left;
-      justify-content: left;
-      width: 90vw;
-   }
-
-   .all-percent-container {
-      width: 97%
-   }
-}
-
-/* @media only screen and(max-width: 1080px) {
-   .barangay-with-percentage-container {
-      width: 100%;
-      flex-direction: row;
-   }
-
-   .barangay-name {
-      text-align: right;
-      justify-content: right;
-      width: 100px;
-   }
-
-   .all-percent-container {
-      max-width: 60vw;
-      width: 60%;
-      padding-left: '0px';
-   }
-} */
-
-
 
 .barangay-name {
    display: flex;
-   min-width: 10px;
-   /* align-items: center;
-   justify-content: right;*/
-   text-align: left;
+   width: 30%;
+   min-width: 80px;
+   align-items: center;
+   justify-content: right;
+   text-align: right;
    font-size: 15px;
    font-family: Montserrat;
    font-style: normal;
@@ -70,9 +32,7 @@
    display: flex;
    flex-grow: 1;
    margin-left: 10px;
-   margin-right: 0 auto;
-   ;
-   /* width: 1200px; */
+   width: 1000px;
    min-height: 40px;
 }
 
@@ -81,6 +41,7 @@
    flex-grow: 1;
    align-items: center;
    text-align: center;
+   margin: 0.1px;
    /* width: 100%; */
 }
 
@@ -101,9 +62,6 @@
    text-align: center;
    align-items: center;
    justify-content: center;
-   margin-left: auto;
-   padding-left: 'auto';
-   padding-right: 'auto';
 }
 
 
@@ -120,6 +78,7 @@
    width: 15px;
    height: 15px;
    border-radius: 50%;
+
    background-color: var(--backgroundColor);
 }
 
@@ -143,11 +102,8 @@
 }
 
 .percent-container .tooltip-container {
-
    visibility: hidden;
    width: 120px;
-   font-family: Montserrat;
-   font: 20px;
    color: #fff;
    border-radius: 6px;
    padding: 5px 0;

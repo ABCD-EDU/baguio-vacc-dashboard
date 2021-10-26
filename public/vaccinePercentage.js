@@ -63,6 +63,25 @@ async function displayPercentageGraphs() {
 
       if (document.body.clientWidth < 763) {
          barangayNameContainer.style.width = '60%'
+
+         barangayWithPercentContainer.style.width = '100%'
+         barangayWithPercentContainer.style.flexDirection = 'column'
+         barangayNameContainer.style.textAlign = 'left'
+         barangayNameContainer.style.justifyContent = 'left'
+         barangayNameContainer.style.width = '70%'
+
+         // barangayWithPercentContainer.style.
+         allPercentContainer.style.width = '97%'
+
+      } else {
+         barangayWithPercentContainer.style.flexDirection = 'row';
+         barangayNameContainer.style.textAlign = 'right'
+         barangayNameContainer.style.justifyContent = 'right'
+
+         allPercentContainer.style.maxWidth = `${document.body.clientWidth - 200}px`;
+         allPercentContainer.style.maxWidth = '1200px'
+         allPercentContainer.style.width = '70%'
+         allPercentContainer.style.paddingLeft = '0px'
       }
 
       for (let j = 0; j < vaccineTypes.length; j++) {

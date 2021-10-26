@@ -32,15 +32,23 @@
     <div class="titleBar"><span class="headerText">VACCINATION TRACKER</span></div>
 
     Summary Cards Section `
-     <h3 id="vac-summary-title">Baguio City Vaccination Summary</h3>
+    <h3 id="vac-summary-title">Baguio City Vaccination Summary</h3>
     <div class="total-cards-container">
         <div class="total-card1" id="total-card1"></div>
         <div class="total-card2" id="total-card2"></div>
         <div class="total-card3" id="total-card3"></div>
         <div class="total-card4" id="total-card4"></div>
     </div>
-    
-    
+
+    <div id="barangayPerPercentMainContainer">
+        <div id="barangayVaccinePercentageHeader">
+            <span>Percentages of the type of vaccine used in a barangay</span>
+        </div>
+        <div class="vaccine-percentage-main-container"></div>
+        <div id="vaccine-type-legend-container"></div>
+    </div>
+
+
     <div id="barangayCategorySelectionMainContainer">
 
         <div id="barangaySelectorContainer">
@@ -104,27 +112,25 @@
             </div>
         </div>
         <hr>
-    </div> 
-
-    <div id="barangayPerPercentMainContainer">
-        <div id="barangayVaccinePercentageHeader">
-            <span>Percentages of the type of vaccine used in a barangay</span>
-        </div>
-        <div class="vaccine-percentage-main-container"></div>
-        <div id="vaccine-type-legend-container"></div>
     </div>
+
+
 
 
     <div id="perBrandMainContainer">
         <div id="brgyContainerHeader"><span>Top Vaccinations per Brand</span></div>
         <div id="buttonsMainContainer">
             <div class="buttonsContainer">
-                <button id="percentageButton-perBrand" class="graphButton" onClick="onGraphButtonClick(this.id)">Percentage</button>
-                <button id="vaccinatedButton-perBrand" class="graphButton" onClick="onGraphButtonClick(this.id)">Vaccinated</button>
+                <button id="percentageButton-perBrand" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Percentage</button>
+                <button id="vaccinatedButton-perBrand" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Vaccinated</button>
             </div>
             <div class="buttonsContainer">
-                <button id="ascendingButton-perBrand" class="graphButton" onClick="onGraphButtonClick(this.id)">Ascending</button>
-                <button id="descendingButton-perBrand" class="graphButton" onClick="onGraphButtonClick(this.id)">Descending</button>
+                <button id="ascendingButton-perBrand" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Ascending</button>
+                <button id="descendingButton-perBrand" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Descending</button>
             </div>
         </div>
         <div id="brgyDataFlip"></div>
@@ -137,12 +143,16 @@
         <div id="ageGroupContainerHeader"><span>Total Vaccinations per Age Group</span></div>
         <div id="buttonsMainContainer">
             <div class="buttonsContainer">
-                <button id="percentageButton-perAge" class="graphButton" onClick="onGraphButtonClick(this.id)">Percentage</button>
-                <button id="vaccinatedButton-perAge" class="graphButton" onClick="onGraphButtonClick(this.id)">Vaccinated</button>
+                <button id="percentageButton-perAge" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Percentage</button>
+                <button id="vaccinatedButton-perAge" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Vaccinated</button>
             </div>
             <div class="buttonsContainer">
-                <button id="ascendingButton-perAge" class="graphButton" onClick="onGraphButtonClick(this.id)">Ascending</button>
-                <button id="descendingButton-perAge" class="graphButton" onClick="onGraphButtonClick(this.id)">Descending</button>
+                <button id="ascendingButton-perAge" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Ascending</button>
+                <button id="descendingButton-perAge" class="graphButton"
+                    onClick="onGraphButtonClick(this.id)">Descending</button>
             </div>
         </div>
         <div id="ageGroupDataFlip"></div>
