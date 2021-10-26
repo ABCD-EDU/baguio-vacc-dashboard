@@ -1,12 +1,19 @@
 // import { getBarangayNames, getBarangayVaccinatedData, getVaccineTypeData, getData } from './helper/jsonParser.js'
 
+const topNVaccinatedBarangays = await getTopNVaccinatedBarangays(10);
 
-const barangayNames = await getBarangayNames()
+const barangayNames = []
+
+for (let key in topNVaccinatedBarangays) {
+   barangayNames.push(topNVaccinatedBarangays[key].name);
+}
+// console.log(barangayNames);
 
 let vaccinatedData = {}//All Barangays Vaccinated
 let vaccineTypeData = {} //All Barangays Vaccine Type 
 let vaccineTypeDataInPercent = {} // All Barangays Vaccine Type Percentage
-console.log();
+
+
 const vaccineTypes = ["Astrazeneca", "Sputnik", "Pfizer", "Moderna", "Johnson & Johnson's Janssen", "Gamaleya", "Novavax", "Sinovac",]
 // for (var i = 0; i < barangayNames.length; i++) {
 for (var i = 0; i < 10; i++) {
@@ -15,6 +22,8 @@ for (var i = 0; i < 10; i++) {
    vaccineTypeData[barangayNames[i]] = await getVaccineTypeData(barangayNames[i]);
 }
 
+console.log(vaccinatedData);
+console.log(vaccineTypeData);
 
 function getPercentages(vaccineTypeData) {
    const output = {}
@@ -166,7 +175,6 @@ function displayVaccineTypeLegend() {
 
 displayPercentageGraphs();
 displayVaccineTypeLegend();
-const test = await getAllVaccinatedPerBarangay(true);
 
 
 window.addEventListener("resize", function () {
