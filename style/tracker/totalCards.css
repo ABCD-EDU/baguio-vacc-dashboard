@@ -5,7 +5,7 @@
     font-family: Roboto;
 }
 
-.total-cards-container {
+#total-cards-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@
     min-width: 500px;
 }
 
-.total-card1{
+#total-card1{
    background: #1CB876;
    border-radius: 5px;
    padding-top: var(--padding);
@@ -28,7 +28,7 @@
    padding-top: 2%;
 }
 
-.total-card2,.total-card3, .total-card4 {
+#total-card2,#total-card3, #total-card4 {
    background: #FFD57B;
    border-radius: 5px;
    padding-top: var(--padding);
@@ -41,6 +41,6 @@
    padding-top: 2%;
 }
 
-.total-card4 h2 {
+#total-card4 h2 {
     font-size: 100%;
 }

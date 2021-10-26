@@ -32,13 +32,25 @@
     <div class="titleBar"><span class="headerText">VACCINATION TRACKER</span></div>
 
     <!-- Summary Cards Section -->
-    <!-- <h3 id="vac-summary-title">Baguio City Vaccination Summary</h3>
-    <div class="total-cards-container">
-        <div class="total-card1" id="total-card1"></div>
-        <div class="total-card2" id="total-card2"></div>
-        <div class="total-card3" id="total-card3"></div>
-        <div class="total-card4" id="total-card4"></div>
-    </div> -->
+    <h3 id="vac-summary-title">Baguio City Vaccination Summary</h3>
+    <div id="total-cards-container">
+        <div id="total-card1">
+            <h5>Total Vaccinated Individuals <br>(Baguio City)</h5>
+            <br>
+        </div>
+        <div id="total-card2">
+            <h5>% of Vaccinated Residents from Priority Groups (A1 - A5)</h5>
+            <br>
+        </div>
+        <div id="total-card3">
+            <h5>Most Vaccinated Priority Group <br>(A1 - A5)</h5>
+            <br>
+        </div>
+        <div id="total-card4">
+            <h5>Barangay with the most vaccinated residents</h5>
+            <br>
+        </div>
+    </div>
 
     <!-- <div id="barangayCategorySelectionMainContainer">
 
@@ -152,6 +164,7 @@
     <script defer src="./helper/jsonParser.js"></script>
     <script defer src="vaccinePercentage.js" type="module"></script>
     <script defer src="tracker.js"></script>
+    <script src="totalCards.js" type="module"></script>
 </body>
 
 </html>
