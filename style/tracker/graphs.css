@@ -1,17 +1,21 @@
-#brgyContainer, #ageGroupContainer {
+#brgyContainer,
+#ageGroupContainer {
     margin: 0 auto;
     display: inline-block;
 }
 
-#perBrandMainContainer, #perAgeGroupMainContainer {
+#perBrandMainContainer,
+#perAgeGroupMainContainer {
     margin: 0 auto;
 }
 
-#brgyContainerHeader, #ageGroupContainerHeader {
+#brgyContainerHeader,
+#ageGroupContainerHeader {
     display: flex;
 }
 
-#brgyContainerHeader > span, #ageGroupContainerHeader > span {
+#brgyContainerHeader>span,
+#ageGroupContainerHeader>span {
     margin: 1.5rem auto;
 
     font-family: Montserrat;
@@ -24,12 +28,9 @@
     color: white;
 }
 
-#brgyRow, #ageGroupRow {
+#brgyRow,
+#ageGroupRow {
     display: flex;
-}
-
-#brgyRow > #vaccine {
-    width: 300px;
 }
 
 #buttonsContainer {
@@ -52,23 +53,37 @@
 }
 
 @media (max-width: 768px) {
-    #perBrandMainContainer, #perAgeGroupMainContainer {
+
+    #perBrandMainContainer,
+    #perAgeGroupMainContainer {
         width: 100%;
         display: block;
     }
-    
-    #brgyRow, #ageGroupRow {
+
+    #brgyRow,
+    #ageGroupRow {
         display: block;
         align-content: center;
     }
 
-    #vaccine {
-        margin: 0 50%;
+    #ageGroupContainer,
+    #brgyContainer {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .vaccine,
+    .age {
+        flex-shrink: 0;
+        margin: 0 auto;
     }
 }
 
 @media only screen and (max-width: 1080px) {
-    #perBrandMainContainer, #perAgeGroupMainContainer {
+
+    #perBrandMainContainer,
+    #perAgeGroupMainContainer {
         width: 100%;
         display: block;
     }

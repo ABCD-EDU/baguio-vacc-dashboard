@@ -62,17 +62,8 @@ async function displayPercentageGraphs() {
       allPercentContainer.style.maxWidth = '1200px'
 
       if (document.body.clientWidth < 763) {
-         barangayWithPercentContainer.style.width = '100%'
-         barangayWithPercentContainer.style.flexDirection = 'column'
-         barangayNameContainer.style.textAlign = 'left'
-         barangayNameContainer.style.justifyContent = 'left'
-         barangayNameContainer.style.width = '70%'
-
-         // barangayWithPercentContainer.style.
-         allPercentContainer.style.width = '100%'
-         allPercentContainer.style.paddingRight = '0px'
+         barangayNameContainer.style.width = '60%'
       }
-      // allPercentContainer.style.setProperty("--currentWindowWidth", '1000')
 
       for (let j = 0; j < vaccineTypes.length; j++) {
 
@@ -158,9 +149,6 @@ displayPercentageGraphs();
 displayVaccineTypeLegend();
 const test = await getAllVaccinatedPerBarangay(true);
 
-function resizeComponentsOnPhoneView() {
-
-}
 
 window.addEventListener("resize", function () {
 
@@ -175,21 +163,16 @@ window.addEventListener("resize", function () {
       // Get container that contains all the percentage graph
       const allPercentContainer = document.getElementById(`all-percent-container-${barangayNames[i]}`);
 
-
+      console.log(barangayNameContainer.style.textAlign);
       if (document.body.clientWidth < 763) {
          barangayWithPercentContainer.style.width = '100%'
          barangayWithPercentContainer.style.flexDirection = 'column'
-         barangayWithPercentContainer.style.paddingRight = '-100%'
-
          barangayNameContainer.style.textAlign = 'left'
          barangayNameContainer.style.justifyContent = 'left'
          barangayNameContainer.style.width = '70%'
 
          // barangayWithPercentContainer.style.
-         allPercentContainer.style.width = '100%'
-         allPercentContainer.style.paddingRight = '100px'
-
-         barangayWithPercentContainer.style.width = 'auto'
+         allPercentContainer.style.width = '97%'
 
       } else {
          barangayWithPercentContainer.style.flexDirection = 'row';
@@ -197,9 +180,9 @@ window.addEventListener("resize", function () {
          barangayNameContainer.style.justifyContent = 'right'
 
          allPercentContainer.style.maxWidth = `${document.body.clientWidth - 200}px`;
-         // allPercentContainer.style.maxWidth = '1200px'
+         allPercentContainer.style.maxWidth = '1200px'
          allPercentContainer.style.width = '70%'
-         allPercentContainer.style.paddingRight = '15%'
+         allPercentContainer.style.paddingLeft = '0px'
       }
       // Fetch the percentages of vaccines in a barangay
       const barangayVaccineTypeDataInPercent = vaccineTypeDataInPercent[barangayNames[i]]
