@@ -28,11 +28,16 @@
     display: flex;
 }
 
-#buttonsContainer {
+#buttonsMainContainer {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0px auto;
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: 4px;
 }
 
 .graphButton {
@@ -43,7 +48,7 @@
     font-weight: 500;
     width: 130px;
     padding: 0.5rem 1rem;
-    margin: 0px 0.5rem;
+    /* margin: 0px 0.5rem; */
     border-radius: 1000px;
 }
 
@@ -67,6 +72,17 @@
     .vaccine, .age {
         flex-shrink: 0;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 630px) {
+    #buttonsMainContainer {
+        justify-content: space-evenly;
+
+    }
+    .buttonsContainer {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
