@@ -43,24 +43,46 @@ async function getCityData() {
     return data;
 }
 
-async function getVaccineTypeData(location) {
+async function getVaccineTypeData(location, isAscending) {
+    let data = null;
     if (location === "Baguio City") {
-        const data = await getCityData();
-        return data.vaccineType;
+        data = await getCityData();
+    }else {
+        data = await getBarangayData(location);
     }
-
-    const barangayData = await getBarangayData(location);
-    return barangayData.vaccineType;
+    data = sortAccordingToKeys(data.vaccineType, isAscending);
+    return data;
 }
 
-async function getAgeGroupData(location) {
+async function getAgeGroupData(location, isAscending) {
+    let data = null;
     if (location === "Baguio City") {
-        const data = await getCityData();
-        return data.ageGroup;
+        data = await getCityData();
+    } else {
+        data = await getBarangayData(location);
     }
-    
-    const barangayData = await getBarangayData(location);
-    return barangayData.ageGroup;
+    data = sortAccordingToKeys(data.ageGroup, isAscending);
+    return data;
+}
+
+async function getPopulation(location) {
+    let data = null;
+    if (location === "Baguio City") {
+        data = await getCityData();
+    } else {
+        data = await getBarangayData(location);
+    }
+    return data.population;
+}
+
+async function getTotalVaccinated(location) {
+    let data = null;
+    if (location === "Baguio City") {
+        data = await getCityData();
+    } else {
+        data = await getBarangayData(location);
+    }
+    return data.vaccinated;
 }
 
 async function getCategoryData(location) {
@@ -105,4 +127,26 @@ async function getMaxBarangayVaccine(location) {
     //     console.log(err)
     // })
 
+}
+
+function sortAccordingToKeys(object, isAscending) {
+    let sortable = [];
+    for (let obj in object) {
+        sortable.push([obj, object[obj]]);
+    }
+    if (isAscending) {
+        sortable.sort(function(a, b) {
+            return a[1] - b[1];
+        })
+    }else {
+        sortable.sort(function (a, b) {
+            return b[1] - a[1];
+        })
+    }
+    let sorted = {};
+    for (let i = 0; i < sortable.length; i++) {
+        const element = sortable[i];
+        sorted[element[0]] = element[1];
+    }
+    return sorted;
 }
