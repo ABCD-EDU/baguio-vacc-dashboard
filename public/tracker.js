@@ -4,11 +4,52 @@ var vaccineMax = 0;
 var ageGroupMax = 0;
 var barSpacing = 0;
 var defaultLocation = "Baguio City";
+var selectedLocation = "Baguio City";
+
+var brandGraphNumerical = true;
+var ageGraphNumerical = true;
+var ageIsAscending = true;
+var brandIsAscending = true;
 
 initializeBarangaySelector();
 
 function onGraphButtonClick(id) {
-    alert(id)
+    let ageClicked = false;
+    let brandClicked = false;
+    if (id === "percentageButton-perAge") {
+        ageGraphNumerical = false;
+        ageClicked = true;
+    } else if (id === "vaccinatedButton-perAge") {
+        ageGraphNumerical = true;
+        ageClicked = true;
+    } else if (id === "ascendingButton-perAge") {
+        ageIsAscending = true;
+        ageClicked = true;
+    } else if (id === "descendingButton-perAge") {
+        ageIsAscending = false;
+        ageClicked = true;
+    } else if (id === "percentageButton-perBrand") {
+        brandGraphNumerical = false;
+        brandClicked = true;
+    } else if (id === "vaccinatedButton-perBrand") {
+        brandGraphNumerical = true;
+        brandClicked = true;
+    } else if (id === "ascendingButton-perBrand") {
+        brandIsAscending = true;
+        brandClicked = true;
+    } else if (id === "descendingButton-perBrand") {
+        brandIsAscending = false;
+        brandClicked = true;
+    }
+    if (ageClicked === true) {
+        const ageGrpContainer = document.getElementById("ageGroupContainer");
+        ageGrpContainer.innerHTML = '';
+        initializeAgeGroupData(selectedLocation, ageGraphNumerical, ageIsAscending);
+    }else if (brandClicked === true); {
+        const ageGrpContainer = document.getElementById("brgyContainer");
+        ageGrpContainer.innerHTML = '';
+        initializeVaccineTypeData(selectedLocation, brandGraphNumerical, brandIsAscending);
+    }
 }
 
 async function initializeBarangaySelector() {
@@ -39,9 +80,10 @@ async function onBarangayChange() {
         let category = keys[i];
         document.getElementById(category + "-Data").textContent = data[category];
     }
+    selectedLocation = barangay;
     removeChildrenOfGraphContainers();
-    initializeVaccineTypeData(barangay);
-    initializeAgeGroupData(barangay);
+    initializeVaccineTypeData(barangay, brandGraphNumerical, brandIsAscending);
+    initializeAgeGroupData(barangay, ageGraphNumerical, ageIsAscending);
 }
 
 function removeChildrenOfGraphContainers() {
@@ -59,8 +101,14 @@ function getMaxValue(data) {
     return max;
 }
 
-function initializeVaccineTypeData(location) {
-    getVaccineTypeData(location)
+function initializeVaccineTypeData(location, isNumerical, isAscending) {
+    let totalVaccinated = null
+    if (!isNumerical) {
+        getTotalVaccinated(location).then(data => {
+            totalVaccinated = data;
+        })
+    }
+    getVaccineTypeData(location, isAscending)
         .then(data => {
             const brgyContainer = document.getElementById("brgyContainer");
             var count = 0;
@@ -75,9 +123,13 @@ function initializeVaccineTypeData(location) {
 
                 nameContainer.className = "vaccine";
                 barContainer.className = "bar";
-
+                
                 nameContainer.innerHTML += `${key}`;
-                barContainer.innerHTML += `${value}`;
+                if (!isNumerical) {
+                    barContainer.innerHTML += `${roundValue(value, totalVaccinated)}%`;
+                }else {
+                    barContainer.innerHTML += `${value}`;
+                }
 
                 addStyleToName(nameContainer);
                 addStyleToBar(barContainer, value, vaccineMax);
@@ -94,8 +146,14 @@ function initializeVaccineTypeData(location) {
         })
 }
 
-function initializeAgeGroupData(location) {
-    getAgeGroupData(location)
+function initializeAgeGroupData(location, isNumerical, isAscending) {
+    let totalVaccinated = null
+    if (!isNumerical) {
+        getTotalVaccinated(location).then(data => {
+            totalVaccinated = data;
+        })
+    }
+    getAgeGroupData(location, isAscending)
         .then(data => {
             const brgyContainer = document.getElementById("ageGroupContainer");
             var count = 0;
@@ -112,7 +170,11 @@ function initializeAgeGroupData(location) {
                 barContainer.className = "ageBar";
 
                 nameContainer.innerHTML += `${key}`;
-                barContainer.innerHTML += `${value}`;
+                if (!isNumerical) {
+                    barContainer.innerHTML += `${roundValue(value, totalVaccinated)}%`;
+                } else {
+                    barContainer.innerHTML += `${value}`;
+                }
 
                 addStyleToName(nameContainer);
                 addStyleToBar(barContainer, value, ageGroupMax);
@@ -127,6 +189,15 @@ function initializeAgeGroupData(location) {
         .catch(err => {
             console.log(err);
         })
+}
+
+function roundValue(value, totalVaccinated) {
+    const val = (value / totalVaccinated) * 100;
+    if (val < 1 && val != 0) {
+        return val.toFixed(2);
+    }else {
+        return Math.round(val);
+    }
 }
 
 function addStyleToName(name) {
