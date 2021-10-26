@@ -18,6 +18,11 @@ vaccine_type_data = {}
 age_group_data = {}
 category_data = {}
 per_sex_data = {}
+
+import os
+print('curr working directory')
+print(os.getcwd())
+
 with open('total.csv','r') as file:
     lines = csv.reader(file, delimiter=",", quotechar='"')
     for index, line in enumerate(lines):
@@ -50,11 +55,8 @@ data = []
 brgy_data = {}
 curr_id_number = 1
 brgy_data["id"] = curr_id_number
-import os
-print('curr working directory')
-print(os.getcwd())
-with open('data.csv', 'r') as file:
 
+with open('data.csv', 'r') as file:
     lines = csv.reader(file, delimiter= ',', quotechar='"')
     for index, line in enumerate(lines):
         if index < 2:
@@ -67,9 +69,10 @@ with open('data.csv', 'r') as file:
         brgy_data["vaccinated"] = values[2]
         vaccine_type_data = {}
         for index_inner, vaccine_type in enumerate(vaccine_type_list):
-            vaccine_type_data[vaccine_type] = values[index_inner+4]
-        brgy_data["vaccineType"] = vaccine_type_data
+            vaccine_type_data[vaccine_type] = int(values[index_inner+4].replace(',', ''))
 
+        brgy_data["vaccineType"] = vaccine_type_data
+        print(f"data: {brgy_data['vaccineType']}")
         age_group_data = {}
         for index_inner, age_group in enumerate(age_group_list):
             age_group_data[age_group] = values[index_inner+13]

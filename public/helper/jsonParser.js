@@ -9,8 +9,9 @@ async function getBarangayNames() {
     }
     return names
 }
-async function getMostVaccinatedBarangayNames(barangayCountGiven) {
-
+async function getTopNVaccinatedBarangays(barangayCountGiven) {
+    const output = await getAllVaccinatedPerBarangay(true)
+    return output.slice(0, barangayCountGiven)
 }
 
 async function getAllVaccinatedPerBarangay(isSorted) {
@@ -23,28 +24,39 @@ async function getAllVaccinatedPerBarangay(isSorted) {
 
         const name = brgyData[i].name;
         const vaccinated = brgyData[i].vaccinated;
-        
-        output["name"] = name;
-        output["vaccinated"] = vaccinated
 
-        console.log(output);
+        output["name"] = name;
+        output["vaccinated"] = parseInt(vaccinated, 10)
         list.push(output);
     }
 
-    const sortedList = []
     if (isSorted) {
-        sortJSONByValue(list, 'vaccinated', true)
+        list.sort(sortJSONByValue("vaccinated", false))
+        return list
+    } else {
+        return list
     };
-    console.log(list);
-
-
-
 }
 
-function sortJSONByValue(list, prop, isAscending) {
-    list.sort(function (a, b) {
-        return a.vaccinated.localeCompare(b.vaccinated);
-    });
+
+function sortJSONByValue(prop, isAscending) {
+    return function (a, b) {
+        if (isAscending) {
+            if (a[prop] > b[prop]) {
+                return 1;
+            } else if (a[prop] < b[prop]) {
+                return -1;
+            }
+            return 0;
+        } else {
+            if (a[prop] < b[prop]) {
+                return 1;
+            } else if (a[prop] > b[prop]) {
+                return -1;
+            }
+            return 0;
+        }
+    }
 }
 
 
@@ -85,7 +97,7 @@ async function getVaccineTypeData(location, isAscending) {
     let data = null;
     if (location === "Baguio City") {
         data = await getCityData();
-    }else {
+    } else {
         data = await getBarangayData(location);
     }
     data = sortAccordingToKeys(data.vaccineType, isAscending);
@@ -173,10 +185,10 @@ function sortAccordingToKeys(object, isAscending) {
         sortable.push([obj, object[obj]]);
     }
     if (isAscending) {
-        sortable.sort(function(a, b) {
+        sortable.sort(function (a, b) {
             return a[1] - b[1];
         })
-    }else {
+    } else {
         sortable.sort(function (a, b) {
             return b[1] - a[1];
         })

@@ -51,14 +51,14 @@
             "population": "666",
             "vaccinated": "446",
             "vaccineType": {
-                "Astrazeneca": "135",
-                "Sputnik": "123",
-                "Pfizer": "59",
-                "Moderna": "2",
-                "Johnson & Johnson's Janssen": "54",
-                "Gamaleya": "19",
-                "Novavax": "25",
-                "Sinovac": "29"
+                "Astrazeneca": 135,
+                "Sputnik": 123,
+                "Pfizer": 59,
+                "Moderna": 2,
+                "Johnson & Johnson's Janssen": 54,
+                "Gamaleya": 19,
+                "Novavax": 25,
+                "Sinovac": 29
             },
             "ageGroup": {
                 "80+": "80",
@@ -98,14 +98,14 @@
             "population": "685",
             "vaccinated": "435",
             "vaccineType": {
-                "Astrazeneca": "126",
-                "Sputnik": "65",
-                "Pfizer": "99",
-                "Moderna": "27",
-                "Johnson & Johnson's Janssen": "44",
-                "Gamaleya": "0",
-                "Novavax": "33",
-                "Sinovac": "41"
+                "Astrazeneca": 126,
+                "Sputnik": 65,
+                "Pfizer": 99,
+                "Moderna": 27,
+                "Johnson & Johnson's Janssen": 44,
+                "Gamaleya": 0,
+                "Novavax": 33,
+                "Sinovac": 41
             },
             "ageGroup": {
                 "80+": "16",
@@ -145,14 +145,14 @@
             "population": "1524",
             "vaccinated": "473",
             "vaccineType": {
-                "Astrazeneca": "137",
-                "Sputnik": "166",
-                "Pfizer": "22",
-                "Moderna": "71",
-                "Johnson & Johnson's Janssen": "33",
-                "Gamaleya": "18",
-                "Novavax": "1",
-                "Sinovac": "25"
+                "Astrazeneca": 137,
+                "Sputnik": 166,
+                "Pfizer": 22,
+                "Moderna": 71,
+                "Johnson & Johnson's Janssen": 33,
+                "Gamaleya": 18,
+                "Novavax": 1,
+                "Sinovac": 25
             },
             "ageGroup": {
                 "80+": "86",
@@ -192,14 +192,14 @@
             "population": "3321",
             "vaccinated": "1247",
             "vaccineType": {
-                "Astrazeneca": "518",
-                "Sputnik": "201",
-                "Pfizer": "246",
-                "Moderna": "19",
-                "Johnson & Johnson's Janssen": "28",
-                "Gamaleya": "34",
-                "Novavax": "8",
-                "Sinovac": "193"
+                "Astrazeneca": 518,
+                "Sputnik": 201,
+                "Pfizer": 246,
+                "Moderna": 19,
+                "Johnson & Johnson's Janssen": 28,
+                "Gamaleya": 34,
+                "Novavax": 8,
+                "Sinovac": 193
             },
             "ageGroup": {
                 "80+": "130",
@@ -239,14 +239,14 @@
             "population": "1086",
             "vaccinated": "995",
             "vaccineType": {
-                "Astrazeneca": "104",
-                "Sputnik": "203",
-                "Pfizer": "273",
-                "Moderna": "68",
-                "Johnson & Johnson's Janssen": "137",
-                "Gamaleya": "40",
-                "Novavax": "83",
-                "Sinovac": "87"
+                "Astrazeneca": 104,
+                "Sputnik": 203,
+                "Pfizer": 273,
+                "Moderna": 68,
+                "Johnson & Johnson's Janssen": 137,
+                "Gamaleya": 40,
+                "Novavax": 83,
+                "Sinovac": 87
             },
             "ageGroup": {
                 "80+": "58",
@@ -286,14 +286,14 @@
             "population": "2906",
             "vaccinated": "1954",
             "vaccineType": {
-                "Astrazeneca": "559",
-                "Sputnik": "639",
-                "Pfizer": "50",
-                "Moderna": "112",
-                "Johnson & Johnson's Janssen": "98",
-                "Gamaleya": "129",
-                "Novavax": "1",
-                "Sinovac": "366"
+                "Astrazeneca": 559,
+                "Sputnik": 639,
+                "Pfizer": 50,
+                "Moderna": 112,
+                "Johnson & Johnson's Janssen": 98,
+                "Gamaleya": 129,
+                "Novavax": 1,
+                "Sinovac": 366
             },
             "ageGroup": {
                 "80+": "368",
@@ -333,14 +333,14 @@
             "population": "13823",
             "vaccinated": "10566",
             "vaccineType": {
-                "Astrazeneca": "507",
-                "Sputnik": "4170",
-                "Pfizer": "1497",
-                "Moderna": "1826",
-                "Johnson & Johnson's Janssen": "775",
-                "Gamaleya": "640",
-                "Novavax": "210",
-                "Sinovac": "941"
+                "Astrazeneca": 507,
+                "Sputnik": 4170,
+                "Pfizer": 1497,
+                "Moderna": 1826,
+                "Johnson & Johnson's Janssen": 775,
+                "Gamaleya": 640,
+                "Novavax": 210,
+                "Sinovac": 941
             },
             "ageGroup": {
                 "80+": "1231",
@@ -380,14 +380,14 @@
             "population": "1933",
             "vaccinated": "1671",
             "vaccineType": {
-                "Astrazeneca": "709",
-                "Sputnik": "115",
-                "Pfizer": "244",
-                "Moderna": "103",
-                "Johnson & Johnson's Janssen": "37",
-                "Gamaleya": "72",
-                "Novavax": "186",
-                "Sinovac": "205"
+                "Astrazeneca": 709,
+                "Sputnik": 115,
+                "Pfizer": 244,
+                "Moderna": 103,
+                "Johnson & Johnson's Janssen": 37,
+                "Gamaleya": 72,
+                "Novavax": 186,
+                "Sinovac": 205
             },
             "ageGroup": {
                 "80+": "284",
@@ -427,14 +427,14 @@
             "population": "377",
             "vaccinated": "351",
             "vaccineType": {
-                "Astrazeneca": "160",
-                "Sputnik": "47",
-                "Pfizer": "43",
-                "Moderna": "32",
-                "Johnson & Johnson's Janssen": "33",
-                "Gamaleya": "18",
-                "Novavax": "0",
-                "Sinovac": "18"
+                "Astrazeneca": 160,
+                "Sputnik": 47,
+                "Pfizer": 43,
+                "Moderna": 32,
+                "Johnson & Johnson's Janssen": 33,
+                "Gamaleya": 18,
+                "Novavax": 0,
+                "Sinovac": 18
             },
             "ageGroup": {
                 "80+": "58",
@@ -474,14 +474,14 @@
             "population": "728",
             "vaccinated": "310",
             "vaccineType": {
-                "Astrazeneca": "88",
-                "Sputnik": "17",
-                "Pfizer": "53",
-                "Moderna": "3",
-                "Johnson & Johnson's Janssen": "25",
-                "Gamaleya": "16",
-                "Novavax": "54",
-                "Sinovac": "54"
+                "Astrazeneca": 88,
+                "Sputnik": 17,
+                "Pfizer": 53,
+                "Moderna": 3,
+                "Johnson & Johnson's Janssen": 25,
+                "Gamaleya": 16,
+                "Novavax": 54,
+                "Sinovac": 54
             },
             "ageGroup": {
                 "80+": "61",
@@ -521,14 +521,14 @@
             "population": "1053",
             "vaccinated": "906",
             "vaccineType": {
-                "Astrazeneca": "44",
-                "Sputnik": "137",
-                "Pfizer": "230",
-                "Moderna": "129",
-                "Johnson & Johnson's Janssen": "97",
-                "Gamaleya": "83",
-                "Novavax": "33",
-                "Sinovac": "153"
+                "Astrazeneca": 44,
+                "Sputnik": 137,
+                "Pfizer": 230,
+                "Moderna": 129,
+                "Johnson & Johnson's Janssen": 97,
+                "Gamaleya": 83,
+                "Novavax": 33,
+                "Sinovac": 153
             },
             "ageGroup": {
                 "80+": "179",
@@ -568,14 +568,14 @@
             "population": "28",
             "vaccinated": "28",
             "vaccineType": {
-                "Astrazeneca": "10",
-                "Sputnik": "2",
-                "Pfizer": "7",
-                "Moderna": "0",
-                "Johnson & Johnson's Janssen": "1",
-                "Gamaleya": "4",
-                "Novavax": "1",
-                "Sinovac": "3"
+                "Astrazeneca": 10,
+                "Sputnik": 2,
+                "Pfizer": 7,
+                "Moderna": 0,
+                "Johnson & Johnson's Janssen": 1,
+                "Gamaleya": 4,
+                "Novavax": 1,
+                "Sinovac": 3
             },
             "ageGroup": {
                 "80+": "1",
@@ -615,14 +615,14 @@
             "population": "13092",
             "vaccinated": "2481",
             "vaccineType": {
-                "Astrazeneca": "285",
-                "Sputnik": "305",
-                "Pfizer": "377",
-                "Moderna": "430",
-                "Johnson & Johnson's Janssen": "250",
-                "Gamaleya": "117",
-                "Novavax": "320",
-                "Sinovac": "397"
+                "Astrazeneca": 285,
+                "Sputnik": 305,
+                "Pfizer": 377,
+                "Moderna": 430,
+                "Johnson & Johnson's Janssen": 250,
+                "Gamaleya": 117,
+                "Novavax": 320,
+                "Sinovac": 397
             },
             "ageGroup": {
                 "80+": "190",
@@ -662,14 +662,14 @@
             "population": "10867",
             "vaccinated": "5353",
             "vaccineType": {
-                "Astrazeneca": "679",
-                "Sputnik": "805",
-                "Pfizer": "1711",
-                "Moderna": "465",
-                "Johnson & Johnson's Janssen": "62",
-                "Gamaleya": "93",
-                "Novavax": "760",
-                "Sinovac": "778"
+                "Astrazeneca": 679,
+                "Sputnik": 805,
+                "Pfizer": 1711,
+                "Moderna": 465,
+                "Johnson & Johnson's Janssen": 62,
+                "Gamaleya": 93,
+                "Novavax": 760,
+                "Sinovac": 778
             },
             "ageGroup": {
                 "80+": "706",
@@ -709,14 +709,14 @@
             "population": "768",
             "vaccinated": "594",
             "vaccineType": {
-                "Astrazeneca": "277",
-                "Sputnik": "51",
-                "Pfizer": "58",
-                "Moderna": "46",
-                "Johnson & Johnson's Janssen": "73",
-                "Gamaleya": "6",
-                "Novavax": "17",
-                "Sinovac": "66"
+                "Astrazeneca": 277,
+                "Sputnik": 51,
+                "Pfizer": 58,
+                "Moderna": 46,
+                "Johnson & Johnson's Janssen": 73,
+                "Gamaleya": 6,
+                "Novavax": 17,
+                "Sinovac": 66
             },
             "ageGroup": {
                 "80+": "118",
@@ -756,14 +756,14 @@
             "population": "2492",
             "vaccinated": "2163",
             "vaccineType": {
-                "Astrazeneca": "651",
-                "Sputnik": "405",
-                "Pfizer": "207",
-                "Moderna": "354",
-                "Johnson & Johnson's Janssen": "6",
-                "Gamaleya": "125",
-                "Novavax": "19",
-                "Sinovac": "396"
+                "Astrazeneca": 651,
+                "Sputnik": 405,
+                "Pfizer": 207,
+                "Moderna": 354,
+                "Johnson & Johnson's Janssen": 6,
+                "Gamaleya": 125,
+                "Novavax": 19,
+                "Sinovac": 396
             },
             "ageGroup": {
                 "80+": "362",
@@ -803,14 +803,14 @@
             "population": "1099",
             "vaccinated": "944",
             "vaccineType": {
-                "Astrazeneca": "403",
-                "Sputnik": "186",
-                "Pfizer": "87",
-                "Moderna": "57",
-                "Johnson & Johnson's Janssen": "48",
-                "Gamaleya": "19",
-                "Novavax": "59",
-                "Sinovac": "85"
+                "Astrazeneca": 403,
+                "Sputnik": 186,
+                "Pfizer": 87,
+                "Moderna": 57,
+                "Johnson & Johnson's Janssen": 48,
+                "Gamaleya": 19,
+                "Novavax": 59,
+                "Sinovac": 85
             },
             "ageGroup": {
                 "80+": "167",
@@ -850,14 +850,14 @@
             "population": "644",
             "vaccinated": "556",
             "vaccineType": {
-                "Astrazeneca": "18",
-                "Sputnik": "113",
-                "Pfizer": "1",
-                "Moderna": "149",
-                "Johnson & Johnson's Janssen": "96",
-                "Gamaleya": "74",
-                "Novavax": "25",
-                "Sinovac": "80"
+                "Astrazeneca": 18,
+                "Sputnik": 113,
+                "Pfizer": 1,
+                "Moderna": 149,
+                "Johnson & Johnson's Janssen": 96,
+                "Gamaleya": 74,
+                "Novavax": 25,
+                "Sinovac": 80
             },
             "ageGroup": {
                 "80+": "26",
@@ -897,14 +897,14 @@
             "population": "1478",
             "vaccinated": "535",
             "vaccineType": {
-                "Astrazeneca": "181",
-                "Sputnik": "24",
-                "Pfizer": "151",
-                "Moderna": "15",
-                "Johnson & Johnson's Janssen": "38",
-                "Gamaleya": "3",
-                "Novavax": "12",
-                "Sinovac": "111"
+                "Astrazeneca": 181,
+                "Sputnik": 24,
+                "Pfizer": 151,
+                "Moderna": 15,
+                "Johnson & Johnson's Janssen": 38,
+                "Gamaleya": 3,
+                "Novavax": 12,
+                "Sinovac": 111
             },
             "ageGroup": {
                 "80+": "11",
@@ -944,14 +944,14 @@
             "population": "1860",
             "vaccinated": "436",
             "vaccineType": {
-                "Astrazeneca": "28",
-                "Sputnik": "140",
-                "Pfizer": "24",
-                "Moderna": "35",
-                "Johnson & Johnson's Janssen": "40",
-                "Gamaleya": "0",
-                "Novavax": "16",
-                "Sinovac": "153"
+                "Astrazeneca": 28,
+                "Sputnik": 140,
+                "Pfizer": 24,
+                "Moderna": 35,
+                "Johnson & Johnson's Janssen": 40,
+                "Gamaleya": 0,
+                "Novavax": 16,
+                "Sinovac": 153
             },
             "ageGroup": {
                 "80+": "29",
@@ -991,14 +991,14 @@
             "population": "1804",
             "vaccinated": "240",
             "vaccineType": {
-                "Astrazeneca": "82",
-                "Sputnik": "12",
-                "Pfizer": "54",
-                "Moderna": "19",
-                "Johnson & Johnson's Janssen": "32",
-                "Gamaleya": "15",
-                "Novavax": "1",
-                "Sinovac": "25"
+                "Astrazeneca": 82,
+                "Sputnik": 12,
+                "Pfizer": 54,
+                "Moderna": 19,
+                "Johnson & Johnson's Janssen": 32,
+                "Gamaleya": 15,
+                "Novavax": 1,
+                "Sinovac": 25
             },
             "ageGroup": {
                 "80+": "19",
@@ -1038,14 +1038,14 @@
             "population": "2112",
             "vaccinated": "1025",
             "vaccineType": {
-                "Astrazeneca": "489",
-                "Sputnik": "45",
-                "Pfizer": "136",
-                "Moderna": "73",
-                "Johnson & Johnson's Janssen": "50",
-                "Gamaleya": "21",
-                "Novavax": "74",
-                "Sinovac": "137"
+                "Astrazeneca": 489,
+                "Sputnik": 45,
+                "Pfizer": 136,
+                "Moderna": 73,
+                "Johnson & Johnson's Janssen": 50,
+                "Gamaleya": 21,
+                "Novavax": 74,
+                "Sinovac": 137
             },
             "ageGroup": {
                 "80+": "110",
@@ -1085,14 +1085,14 @@
             "population": "3478",
             "vaccinated": "794",
             "vaccineType": {
-                "Astrazeneca": "153",
-                "Sputnik": "17",
-                "Pfizer": "103",
-                "Moderna": "19",
-                "Johnson & Johnson's Janssen": "68",
-                "Gamaleya": "63",
-                "Novavax": "114",
-                "Sinovac": "257"
+                "Astrazeneca": 153,
+                "Sputnik": 17,
+                "Pfizer": 103,
+                "Moderna": 19,
+                "Johnson & Johnson's Janssen": 68,
+                "Gamaleya": 63,
+                "Novavax": 114,
+                "Sinovac": 257
             },
             "ageGroup": {
                 "80+": "21",
@@ -1132,14 +1132,14 @@
             "population": "1547",
             "vaccinated": "514",
             "vaccineType": {
-                "Astrazeneca": "4",
-                "Sputnik": "63",
-                "Pfizer": "104",
-                "Moderna": "73",
-                "Johnson & Johnson's Janssen": "82",
-                "Gamaleya": "31",
-                "Novavax": "47",
-                "Sinovac": "110"
+                "Astrazeneca": 4,
+                "Sputnik": 63,
+                "Pfizer": 104,
+                "Moderna": 73,
+                "Johnson & Johnson's Janssen": 82,
+                "Gamaleya": 31,
+                "Novavax": 47,
+                "Sinovac": 110
             },
             "ageGroup": {
                 "80+": "75",
@@ -1179,14 +1179,14 @@
             "population": "13875",
             "vaccinated": "13579",
             "vaccineType": {
-                "Astrazeneca": "1974",
-                "Sputnik": "5075",
-                "Pfizer": "579",
-                "Moderna": "1998",
-                "Johnson & Johnson's Janssen": "1283",
-                "Gamaleya": "691",
-                "Novavax": "933",
-                "Sinovac": "1,046"
+                "Astrazeneca": 1974,
+                "Sputnik": 5075,
+                "Pfizer": 579,
+                "Moderna": 1998,
+                "Johnson & Johnson's Janssen": 1283,
+                "Gamaleya": 691,
+                "Novavax": 933,
+                "Sinovac": 1046
             },
             "ageGroup": {
                 "80+": "2132",
@@ -1226,14 +1226,14 @@
             "population": "2638",
             "vaccinated": "1197",
             "vaccineType": {
-                "Astrazeneca": "363",
-                "Sputnik": "81",
-                "Pfizer": "17",
-                "Moderna": "178",
-                "Johnson & Johnson's Janssen": "252",
-                "Gamaleya": "56",
-                "Novavax": "98",
-                "Sinovac": "152"
+                "Astrazeneca": 363,
+                "Sputnik": 81,
+                "Pfizer": 17,
+                "Moderna": 178,
+                "Johnson & Johnson's Janssen": 252,
+                "Gamaleya": 56,
+                "Novavax": 98,
+                "Sinovac": 152
             },
             "ageGroup": {
                 "80+": "217",
@@ -1273,14 +1273,14 @@
             "population": "2330",
             "vaccinated": "1562",
             "vaccineType": {
-                "Astrazeneca": "430",
-                "Sputnik": "322",
-                "Pfizer": "39",
-                "Moderna": "76",
-                "Johnson & Johnson's Janssen": "1",
-                "Gamaleya": "133",
-                "Novavax": "117",
-                "Sinovac": "444"
+                "Astrazeneca": 430,
+                "Sputnik": 322,
+                "Pfizer": 39,
+                "Moderna": 76,
+                "Johnson & Johnson's Janssen": 1,
+                "Gamaleya": 133,
+                "Novavax": 117,
+                "Sinovac": 444
             },
             "ageGroup": {
                 "80+": "158",
@@ -1320,14 +1320,14 @@
             "population": "1298",
             "vaccinated": "567",
             "vaccineType": {
-                "Astrazeneca": "165",
-                "Sputnik": "8",
-                "Pfizer": "59",
-                "Moderna": "110",
-                "Johnson & Johnson's Janssen": "6",
-                "Gamaleya": "8",
-                "Novavax": "86",
-                "Sinovac": "125"
+                "Astrazeneca": 165,
+                "Sputnik": 8,
+                "Pfizer": 59,
+                "Moderna": 110,
+                "Johnson & Johnson's Janssen": 6,
+                "Gamaleya": 8,
+                "Novavax": 86,
+                "Sinovac": 125
             },
             "ageGroup": {
                 "80+": "42",
@@ -1367,14 +1367,14 @@
             "population": "1722",
             "vaccinated": "1451",
             "vaccineType": {
-                "Astrazeneca": "279",
-                "Sputnik": "54",
-                "Pfizer": "417",
-                "Moderna": "232",
-                "Johnson & Johnson's Janssen": "19",
-                "Gamaleya": "96",
-                "Novavax": "158",
-                "Sinovac": "196"
+                "Astrazeneca": 279,
+                "Sputnik": 54,
+                "Pfizer": 417,
+                "Moderna": 232,
+                "Johnson & Johnson's Janssen": 19,
+                "Gamaleya": 96,
+                "Novavax": 158,
+                "Sinovac": 196
             },
             "ageGroup": {
                 "80+": "148",
@@ -1414,14 +1414,14 @@
             "population": "1678",
             "vaccinated": "482",
             "vaccineType": {
-                "Astrazeneca": "45",
-                "Sputnik": "26",
-                "Pfizer": "71",
-                "Moderna": "163",
-                "Johnson & Johnson's Janssen": "74",
-                "Gamaleya": "30",
-                "Novavax": "36",
-                "Sinovac": "37"
+                "Astrazeneca": 45,
+                "Sputnik": 26,
+                "Pfizer": 71,
+                "Moderna": 163,
+                "Johnson & Johnson's Janssen": 74,
+                "Gamaleya": 30,
+                "Novavax": 36,
+                "Sinovac": 37
             },
             "ageGroup": {
                 "80+": "75",
@@ -1461,14 +1461,14 @@
             "population": "1762",
             "vaccinated": "896",
             "vaccineType": {
-                "Astrazeneca": "399",
-                "Sputnik": "130",
-                "Pfizer": "123",
-                "Moderna": "24",
-                "Johnson & Johnson's Janssen": "71",
-                "Gamaleya": "1",
-                "Novavax": "29",
-                "Sinovac": "119"
+                "Astrazeneca": 399,
+                "Sputnik": 130,
+                "Pfizer": 123,
+                "Moderna": 24,
+                "Johnson & Johnson's Janssen": 71,
+                "Gamaleya": 1,
+                "Novavax": 29,
+                "Sinovac": 119
             },
             "ageGroup": {
                 "80+": "44",
@@ -1508,14 +1508,14 @@
             "population": "1671",
             "vaccinated": "485",
             "vaccineType": {
-                "Astrazeneca": "208",
-                "Sputnik": "106",
-                "Pfizer": "79",
-                "Moderna": "30",
-                "Johnson & Johnson's Janssen": "8",
-                "Gamaleya": "4",
-                "Novavax": "12",
-                "Sinovac": "38"
+                "Astrazeneca": 208,
+                "Sputnik": 106,
+                "Pfizer": 79,
+                "Moderna": 30,
+                "Johnson & Johnson's Janssen": 8,
+                "Gamaleya": 4,
+                "Novavax": 12,
+                "Sinovac": 38
             },
             "ageGroup": {
                 "80+": "68",
@@ -1555,14 +1555,14 @@
             "population": "1521",
             "vaccinated": "848",
             "vaccineType": {
-                "Astrazeneca": "35",
-                "Sputnik": "47",
-                "Pfizer": "230",
-                "Moderna": "36",
-                "Johnson & Johnson's Janssen": "166",
-                "Gamaleya": "102",
-                "Novavax": "60",
-                "Sinovac": "172"
+                "Astrazeneca": 35,
+                "Sputnik": 47,
+                "Pfizer": 230,
+                "Moderna": 36,
+                "Johnson & Johnson's Janssen": 166,
+                "Gamaleya": 102,
+                "Novavax": 60,
+                "Sinovac": 172
             },
             "ageGroup": {
                 "80+": "82",
@@ -1602,14 +1602,14 @@
             "population": "643",
             "vaccinated": "582",
             "vaccineType": {
-                "Astrazeneca": "253",
-                "Sputnik": "36",
-                "Pfizer": "22",
-                "Moderna": "90",
-                "Johnson & Johnson's Janssen": "23",
-                "Gamaleya": "46",
-                "Novavax": "45",
-                "Sinovac": "67"
+                "Astrazeneca": 253,
+                "Sputnik": 36,
+                "Pfizer": 22,
+                "Moderna": 90,
+                "Johnson & Johnson's Janssen": 23,
+                "Gamaleya": 46,
+                "Novavax": 45,
+                "Sinovac": 67
             },
             "ageGroup": {
                 "80+": "98",
@@ -1649,14 +1649,14 @@
             "population": "1882",
             "vaccinated": "1772",
             "vaccineType": {
-                "Astrazeneca": "684",
-                "Sputnik": "431",
-                "Pfizer": "44",
-                "Moderna": "49",
-                "Johnson & Johnson's Janssen": "279",
-                "Gamaleya": "66",
-                "Novavax": "60",
-                "Sinovac": "159"
+                "Astrazeneca": 684,
+                "Sputnik": 431,
+                "Pfizer": 44,
+                "Moderna": 49,
+                "Johnson & Johnson's Janssen": 279,
+                "Gamaleya": 66,
+                "Novavax": 60,
+                "Sinovac": 159
             },
             "ageGroup": {
                 "80+": "143",
@@ -1696,14 +1696,14 @@
             "population": "4818",
             "vaccinated": "4070",
             "vaccineType": {
-                "Astrazeneca": "1521",
-                "Sputnik": "1183",
-                "Pfizer": "606",
-                "Moderna": "273",
-                "Johnson & Johnson's Janssen": "166",
-                "Gamaleya": "122",
-                "Novavax": "46",
-                "Sinovac": "153"
+                "Astrazeneca": 1521,
+                "Sputnik": 1183,
+                "Pfizer": 606,
+                "Moderna": 273,
+                "Johnson & Johnson's Janssen": 166,
+                "Gamaleya": 122,
+                "Novavax": 46,
+                "Sinovac": 153
             },
             "ageGroup": {
                 "80+": "399",
@@ -1743,14 +1743,14 @@
             "population": "6366",
             "vaccinated": "3631",
             "vaccineType": {
-                "Astrazeneca": "273",
-                "Sputnik": "979",
-                "Pfizer": "489",
-                "Moderna": "173",
-                "Johnson & Johnson's Janssen": "274",
-                "Gamaleya": "119",
-                "Novavax": "642",
-                "Sinovac": "682"
+                "Astrazeneca": 273,
+                "Sputnik": 979,
+                "Pfizer": 489,
+                "Moderna": 173,
+                "Johnson & Johnson's Janssen": 274,
+                "Gamaleya": 119,
+                "Novavax": 642,
+                "Sinovac": 682
             },
             "ageGroup": {
                 "80+": "637",
@@ -1790,14 +1790,14 @@
             "population": "953",
             "vaccinated": "448",
             "vaccineType": {
-                "Astrazeneca": "107",
-                "Sputnik": "123",
-                "Pfizer": "16",
-                "Moderna": "14",
-                "Johnson & Johnson's Janssen": "37",
-                "Gamaleya": "71",
-                "Novavax": "14",
-                "Sinovac": "66"
+                "Astrazeneca": 107,
+                "Sputnik": 123,
+                "Pfizer": 16,
+                "Moderna": 14,
+                "Johnson & Johnson's Janssen": 37,
+                "Gamaleya": 71,
+                "Novavax": 14,
+                "Sinovac": 66
             },
             "ageGroup": {
                 "80+": "52",
@@ -1837,14 +1837,14 @@
             "population": "1762",
             "vaccinated": "814",
             "vaccineType": {
-                "Astrazeneca": "173",
-                "Sputnik": "318",
-                "Pfizer": "52",
-                "Moderna": "17",
-                "Johnson & Johnson's Janssen": "96",
-                "Gamaleya": "51",
-                "Novavax": "0",
-                "Sinovac": "107"
+                "Astrazeneca": 173,
+                "Sputnik": 318,
+                "Pfizer": 52,
+                "Moderna": 17,
+                "Johnson & Johnson's Janssen": 96,
+                "Gamaleya": 51,
+                "Novavax": 0,
+                "Sinovac": 107
             },
             "ageGroup": {
                 "80+": "54",
@@ -1884,14 +1884,14 @@
             "population": "7984",
             "vaccinated": "5980",
             "vaccineType": {
-                "Astrazeneca": "73",
-                "Sputnik": "1962",
-                "Pfizer": "1761",
-                "Moderna": "411",
-                "Johnson & Johnson's Janssen": "533",
-                "Gamaleya": "263",
-                "Novavax": "282",
-                "Sinovac": "695"
+                "Astrazeneca": 73,
+                "Sputnik": 1962,
+                "Pfizer": 1761,
+                "Moderna": 411,
+                "Johnson & Johnson's Janssen": 533,
+                "Gamaleya": 263,
+                "Novavax": 282,
+                "Sinovac": 695
             },
             "ageGroup": {
                 "80+": "568",
@@ -1931,14 +1931,14 @@
             "population": "1775",
             "vaccinated": "701",
             "vaccineType": {
-                "Astrazeneca": "286",
-                "Sputnik": "206",
-                "Pfizer": "93",
-                "Moderna": "37",
-                "Johnson & Johnson's Janssen": "3",
-                "Gamaleya": "32",
-                "Novavax": "5",
-                "Sinovac": "39"
+                "Astrazeneca": 286,
+                "Sputnik": 206,
+                "Pfizer": 93,
+                "Moderna": 37,
+                "Johnson & Johnson's Janssen": 3,
+                "Gamaleya": 32,
+                "Novavax": 5,
+                "Sinovac": 39
             },
             "ageGroup": {
                 "80+": "12",
@@ -1978,14 +1978,14 @@
             "population": "3753",
             "vaccinated": "3741",
             "vaccineType": {
-                "Astrazeneca": "1736",
-                "Sputnik": "876",
-                "Pfizer": "288",
-                "Moderna": "8",
-                "Johnson & Johnson's Janssen": "115",
-                "Gamaleya": "119",
-                "Novavax": "214",
-                "Sinovac": "385"
+                "Astrazeneca": 1736,
+                "Sputnik": 876,
+                "Pfizer": 288,
+                "Moderna": 8,
+                "Johnson & Johnson's Janssen": 115,
+                "Gamaleya": 119,
+                "Novavax": 214,
+                "Sinovac": 385
             },
             "ageGroup": {
                 "80+": "30",
@@ -2025,14 +2025,14 @@
             "population": "2880",
             "vaccinated": "2691",
             "vaccineType": {
-                "Astrazeneca": "719",
-                "Sputnik": "15",
-                "Pfizer": "672",
-                "Moderna": "207",
-                "Johnson & Johnson's Janssen": "285",
-                "Gamaleya": "89",
-                "Novavax": "315",
-                "Sinovac": "389"
+                "Astrazeneca": 719,
+                "Sputnik": 15,
+                "Pfizer": 672,
+                "Moderna": 207,
+                "Johnson & Johnson's Janssen": 285,
+                "Gamaleya": 89,
+                "Novavax": 315,
+                "Sinovac": 389
             },
             "ageGroup": {
                 "80+": "102",
@@ -2072,14 +2072,14 @@
             "population": "1960",
             "vaccinated": "454",
             "vaccineType": {
-                "Astrazeneca": "61",
-                "Sputnik": "177",
-                "Pfizer": "10",
-                "Moderna": "5",
-                "Johnson & Johnson's Janssen": "77",
-                "Gamaleya": "48",
-                "Novavax": "31",
-                "Sinovac": "45"
+                "Astrazeneca": 61,
+                "Sputnik": 177,
+                "Pfizer": 10,
+                "Moderna": 5,
+                "Johnson & Johnson's Janssen": 77,
+                "Gamaleya": 48,
+                "Novavax": 31,
+                "Sinovac": 45
             },
             "ageGroup": {
                 "80+": "75",
@@ -2119,14 +2119,14 @@
             "population": "134",
             "vaccinated": "28",
             "vaccineType": {
-                "Astrazeneca": "4",
-                "Sputnik": "2",
-                "Pfizer": "0",
-                "Moderna": "11",
-                "Johnson & Johnson's Janssen": "1",
-                "Gamaleya": "2",
-                "Novavax": "4",
-                "Sinovac": "4"
+                "Astrazeneca": 4,
+                "Sputnik": 2,
+                "Pfizer": 0,
+                "Moderna": 11,
+                "Johnson & Johnson's Janssen": 1,
+                "Gamaleya": 2,
+                "Novavax": 4,
+                "Sinovac": 4
             },
             "ageGroup": {
                 "80+": "2",
@@ -2166,14 +2166,14 @@
             "population": "1177",
             "vaccinated": "652",
             "vaccineType": {
-                "Astrazeneca": "256",
-                "Sputnik": "2",
-                "Pfizer": "9",
-                "Moderna": "45",
-                "Johnson & Johnson's Janssen": "3",
-                "Gamaleya": "53",
-                "Novavax": "52",
-                "Sinovac": "232"
+                "Astrazeneca": 256,
+                "Sputnik": 2,
+                "Pfizer": 9,
+                "Moderna": 45,
+                "Johnson & Johnson's Janssen": 3,
+                "Gamaleya": 53,
+                "Novavax": 52,
+                "Sinovac": 232
             },
             "ageGroup": {
                 "80+": "20",
@@ -2213,14 +2213,14 @@
             "population": "8043",
             "vaccinated": "6595",
             "vaccineType": {
-                "Astrazeneca": "3277",
-                "Sputnik": "979",
-                "Pfizer": "101",
-                "Moderna": "530",
-                "Johnson & Johnson's Janssen": "707",
-                "Gamaleya": "202",
-                "Novavax": "247",
-                "Sinovac": "552"
+                "Astrazeneca": 3277,
+                "Sputnik": 979,
+                "Pfizer": 101,
+                "Moderna": 530,
+                "Johnson & Johnson's Janssen": 707,
+                "Gamaleya": 202,
+                "Novavax": 247,
+                "Sinovac": 552
             },
             "ageGroup": {
                 "80+": "298",
@@ -2260,14 +2260,14 @@
             "population": "1571",
             "vaccinated": "836",
             "vaccineType": {
-                "Astrazeneca": "310",
-                "Sputnik": "181",
-                "Pfizer": "65",
-                "Moderna": "102",
-                "Johnson & Johnson's Janssen": "13",
-                "Gamaleya": "51",
-                "Novavax": "42",
-                "Sinovac": "72"
+                "Astrazeneca": 310,
+                "Sputnik": 181,
+                "Pfizer": 65,
+                "Moderna": 102,
+                "Johnson & Johnson's Janssen": 13,
+                "Gamaleya": 51,
+                "Novavax": 42,
+                "Sinovac": 72
             },
             "ageGroup": {
                 "80+": "44",
@@ -2307,14 +2307,14 @@
             "population": "2499",
             "vaccinated": "1862",
             "vaccineType": {
-                "Astrazeneca": "656",
-                "Sputnik": "181",
-                "Pfizer": "229",
-                "Moderna": "181",
-                "Johnson & Johnson's Janssen": "299",
-                "Gamaleya": "95",
-                "Novavax": "36",
-                "Sinovac": "185"
+                "Astrazeneca": 656,
+                "Sputnik": 181,
+                "Pfizer": 229,
+                "Moderna": 181,
+                "Johnson & Johnson's Janssen": 299,
+                "Gamaleya": 95,
+                "Novavax": 36,
+                "Sinovac": 185
             },
             "ageGroup": {
                 "80+": "296",
@@ -2354,14 +2354,14 @@
             "population": "1677",
             "vaccinated": "665",
             "vaccineType": {
-                "Astrazeneca": "94",
-                "Sputnik": "99",
-                "Pfizer": "218",
-                "Moderna": "3",
-                "Johnson & Johnson's Janssen": "81",
-                "Gamaleya": "70",
-                "Novavax": "27",
-                "Sinovac": "73"
+                "Astrazeneca": 94,
+                "Sputnik": 99,
+                "Pfizer": 218,
+                "Moderna": 3,
+                "Johnson & Johnson's Janssen": 81,
+                "Gamaleya": 70,
+                "Novavax": 27,
+                "Sinovac": 73
             },
             "ageGroup": {
                 "80+": "39",
@@ -2401,14 +2401,14 @@
             "population": "2674",
             "vaccinated": "1918",
             "vaccineType": {
-                "Astrazeneca": "167",
-                "Sputnik": "585",
-                "Pfizer": "64",
-                "Moderna": "49",
-                "Johnson & Johnson's Janssen": "342",
-                "Gamaleya": "93",
-                "Novavax": "198",
-                "Sinovac": "420"
+                "Astrazeneca": 167,
+                "Sputnik": 585,
+                "Pfizer": 64,
+                "Moderna": 49,
+                "Johnson & Johnson's Janssen": 342,
+                "Gamaleya": 93,
+                "Novavax": 198,
+                "Sinovac": 420
             },
             "ageGroup": {
                 "80+": "358",
@@ -2448,14 +2448,14 @@
             "population": "1712",
             "vaccinated": "1112",
             "vaccineType": {
-                "Astrazeneca": "117",
-                "Sputnik": "15",
-                "Pfizer": "24",
-                "Moderna": "96",
-                "Johnson & Johnson's Janssen": "390",
-                "Gamaleya": "150",
-                "Novavax": "155",
-                "Sinovac": "165"
+                "Astrazeneca": 117,
+                "Sputnik": 15,
+                "Pfizer": 24,
+                "Moderna": 96,
+                "Johnson & Johnson's Janssen": 390,
+                "Gamaleya": 150,
+                "Novavax": 155,
+                "Sinovac": 165
             },
             "ageGroup": {
                 "80+": "15",
@@ -2495,14 +2495,14 @@
             "population": "30",
             "vaccinated": "4",
             "vaccineType": {
-                "Astrazeneca": "1",
-                "Sputnik": "0",
-                "Pfizer": "1",
-                "Moderna": "1",
-                "Johnson & Johnson's Janssen": "0",
-                "Gamaleya": "0",
-                "Novavax": "0",
-                "Sinovac": "1"
+                "Astrazeneca": 1,
+                "Sputnik": 0,
+                "Pfizer": 1,
+                "Moderna": 1,
+                "Johnson & Johnson's Janssen": 0,
+                "Gamaleya": 0,
+                "Novavax": 0,
+                "Sinovac": 1
             },
             "ageGroup": {
                 "80+": "0",
@@ -2542,14 +2542,14 @@
             "population": "1549",
             "vaccinated": "1031",
             "vaccineType": {
-                "Astrazeneca": "168",
-                "Sputnik": "68",
-                "Pfizer": "296",
-                "Moderna": "173",
-                "Johnson & Johnson's Janssen": "122",
-                "Gamaleya": "84",
-                "Novavax": "36",
-                "Sinovac": "84"
+                "Astrazeneca": 168,
+                "Sputnik": 68,
+                "Pfizer": 296,
+                "Moderna": 173,
+                "Johnson & Johnson's Janssen": 122,
+                "Gamaleya": 84,
+                "Novavax": 36,
+                "Sinovac": 84
             },
             "ageGroup": {
                 "80+": "154",
@@ -2589,14 +2589,14 @@
             "population": "2928",
             "vaccinated": "2107",
             "vaccineType": {
-                "Astrazeneca": "202",
-                "Sputnik": "550",
-                "Pfizer": "372",
-                "Moderna": "9",
-                "Johnson & Johnson's Janssen": "413",
-                "Gamaleya": "30",
-                "Novavax": "206",
-                "Sinovac": "325"
+                "Astrazeneca": 202,
+                "Sputnik": 550,
+                "Pfizer": 372,
+                "Moderna": 9,
+                "Johnson & Johnson's Janssen": 413,
+                "Gamaleya": 30,
+                "Novavax": 206,
+                "Sinovac": 325
             },
             "ageGroup": {
                 "80+": "345",
@@ -2636,14 +2636,14 @@
             "population": "2296",
             "vaccinated": "1117",
             "vaccineType": {
-                "Astrazeneca": "19",
-                "Sputnik": "262",
-                "Pfizer": "36",
-                "Moderna": "59",
-                "Johnson & Johnson's Janssen": "180",
-                "Gamaleya": "100",
-                "Novavax": "229",
-                "Sinovac": "232"
+                "Astrazeneca": 19,
+                "Sputnik": 262,
+                "Pfizer": 36,
+                "Moderna": 59,
+                "Johnson & Johnson's Janssen": 180,
+                "Gamaleya": 100,
+                "Novavax": 229,
+                "Sinovac": 232
             },
             "ageGroup": {
                 "80+": "190",
@@ -2683,14 +2683,14 @@
             "population": "3308",
             "vaccinated": "881",
             "vaccineType": {
-                "Astrazeneca": "81",
-                "Sputnik": "356",
-                "Pfizer": "75",
-                "Moderna": "4",
-                "Johnson & Johnson's Janssen": "21",
-                "Gamaleya": "86",
-                "Novavax": "118",
-                "Sinovac": "140"
+                "Astrazeneca": 81,
+                "Sputnik": 356,
+                "Pfizer": 75,
+                "Moderna": 4,
+                "Johnson & Johnson's Janssen": 21,
+                "Gamaleya": 86,
+                "Novavax": 118,
+                "Sinovac": 140
             },
             "ageGroup": {
                 "80+": "12",
@@ -2730,14 +2730,14 @@
             "population": "1091",
             "vaccinated": "589",
             "vaccineType": {
-                "Astrazeneca": "110",
-                "Sputnik": "195",
-                "Pfizer": "81",
-                "Moderna": "9",
-                "Johnson & Johnson's Janssen": "82",
-                "Gamaleya": "10",
-                "Novavax": "28",
-                "Sinovac": "74"
+                "Astrazeneca": 110,
+                "Sputnik": 195,
+                "Pfizer": 81,
+                "Moderna": 9,
+                "Johnson & Johnson's Janssen": 82,
+                "Gamaleya": 10,
+                "Novavax": 28,
+                "Sinovac": 74
             },
             "ageGroup": {
                 "80+": "26",
@@ -2777,14 +2777,14 @@
             "population": "1885",
             "vaccinated": "937",
             "vaccineType": {
-                "Astrazeneca": "384",
-                "Sputnik": "82",
-                "Pfizer": "213",
-                "Moderna": "107",
-                "Johnson & Johnson's Janssen": "20",
-                "Gamaleya": "55",
-                "Novavax": "34",
-                "Sinovac": "42"
+                "Astrazeneca": 384,
+                "Sputnik": 82,
+                "Pfizer": 213,
+                "Moderna": 107,
+                "Johnson & Johnson's Janssen": 20,
+                "Gamaleya": 55,
+                "Novavax": 34,
+                "Sinovac": 42
             },
             "ageGroup": {
                 "80+": "159",
@@ -2824,14 +2824,14 @@
             "population": "36562",
             "vaccinated": "22186",
             "vaccineType": {
-                "Astrazeneca": "5902",
-                "Sputnik": "1643",
-                "Pfizer": "4374",
-                "Moderna": "3591",
-                "Johnson & Johnson's Janssen": "1918",
-                "Gamaleya": "1937",
-                "Novavax": "146",
-                "Sinovac": "2,675"
+                "Astrazeneca": 5902,
+                "Sputnik": 1643,
+                "Pfizer": 4374,
+                "Moderna": 3591,
+                "Johnson & Johnson's Janssen": 1918,
+                "Gamaleya": 1937,
+                "Novavax": 146,
+                "Sinovac": 2675
             },
             "ageGroup": {
                 "80+": "2422",
@@ -2871,14 +2871,14 @@
             "population": "104",
             "vaccinated": "56",
             "vaccineType": {
-                "Astrazeneca": "20",
-                "Sputnik": "11",
-                "Pfizer": "3",
-                "Moderna": "8",
-                "Johnson & Johnson's Janssen": "0",
-                "Gamaleya": "4",
-                "Novavax": "5",
-                "Sinovac": "5"
+                "Astrazeneca": 20,
+                "Sputnik": 11,
+                "Pfizer": 3,
+                "Moderna": 8,
+                "Johnson & Johnson's Janssen": 0,
+                "Gamaleya": 4,
+                "Novavax": 5,
+                "Sinovac": 5
             },
             "ageGroup": {
                 "80+": "3",
@@ -2918,14 +2918,14 @@
             "population": "189",
             "vaccinated": "123",
             "vaccineType": {
-                "Astrazeneca": "7",
-                "Sputnik": "31",
-                "Pfizer": "8",
-                "Moderna": "5",
-                "Johnson & Johnson's Janssen": "15",
-                "Gamaleya": "19",
-                "Novavax": "7",
-                "Sinovac": "31"
+                "Astrazeneca": 7,
+                "Sputnik": 31,
+                "Pfizer": 8,
+                "Moderna": 5,
+                "Johnson & Johnson's Janssen": 15,
+                "Gamaleya": 19,
+                "Novavax": 7,
+                "Sinovac": 31
             },
             "ageGroup": {
                 "80+": "14",
@@ -2965,14 +2965,14 @@
             "population": "1066",
             "vaccinated": "549",
             "vaccineType": {
-                "Astrazeneca": "245",
-                "Sputnik": "111",
-                "Pfizer": "42",
-                "Moderna": "47",
-                "Johnson & Johnson's Janssen": "12",
-                "Gamaleya": "8",
-                "Novavax": "31",
-                "Sinovac": "53"
+                "Astrazeneca": 245,
+                "Sputnik": 111,
+                "Pfizer": 42,
+                "Moderna": 47,
+                "Johnson & Johnson's Janssen": 12,
+                "Gamaleya": 8,
+                "Novavax": 31,
+                "Sinovac": 53
             },
             "ageGroup": {
                 "80+": "79",
@@ -3012,14 +3012,14 @@
             "population": "443",
             "vaccinated": "209",
             "vaccineType": {
-                "Astrazeneca": "65",
-                "Sputnik": "60",
-                "Pfizer": "6",
-                "Moderna": "15",
-                "Johnson & Johnson's Janssen": "7",
-                "Gamaleya": "13",
-                "Novavax": "0",
-                "Sinovac": "43"
+                "Astrazeneca": 65,
+                "Sputnik": 60,
+                "Pfizer": 6,
+                "Moderna": 15,
+                "Johnson & Johnson's Janssen": 7,
+                "Gamaleya": 13,
+                "Novavax": 0,
+                "Sinovac": 43
             },
             "ageGroup": {
                 "80+": "39",
@@ -3059,14 +3059,14 @@
             "population": "6374",
             "vaccinated": "5691",
             "vaccineType": {
-                "Astrazeneca": "1071",
-                "Sputnik": "1411",
-                "Pfizer": "1448",
-                "Moderna": "662",
-                "Johnson & Johnson's Janssen": "299",
-                "Gamaleya": "343",
-                "Novavax": "228",
-                "Sinovac": "229"
+                "Astrazeneca": 1071,
+                "Sputnik": 1411,
+                "Pfizer": 1448,
+                "Moderna": 662,
+                "Johnson & Johnson's Janssen": 299,
+                "Gamaleya": 343,
+                "Novavax": 228,
+                "Sinovac": 229
             },
             "ageGroup": {
                 "80+": "897",
@@ -3106,14 +3106,14 @@
             "population": "711",
             "vaccinated": "433",
             "vaccineType": {
-                "Astrazeneca": "40",
-                "Sputnik": "165",
-                "Pfizer": "110",
-                "Moderna": "19",
-                "Johnson & Johnson's Janssen": "34",
-                "Gamaleya": "8",
-                "Novavax": "19",
-                "Sinovac": "38"
+                "Astrazeneca": 40,
+                "Sputnik": 165,
+                "Pfizer": 110,
+                "Moderna": 19,
+                "Johnson & Johnson's Janssen": 34,
+                "Gamaleya": 8,
+                "Novavax": 19,
+                "Sinovac": 38
             },
             "ageGroup": {
                 "80+": "75",
@@ -3153,14 +3153,14 @@
             "population": "4841",
             "vaccinated": "3579",
             "vaccineType": {
-                "Astrazeneca": "238",
-                "Sputnik": "1001",
-                "Pfizer": "471",
-                "Moderna": "4",
-                "Johnson & Johnson's Janssen": "137",
-                "Gamaleya": "544",
-                "Novavax": "532",
-                "Sinovac": "652"
+                "Astrazeneca": 238,
+                "Sputnik": 1001,
+                "Pfizer": 471,
+                "Moderna": 4,
+                "Johnson & Johnson's Janssen": 137,
+                "Gamaleya": 544,
+                "Novavax": 532,
+                "Sinovac": 652
             },
             "ageGroup": {
                 "80+": "614",
@@ -3200,14 +3200,14 @@
             "population": "12006",
             "vaccinated": "4053",
             "vaccineType": {
-                "Astrazeneca": "137",
-                "Sputnik": "453",
-                "Pfizer": "215",
-                "Moderna": "255",
-                "Johnson & Johnson's Janssen": "703",
-                "Gamaleya": "553",
-                "Novavax": "494",
-                "Sinovac": "1,243"
+                "Astrazeneca": 137,
+                "Sputnik": 453,
+                "Pfizer": 215,
+                "Moderna": 255,
+                "Johnson & Johnson's Janssen": 703,
+                "Gamaleya": 553,
+                "Novavax": 494,
+                "Sinovac": 1243
             },
             "ageGroup": {
                 "80+": "553",
@@ -3247,14 +3247,14 @@
             "population": "1140",
             "vaccinated": "707",
             "vaccineType": {
-                "Astrazeneca": "177",
-                "Sputnik": "220",
-                "Pfizer": "79",
-                "Moderna": "50",
-                "Johnson & Johnson's Janssen": "9",
-                "Gamaleya": "43",
-                "Novavax": "18",
-                "Sinovac": "111"
+                "Astrazeneca": 177,
+                "Sputnik": 220,
+                "Pfizer": 79,
+                "Moderna": 50,
+                "Johnson & Johnson's Janssen": 9,
+                "Gamaleya": 43,
+                "Novavax": 18,
+                "Sinovac": 111
             },
             "ageGroup": {
                 "80+": "45",
@@ -3294,14 +3294,14 @@
             "population": "1451",
             "vaccinated": "695",
             "vaccineType": {
-                "Astrazeneca": "89",
-                "Sputnik": "56",
-                "Pfizer": "105",
-                "Moderna": "119",
-                "Johnson & Johnson's Janssen": "84",
-                "Gamaleya": "113",
-                "Novavax": "32",
-                "Sinovac": "97"
+                "Astrazeneca": 89,
+                "Sputnik": 56,
+                "Pfizer": 105,
+                "Moderna": 119,
+                "Johnson & Johnson's Janssen": 84,
+                "Gamaleya": 113,
+                "Novavax": 32,
+                "Sinovac": 97
             },
             "ageGroup": {
                 "80+": "16",
@@ -3341,14 +3341,14 @@
             "population": "422",
             "vaccinated": "54",
             "vaccineType": {
-                "Astrazeneca": "21",
-                "Sputnik": "10",
-                "Pfizer": "2",
-                "Moderna": "2",
-                "Johnson & Johnson's Janssen": "2",
-                "Gamaleya": "6",
-                "Novavax": "2",
-                "Sinovac": "9"
+                "Astrazeneca": 21,
+                "Sputnik": 10,
+                "Pfizer": 2,
+                "Moderna": 2,
+                "Johnson & Johnson's Janssen": 2,
+                "Gamaleya": 6,
+                "Novavax": 2,
+                "Sinovac": 9
             },
             "ageGroup": {
                 "80+": "9",
@@ -3388,14 +3388,14 @@
             "population": "657",
             "vaccinated": "269",
             "vaccineType": {
-                "Astrazeneca": "119",
-                "Sputnik": "59",
-                "Pfizer": "22",
-                "Moderna": "2",
-                "Johnson & Johnson's Janssen": "4",
-                "Gamaleya": "20",
-                "Novavax": "10",
-                "Sinovac": "33"
+                "Astrazeneca": 119,
+                "Sputnik": 59,
+                "Pfizer": 22,
+                "Moderna": 2,
+                "Johnson & Johnson's Janssen": 4,
+                "Gamaleya": 20,
+                "Novavax": 10,
+                "Sinovac": 33
             },
             "ageGroup": {
                 "80+": "18",
@@ -3435,14 +3435,14 @@
             "population": "1202",
             "vaccinated": "1200",
             "vaccineType": {
-                "Astrazeneca": "316",
-                "Sputnik": "207",
-                "Pfizer": "291",
-                "Moderna": "165",
-                "Johnson & Johnson's Janssen": "58",
-                "Gamaleya": "6",
-                "Novavax": "30",
-                "Sinovac": "127"
+                "Astrazeneca": 316,
+                "Sputnik": 207,
+                "Pfizer": 291,
+                "Moderna": 165,
+                "Johnson & Johnson's Janssen": 58,
+                "Gamaleya": 6,
+                "Novavax": 30,
+                "Sinovac": 127
             },
             "ageGroup": {
                 "80+": "115",
@@ -3482,14 +3482,14 @@
             "population": "2206",
             "vaccinated": "1172",
             "vaccineType": {
-                "Astrazeneca": "11",
-                "Sputnik": "570",
-                "Pfizer": "223",
-                "Moderna": "14",
-                "Johnson & Johnson's Janssen": "139",
-                "Gamaleya": "18",
-                "Novavax": "5",
-                "Sinovac": "192"
+                "Astrazeneca": 11,
+                "Sputnik": 570,
+                "Pfizer": 223,
+                "Moderna": 14,
+                "Johnson & Johnson's Janssen": 139,
+                "Gamaleya": 18,
+                "Novavax": 5,
+                "Sinovac": 192
             },
             "ageGroup": {
                 "80+": "91",
@@ -3529,14 +3529,14 @@
             "population": "1135",
             "vaccinated": "943",
             "vaccineType": {
-                "Astrazeneca": "242",
-                "Sputnik": "178",
-                "Pfizer": "175",
-                "Moderna": "45",
-                "Johnson & Johnson's Janssen": "54",
-                "Gamaleya": "100",
-                "Novavax": "67",
-                "Sinovac": "82"
+                "Astrazeneca": 242,
+                "Sputnik": 178,
+                "Pfizer": 175,
+                "Moderna": 45,
+                "Johnson & Johnson's Janssen": 54,
+                "Gamaleya": 100,
+                "Novavax": 67,
+                "Sinovac": 82
             },
             "ageGroup": {
                 "80+": "108",
@@ -3576,14 +3576,14 @@
             "population": "927",
             "vaccinated": "448",
             "vaccineType": {
-                "Astrazeneca": "3",
-                "Sputnik": "76",
-                "Pfizer": "29",
-                "Moderna": "8",
-                "Johnson & Johnson's Janssen": "66",
-                "Gamaleya": "14",
-                "Novavax": "29",
-                "Sinovac": "223"
+                "Astrazeneca": 3,
+                "Sputnik": 76,
+                "Pfizer": 29,
+                "Moderna": 8,
+                "Johnson & Johnson's Janssen": 66,
+                "Gamaleya": 14,
+                "Novavax": 29,
+                "Sinovac": 223
             },
             "ageGroup": {
                 "80+": "6",
@@ -3623,14 +3623,14 @@
             "population": "68",
             "vaccinated": "14",
             "vaccineType": {
-                "Astrazeneca": "2",
-                "Sputnik": "2",
-                "Pfizer": "2",
-                "Moderna": "3",
-                "Johnson & Johnson's Janssen": "1",
-                "Gamaleya": "1",
-                "Novavax": "1",
-                "Sinovac": "2"
+                "Astrazeneca": 2,
+                "Sputnik": 2,
+                "Pfizer": 2,
+                "Moderna": 3,
+                "Johnson & Johnson's Janssen": 1,
+                "Gamaleya": 1,
+                "Novavax": 1,
+                "Sinovac": 2
             },
             "ageGroup": {
                 "80+": "0",
@@ -3670,14 +3670,14 @@
             "population": "63",
             "vaccinated": "49",
             "vaccineType": {
-                "Astrazeneca": "19",
-                "Sputnik": "10",
-                "Pfizer": "1",
-                "Moderna": "5",
-                "Johnson & Johnson's Janssen": "3",
-                "Gamaleya": "5",
-                "Novavax": "1",
-                "Sinovac": "5"
+                "Astrazeneca": 19,
+                "Sputnik": 10,
+                "Pfizer": 1,
+                "Moderna": 5,
+                "Johnson & Johnson's Janssen": 3,
+                "Gamaleya": 5,
+                "Novavax": 1,
+                "Sinovac": 5
             },
             "ageGroup": {
                 "80+": "4",
@@ -3717,14 +3717,14 @@
             "population": "761",
             "vaccinated": "626",
             "vaccineType": {
-                "Astrazeneca": "262",
-                "Sputnik": "98",
-                "Pfizer": "70",
-                "Moderna": "16",
-                "Johnson & Johnson's Janssen": "63",
-                "Gamaleya": "6",
-                "Novavax": "26",
-                "Sinovac": "85"
+                "Astrazeneca": 262,
+                "Sputnik": 98,
+                "Pfizer": 70,
+                "Moderna": 16,
+                "Johnson & Johnson's Janssen": 63,
+                "Gamaleya": 6,
+                "Novavax": 26,
+                "Sinovac": 85
             },
             "ageGroup": {
                 "80+": "9",
@@ -3764,14 +3764,14 @@
             "population": "1164",
             "vaccinated": "700",
             "vaccineType": {
-                "Astrazeneca": "283",
-                "Sputnik": "100",
-                "Pfizer": "0",
-                "Moderna": "4",
-                "Johnson & Johnson's Janssen": "2",
-                "Gamaleya": "153",
-                "Novavax": "52",
-                "Sinovac": "106"
+                "Astrazeneca": 283,
+                "Sputnik": 100,
+                "Pfizer": 0,
+                "Moderna": 4,
+                "Johnson & Johnson's Janssen": 2,
+                "Gamaleya": 153,
+                "Novavax": 52,
+                "Sinovac": 106
             },
             "ageGroup": {
                 "80+": "87",
@@ -3811,14 +3811,14 @@
             "population": "3565",
             "vaccinated": "1751",
             "vaccineType": {
-                "Astrazeneca": "525",
-                "Sputnik": "151",
-                "Pfizer": "368",
-                "Moderna": "228",
-                "Johnson & Johnson's Janssen": "74",
-                "Gamaleya": "137",
-                "Novavax": "104",
-                "Sinovac": "164"
+                "Astrazeneca": 525,
+                "Sputnik": 151,
+                "Pfizer": 368,
+                "Moderna": 228,
+                "Johnson & Johnson's Janssen": 74,
+                "Gamaleya": 137,
+                "Novavax": 104,
+                "Sinovac": 164
             },
             "ageGroup": {
                 "80+": "232",
@@ -3858,14 +3858,14 @@
             "population": "1332",
             "vaccinated": "315",
             "vaccineType": {
-                "Astrazeneca": "62",
-                "Sputnik": "101",
-                "Pfizer": "17",
-                "Moderna": "17",
-                "Johnson & Johnson's Janssen": "21",
-                "Gamaleya": "8",
-                "Novavax": "42",
-                "Sinovac": "47"
+                "Astrazeneca": 62,
+                "Sputnik": 101,
+                "Pfizer": 17,
+                "Moderna": 17,
+                "Johnson & Johnson's Janssen": 21,
+                "Gamaleya": 8,
+                "Novavax": 42,
+                "Sinovac": 47
             },
             "ageGroup": {
                 "80+": "56",
@@ -3905,14 +3905,14 @@
             "population": "1517",
             "vaccinated": "1009",
             "vaccineType": {
-                "Astrazeneca": "259",
-                "Sputnik": "301",
-                "Pfizer": "3",
-                "Moderna": "211",
-                "Johnson & Johnson's Janssen": "19",
-                "Gamaleya": "33",
-                "Novavax": "81",
-                "Sinovac": "102"
+                "Astrazeneca": 259,
+                "Sputnik": 301,
+                "Pfizer": 3,
+                "Moderna": 211,
+                "Johnson & Johnson's Janssen": 19,
+                "Gamaleya": 33,
+                "Novavax": 81,
+                "Sinovac": 102
             },
             "ageGroup": {
                 "80+": "149",
@@ -3952,14 +3952,14 @@
             "population": "2458",
             "vaccinated": "1063",
             "vaccineType": {
-                "Astrazeneca": "101",
-                "Sputnik": "189",
-                "Pfizer": "224",
-                "Moderna": "227",
-                "Johnson & Johnson's Janssen": "3",
-                "Gamaleya": "35",
-                "Novavax": "89",
-                "Sinovac": "195"
+                "Astrazeneca": 101,
+                "Sputnik": 189,
+                "Pfizer": 224,
+                "Moderna": 227,
+                "Johnson & Johnson's Janssen": 3,
+                "Gamaleya": 35,
+                "Novavax": 89,
+                "Sinovac": 195
             },
             "ageGroup": {
                 "80+": "29",
@@ -3999,14 +3999,14 @@
             "population": "1300",
             "vaccinated": "835",
             "vaccineType": {
-                "Astrazeneca": "290",
-                "Sputnik": "87",
-                "Pfizer": "118",
-                "Moderna": "50",
-                "Johnson & Johnson's Janssen": "11",
-                "Gamaleya": "41",
-                "Novavax": "54",
-                "Sinovac": "184"
+                "Astrazeneca": 290,
+                "Sputnik": 87,
+                "Pfizer": 118,
+                "Moderna": 50,
+                "Johnson & Johnson's Janssen": 11,
+                "Gamaleya": 41,
+                "Novavax": 54,
+                "Sinovac": 184
             },
             "ageGroup": {
                 "80+": "57",
@@ -4046,14 +4046,14 @@
             "population": "1614",
             "vaccinated": "1571",
             "vaccineType": {
-                "Astrazeneca": "238",
-                "Sputnik": "438",
-                "Pfizer": "195",
-                "Moderna": "151",
-                "Johnson & Johnson's Janssen": "76",
-                "Gamaleya": "67",
-                "Novavax": "76",
-                "Sinovac": "330"
+                "Astrazeneca": 238,
+                "Sputnik": 438,
+                "Pfizer": 195,
+                "Moderna": 151,
+                "Johnson & Johnson's Janssen": 76,
+                "Gamaleya": 67,
+                "Novavax": 76,
+                "Sinovac": 330
             },
             "ageGroup": {
                 "80+": "233",
@@ -4093,14 +4093,14 @@
             "population": "2070",
             "vaccinated": "844",
             "vaccineType": {
-                "Astrazeneca": "297",
-                "Sputnik": "23",
-                "Pfizer": "246",
-                "Moderna": "43",
-                "Johnson & Johnson's Janssen": "59",
-                "Gamaleya": "2",
-                "Novavax": "47",
-                "Sinovac": "127"
+                "Astrazeneca": 297,
+                "Sputnik": 23,
+                "Pfizer": 246,
+                "Moderna": 43,
+                "Johnson & Johnson's Janssen": 59,
+                "Gamaleya": 2,
+                "Novavax": 47,
+                "Sinovac": 127
             },
             "ageGroup": {
                 "80+": "96",
@@ -4140,14 +4140,14 @@
             "population": "2237",
             "vaccinated": "1592",
             "vaccineType": {
-                "Astrazeneca": "322",
-                "Sputnik": "399",
-                "Pfizer": "207",
-                "Moderna": "37",
-                "Johnson & Johnson's Janssen": "259",
-                "Gamaleya": "103",
-                "Novavax": "117",
-                "Sinovac": "148"
+                "Astrazeneca": 322,
+                "Sputnik": 399,
+                "Pfizer": 207,
+                "Moderna": 37,
+                "Johnson & Johnson's Janssen": 259,
+                "Gamaleya": 103,
+                "Novavax": 117,
+                "Sinovac": 148
             },
             "ageGroup": {
                 "80+": "152",
@@ -4187,14 +4187,14 @@
             "population": "7012",
             "vaccinated": "4636",
             "vaccineType": {
-                "Astrazeneca": "1895",
-                "Sputnik": "249",
-                "Pfizer": "353",
-                "Moderna": "766",
-                "Johnson & Johnson's Janssen": "557",
-                "Gamaleya": "21",
-                "Novavax": "347",
-                "Sinovac": "448"
+                "Astrazeneca": 1895,
+                "Sputnik": 249,
+                "Pfizer": 353,
+                "Moderna": 766,
+                "Johnson & Johnson's Janssen": 557,
+                "Gamaleya": 21,
+                "Novavax": 347,
+                "Sinovac": 448
             },
             "ageGroup": {
                 "80+": "419",
@@ -4234,14 +4234,14 @@
             "population": "2851",
             "vaccinated": "681",
             "vaccineType": {
-                "Astrazeneca": "30",
-                "Sputnik": "156",
-                "Pfizer": "113",
-                "Moderna": "107",
-                "Johnson & Johnson's Janssen": "102",
-                "Gamaleya": "37",
-                "Novavax": "57",
-                "Sinovac": "79"
+                "Astrazeneca": 30,
+                "Sputnik": 156,
+                "Pfizer": 113,
+                "Moderna": 107,
+                "Johnson & Johnson's Janssen": 102,
+                "Gamaleya": 37,
+                "Novavax": 57,
+                "Sinovac": 79
             },
             "ageGroup": {
                 "80+": "113",
@@ -4281,14 +4281,14 @@
             "population": "2390",
             "vaccinated": "2085",
             "vaccineType": {
-                "Astrazeneca": "601",
-                "Sputnik": "413",
-                "Pfizer": "208",
-                "Moderna": "136",
-                "Johnson & Johnson's Janssen": "215",
-                "Gamaleya": "13",
-                "Novavax": "100",
-                "Sinovac": "399"
+                "Astrazeneca": 601,
+                "Sputnik": 413,
+                "Pfizer": 208,
+                "Moderna": 136,
+                "Johnson & Johnson's Janssen": 215,
+                "Gamaleya": 13,
+                "Novavax": 100,
+                "Sinovac": 399
             },
             "ageGroup": {
                 "80+": "71",
@@ -4324,18 +4324,18 @@
         },
         {
             "id": 92,
-            "name": "Palma-Urbano (Cari\u00ef\u00bf\u00bdo-Palma)",
+            "name": "Palma-Urbano (Cari\ufffdo-Palma)",
             "population": "1089",
             "vaccinated": "236",
             "vaccineType": {
-                "Astrazeneca": "61",
-                "Sputnik": "75",
-                "Pfizer": "14",
-                "Moderna": "33",
-                "Johnson & Johnson's Janssen": "3",
-                "Gamaleya": "0",
-                "Novavax": "25",
-                "Sinovac": "25"
+                "Astrazeneca": 61,
+                "Sputnik": 75,
+                "Pfizer": 14,
+                "Moderna": 33,
+                "Johnson & Johnson's Janssen": 3,
+                "Gamaleya": 0,
+                "Novavax": 25,
+                "Sinovac": 25
             },
             "ageGroup": {
                 "80+": "44",
@@ -4375,14 +4375,14 @@
             "population": "517",
             "vaccinated": "241",
             "vaccineType": {
-                "Astrazeneca": "113",
-                "Sputnik": "1",
-                "Pfizer": "54",
-                "Moderna": "23",
-                "Johnson & Johnson's Janssen": "10",
-                "Gamaleya": "4",
-                "Novavax": "14",
-                "Sinovac": "22"
+                "Astrazeneca": 113,
+                "Sputnik": 1,
+                "Pfizer": 54,
+                "Moderna": 23,
+                "Johnson & Johnson's Janssen": 10,
+                "Gamaleya": 4,
+                "Novavax": 14,
+                "Sinovac": 22
             },
             "ageGroup": {
                 "80+": "41",
@@ -4422,14 +4422,14 @@
             "population": "7774",
             "vaccinated": "5109",
             "vaccineType": {
-                "Astrazeneca": "2534",
-                "Sputnik": "288",
-                "Pfizer": "1011",
-                "Moderna": "470",
-                "Johnson & Johnson's Janssen": "395",
-                "Gamaleya": "2",
-                "Novavax": "190",
-                "Sinovac": "219"
+                "Astrazeneca": 2534,
+                "Sputnik": 288,
+                "Pfizer": 1011,
+                "Moderna": 470,
+                "Johnson & Johnson's Janssen": 395,
+                "Gamaleya": 2,
+                "Novavax": 190,
+                "Sinovac": 219
             },
             "ageGroup": {
                 "80+": "523",
@@ -4469,14 +4469,14 @@
             "population": "4763",
             "vaccinated": "1249",
             "vaccineType": {
-                "Astrazeneca": "25",
-                "Sputnik": "431",
-                "Pfizer": "281",
-                "Moderna": "122",
-                "Johnson & Johnson's Janssen": "158",
-                "Gamaleya": "52",
-                "Novavax": "40",
-                "Sinovac": "140"
+                "Astrazeneca": 25,
+                "Sputnik": 431,
+                "Pfizer": 281,
+                "Moderna": 122,
+                "Johnson & Johnson's Janssen": 158,
+                "Gamaleya": 52,
+                "Novavax": 40,
+                "Sinovac": 140
             },
             "ageGroup": {
                 "80+": "8",
@@ -4516,14 +4516,14 @@
             "population": "8361",
             "vaccinated": "4355",
             "vaccineType": {
-                "Astrazeneca": "2051",
-                "Sputnik": "247",
-                "Pfizer": "873",
-                "Moderna": "278",
-                "Johnson & Johnson's Janssen": "290",
-                "Gamaleya": "45",
-                "Novavax": "22",
-                "Sinovac": "549"
+                "Astrazeneca": 2051,
+                "Sputnik": 247,
+                "Pfizer": 873,
+                "Moderna": 278,
+                "Johnson & Johnson's Janssen": 290,
+                "Gamaleya": 45,
+                "Novavax": 22,
+                "Sinovac": 549
             },
             "ageGroup": {
                 "80+": "179",
@@ -4563,14 +4563,14 @@
             "population": "2855",
             "vaccinated": "1067",
             "vaccineType": {
-                "Astrazeneca": "228",
-                "Sputnik": "320",
-                "Pfizer": "186",
-                "Moderna": "33",
-                "Johnson & Johnson's Janssen": "32",
-                "Gamaleya": "133",
-                "Novavax": "30",
-                "Sinovac": "105"
+                "Astrazeneca": 228,
+                "Sputnik": 320,
+                "Pfizer": 186,
+                "Moderna": 33,
+                "Johnson & Johnson's Janssen": 32,
+                "Gamaleya": 133,
+                "Novavax": 30,
+                "Sinovac": 105
             },
             "ageGroup": {
                 "80+": "167",
@@ -4610,14 +4610,14 @@
             "population": "685",
             "vaccinated": "321",
             "vaccineType": {
-                "Astrazeneca": "64",
-                "Sputnik": "84",
-                "Pfizer": "40",
-                "Moderna": "50",
-                "Johnson & Johnson's Janssen": "6",
-                "Gamaleya": "31",
-                "Novavax": "21",
-                "Sinovac": "25"
+                "Astrazeneca": 64,
+                "Sputnik": 84,
+                "Pfizer": 40,
+                "Moderna": 50,
+                "Johnson & Johnson's Janssen": 6,
+                "Gamaleya": 31,
+                "Novavax": 21,
+                "Sinovac": 25
             },
             "ageGroup": {
                 "80+": "54",
@@ -4657,14 +4657,14 @@
             "population": "1375",
             "vaccinated": "572",
             "vaccineType": {
-                "Astrazeneca": "147",
-                "Sputnik": "170",
-                "Pfizer": "58",
-                "Moderna": "54",
-                "Johnson & Johnson's Janssen": "27",
-                "Gamaleya": "58",
-                "Novavax": "19",
-                "Sinovac": "39"
+                "Astrazeneca": 147,
+                "Sputnik": 170,
+                "Pfizer": 58,
+                "Moderna": 54,
+                "Johnson & Johnson's Janssen": 27,
+                "Gamaleya": 58,
+                "Novavax": 19,
+                "Sinovac": 39
             },
             "ageGroup": {
                 "80+": "52",
@@ -4704,14 +4704,14 @@
             "population": "2646",
             "vaccinated": "2461",
             "vaccineType": {
-                "Astrazeneca": "736",
-                "Sputnik": "238",
-                "Pfizer": "37",
-                "Moderna": "111",
-                "Johnson & Johnson's Janssen": "579",
-                "Gamaleya": "145",
-                "Novavax": "4",
-                "Sinovac": "611"
+                "Astrazeneca": 736,
+                "Sputnik": 238,
+                "Pfizer": 37,
+                "Moderna": 111,
+                "Johnson & Johnson's Janssen": 579,
+                "Gamaleya": 145,
+                "Novavax": 4,
+                "Sinovac": 611
             },
             "ageGroup": {
                 "80+": "423",
@@ -4751,14 +4751,14 @@
             "population": "3497",
             "vaccinated": "1903",
             "vaccineType": {
-                "Astrazeneca": "583",
-                "Sputnik": "595",
-                "Pfizer": "246",
-                "Moderna": "18",
-                "Johnson & Johnson's Janssen": "216",
-                "Gamaleya": "110",
-                "Novavax": "26",
-                "Sinovac": "109"
+                "Astrazeneca": 583,
+                "Sputnik": 595,
+                "Pfizer": 246,
+                "Moderna": 18,
+                "Johnson & Johnson's Janssen": 216,
+                "Gamaleya": 110,
+                "Novavax": 26,
+                "Sinovac": 109
             },
             "ageGroup": {
                 "80+": "24",
@@ -4798,14 +4798,14 @@
             "population": "1998",
             "vaccinated": "1613",
             "vaccineType": {
-                "Astrazeneca": "276",
-                "Sputnik": "468",
-                "Pfizer": "267",
-                "Moderna": "33",
-                "Johnson & Johnson's Janssen": "59",
-                "Gamaleya": "17",
-                "Novavax": "112",
-                "Sinovac": "381"
+                "Astrazeneca": 276,
+                "Sputnik": 468,
+                "Pfizer": 267,
+                "Moderna": 33,
+                "Johnson & Johnson's Janssen": 59,
+                "Gamaleya": 17,
+                "Novavax": 112,
+                "Sinovac": 381
             },
             "ageGroup": {
                 "80+": "304",
@@ -4845,14 +4845,14 @@
             "population": "2777",
             "vaccinated": "1854",
             "vaccineType": {
-                "Astrazeneca": "625",
-                "Sputnik": "27",
-                "Pfizer": "296",
-                "Moderna": "74",
-                "Johnson & Johnson's Janssen": "28",
-                "Gamaleya": "46",
-                "Novavax": "269",
-                "Sinovac": "489"
+                "Astrazeneca": 625,
+                "Sputnik": 27,
+                "Pfizer": 296,
+                "Moderna": 74,
+                "Johnson & Johnson's Janssen": 28,
+                "Gamaleya": 46,
+                "Novavax": 269,
+                "Sinovac": 489
             },
             "ageGroup": {
                 "80+": "108",
@@ -4892,14 +4892,14 @@
             "population": "1792",
             "vaccinated": "1075",
             "vaccineType": {
-                "Astrazeneca": "283",
-                "Sputnik": "52",
-                "Pfizer": "12",
-                "Moderna": "56",
-                "Johnson & Johnson's Janssen": "321",
-                "Gamaleya": "27",
-                "Novavax": "128",
-                "Sinovac": "196"
+                "Astrazeneca": 283,
+                "Sputnik": 52,
+                "Pfizer": 12,
+                "Moderna": 56,
+                "Johnson & Johnson's Janssen": 321,
+                "Gamaleya": 27,
+                "Novavax": 128,
+                "Sinovac": 196
             },
             "ageGroup": {
                 "80+": "72",
@@ -4939,14 +4939,14 @@
             "population": "2243",
             "vaccinated": "1619",
             "vaccineType": {
-                "Astrazeneca": "116",
-                "Sputnik": "137",
-                "Pfizer": "212",
-                "Moderna": "224",
-                "Johnson & Johnson's Janssen": "418",
-                "Gamaleya": "70",
-                "Novavax": "147",
-                "Sinovac": "295"
+                "Astrazeneca": 116,
+                "Sputnik": 137,
+                "Pfizer": 212,
+                "Moderna": 224,
+                "Johnson & Johnson's Janssen": 418,
+                "Gamaleya": 70,
+                "Novavax": 147,
+                "Sinovac": 295
             },
             "ageGroup": {
                 "80+": "165",
@@ -4986,14 +4986,14 @@
             "population": "195",
             "vaccinated": "144",
             "vaccineType": {
-                "Astrazeneca": "20",
-                "Sputnik": "42",
-                "Pfizer": "16",
-                "Moderna": "24",
-                "Johnson & Johnson's Janssen": "10",
-                "Gamaleya": "2",
-                "Novavax": "0",
-                "Sinovac": "30"
+                "Astrazeneca": 20,
+                "Sputnik": 42,
+                "Pfizer": 16,
+                "Moderna": 24,
+                "Johnson & Johnson's Janssen": 10,
+                "Gamaleya": 2,
+                "Novavax": 0,
+                "Sinovac": 30
             },
             "ageGroup": {
                 "80+": "1",
@@ -5033,14 +5033,14 @@
             "population": "1646",
             "vaccinated": "1128",
             "vaccineType": {
-                "Astrazeneca": "85",
-                "Sputnik": "261",
-                "Pfizer": "147",
-                "Moderna": "3",
-                "Johnson & Johnson's Janssen": "80",
-                "Gamaleya": "95",
-                "Novavax": "172",
-                "Sinovac": "285"
+                "Astrazeneca": 85,
+                "Sputnik": 261,
+                "Pfizer": 147,
+                "Moderna": 3,
+                "Johnson & Johnson's Janssen": 80,
+                "Gamaleya": 95,
+                "Novavax": 172,
+                "Sinovac": 285
             },
             "ageGroup": {
                 "80+": "52",
@@ -5080,14 +5080,14 @@
             "population": "1680",
             "vaccinated": "977",
             "vaccineType": {
-                "Astrazeneca": "422",
-                "Sputnik": "176",
-                "Pfizer": "30",
-                "Moderna": "158",
-                "Johnson & Johnson's Janssen": "83",
-                "Gamaleya": "11",
-                "Novavax": "45",
-                "Sinovac": "52"
+                "Astrazeneca": 422,
+                "Sputnik": 176,
+                "Pfizer": 30,
+                "Moderna": 158,
+                "Johnson & Johnson's Janssen": 83,
+                "Gamaleya": 11,
+                "Novavax": 45,
+                "Sinovac": 52
             },
             "ageGroup": {
                 "80+": "143",
@@ -5127,14 +5127,14 @@
             "population": "1539",
             "vaccinated": "1454",
             "vaccineType": {
-                "Astrazeneca": "256",
-                "Sputnik": "362",
-                "Pfizer": "70",
-                "Moderna": "60",
-                "Johnson & Johnson's Janssen": "324",
-                "Gamaleya": "175",
-                "Novavax": "67",
-                "Sinovac": "140"
+                "Astrazeneca": 256,
+                "Sputnik": 362,
+                "Pfizer": 70,
+                "Moderna": 60,
+                "Johnson & Johnson's Janssen": 324,
+                "Gamaleya": 175,
+                "Novavax": 67,
+                "Sinovac": 140
             },
             "ageGroup": {
                 "80+": "112",
@@ -5174,14 +5174,14 @@
             "population": "3951",
             "vaccinated": "910",
             "vaccineType": {
-                "Astrazeneca": "53",
-                "Sputnik": "14",
-                "Pfizer": "139",
-                "Moderna": "301",
-                "Johnson & Johnson's Janssen": "62",
-                "Gamaleya": "16",
-                "Novavax": "154",
-                "Sinovac": "171"
+                "Astrazeneca": 53,
+                "Sputnik": 14,
+                "Pfizer": 139,
+                "Moderna": 301,
+                "Johnson & Johnson's Janssen": 62,
+                "Gamaleya": 16,
+                "Novavax": 154,
+                "Sinovac": 171
             },
             "ageGroup": {
                 "80+": "46",
@@ -5221,14 +5221,14 @@
             "population": "1344",
             "vaccinated": "1097",
             "vaccineType": {
-                "Astrazeneca": "225",
-                "Sputnik": "269",
-                "Pfizer": "5",
-                "Moderna": "96",
-                "Johnson & Johnson's Janssen": "118",
-                "Gamaleya": "24",
-                "Novavax": "71",
-                "Sinovac": "289"
+                "Astrazeneca": 225,
+                "Sputnik": 269,
+                "Pfizer": 5,
+                "Moderna": 96,
+                "Johnson & Johnson's Janssen": 118,
+                "Gamaleya": 24,
+                "Novavax": 71,
+                "Sinovac": 289
             },
             "ageGroup": {
                 "80+": "174",
@@ -5268,14 +5268,14 @@
             "population": "1396",
             "vaccinated": "1096",
             "vaccineType": {
-                "Astrazeneca": "356",
-                "Sputnik": "250",
-                "Pfizer": "232",
-                "Moderna": "46",
-                "Johnson & Johnson's Janssen": "45",
-                "Gamaleya": "24",
-                "Novavax": "25",
-                "Sinovac": "118"
+                "Astrazeneca": 356,
+                "Sputnik": 250,
+                "Pfizer": 232,
+                "Moderna": 46,
+                "Johnson & Johnson's Janssen": 45,
+                "Gamaleya": 24,
+                "Novavax": 25,
+                "Sinovac": 118
             },
             "ageGroup": {
                 "80+": "109",
@@ -5315,14 +5315,14 @@
             "population": "2636",
             "vaccinated": "2398",
             "vaccineType": {
-                "Astrazeneca": "1061",
-                "Sputnik": "7",
-                "Pfizer": "201",
-                "Moderna": "358",
-                "Johnson & Johnson's Janssen": "160",
-                "Gamaleya": "40",
-                "Novavax": "180",
-                "Sinovac": "391"
+                "Astrazeneca": 1061,
+                "Sputnik": 7,
+                "Pfizer": 201,
+                "Moderna": 358,
+                "Johnson & Johnson's Janssen": 160,
+                "Gamaleya": 40,
+                "Novavax": 180,
+                "Sinovac": 391
             },
             "ageGroup": {
                 "80+": "172",
@@ -5362,14 +5362,14 @@
             "population": "2053",
             "vaccinated": "806",
             "vaccineType": {
-                "Astrazeneca": "391",
-                "Sputnik": "80",
-                "Pfizer": "44",
-                "Moderna": "67",
-                "Johnson & Johnson's Janssen": "41",
-                "Gamaleya": "89",
-                "Novavax": "27",
-                "Sinovac": "67"
+                "Astrazeneca": 391,
+                "Sputnik": 80,
+                "Pfizer": 44,
+                "Moderna": 67,
+                "Johnson & Johnson's Janssen": 41,
+                "Gamaleya": 89,
+                "Novavax": 27,
+                "Sinovac": 67
             },
             "ageGroup": {
                 "80+": "150",
@@ -5409,14 +5409,14 @@
             "population": "8981",
             "vaccinated": "8041",
             "vaccineType": {
-                "Astrazeneca": "3931",
-                "Sputnik": "1288",
-                "Pfizer": "785",
-                "Moderna": "46",
-                "Johnson & Johnson's Janssen": "117",
-                "Gamaleya": "172",
-                "Novavax": "289",
-                "Sinovac": "1,413"
+                "Astrazeneca": 3931,
+                "Sputnik": 1288,
+                "Pfizer": 785,
+                "Moderna": 46,
+                "Johnson & Johnson's Janssen": 117,
+                "Gamaleya": 172,
+                "Novavax": 289,
+                "Sinovac": 1413
             },
             "ageGroup": {
                 "80+": "769",
@@ -5456,14 +5456,14 @@
             "population": "991",
             "vaccinated": "857",
             "vaccineType": {
-                "Astrazeneca": "99",
-                "Sputnik": "85",
-                "Pfizer": "290",
-                "Moderna": "145",
-                "Johnson & Johnson's Janssen": "112",
-                "Gamaleya": "59",
-                "Novavax": "16",
-                "Sinovac": "51"
+                "Astrazeneca": 99,
+                "Sputnik": 85,
+                "Pfizer": 290,
+                "Moderna": 145,
+                "Johnson & Johnson's Janssen": 112,
+                "Gamaleya": 59,
+                "Novavax": 16,
+                "Sinovac": 51
             },
             "ageGroup": {
                 "80+": "58",
@@ -5503,14 +5503,14 @@
             "population": "1794",
             "vaccinated": "672",
             "vaccineType": {
-                "Astrazeneca": "27",
-                "Sputnik": "60",
-                "Pfizer": "138",
-                "Moderna": "18",
-                "Johnson & Johnson's Janssen": "63",
-                "Gamaleya": "94",
-                "Novavax": "63",
-                "Sinovac": "209"
+                "Astrazeneca": 27,
+                "Sputnik": 60,
+                "Pfizer": 138,
+                "Moderna": 18,
+                "Johnson & Johnson's Janssen": 63,
+                "Gamaleya": 94,
+                "Novavax": 63,
+                "Sinovac": 209
             },
             "ageGroup": {
                 "80+": "79",
@@ -5550,14 +5550,14 @@
             "population": "1909",
             "vaccinated": "395",
             "vaccineType": {
-                "Astrazeneca": "196",
-                "Sputnik": "14",
-                "Pfizer": "72",
-                "Moderna": "24",
-                "Johnson & Johnson's Janssen": "18",
-                "Gamaleya": "3",
-                "Novavax": "8",
-                "Sinovac": "60"
+                "Astrazeneca": 196,
+                "Sputnik": 14,
+                "Pfizer": 72,
+                "Moderna": 24,
+                "Johnson & Johnson's Janssen": 18,
+                "Gamaleya": 3,
+                "Novavax": 8,
+                "Sinovac": 60
             },
             "ageGroup": {
                 "80+": "20",
@@ -5597,14 +5597,14 @@
             "population": "7071",
             "vaccinated": "6857",
             "vaccineType": {
-                "Astrazeneca": "1512",
-                "Sputnik": "164",
-                "Pfizer": "334",
-                "Moderna": "622",
-                "Johnson & Johnson's Janssen": "2059",
-                "Gamaleya": "446",
-                "Novavax": "597",
-                "Sinovac": "1,123"
+                "Astrazeneca": 1512,
+                "Sputnik": 164,
+                "Pfizer": 334,
+                "Moderna": 622,
+                "Johnson & Johnson's Janssen": 2059,
+                "Gamaleya": 446,
+                "Novavax": 597,
+                "Sinovac": 1123
             },
             "ageGroup": {
                 "80+": "693",
@@ -5644,14 +5644,14 @@
             "population": "1359",
             "vaccinated": "1012",
             "vaccineType": {
-                "Astrazeneca": "5",
-                "Sputnik": "327",
-                "Pfizer": "98",
-                "Moderna": "166",
-                "Johnson & Johnson's Janssen": "56",
-                "Gamaleya": "48",
-                "Novavax": "18",
-                "Sinovac": "294"
+                "Astrazeneca": 5,
+                "Sputnik": 327,
+                "Pfizer": 98,
+                "Moderna": 166,
+                "Johnson & Johnson's Janssen": 56,
+                "Gamaleya": 48,
+                "Novavax": 18,
+                "Sinovac": 294
             },
             "ageGroup": {
                 "80+": "119",
@@ -5691,14 +5691,14 @@
             "population": "5316",
             "vaccinated": "765",
             "vaccineType": {
-                "Astrazeneca": "281",
-                "Sputnik": "47",
-                "Pfizer": "36",
-                "Moderna": "120",
-                "Johnson & Johnson's Janssen": "32",
-                "Gamaleya": "8",
-                "Novavax": "21",
-                "Sinovac": "220"
+                "Astrazeneca": 281,
+                "Sputnik": 47,
+                "Pfizer": 36,
+                "Moderna": 120,
+                "Johnson & Johnson's Janssen": 32,
+                "Gamaleya": 8,
+                "Novavax": 21,
+                "Sinovac": 220
             },
             "ageGroup": {
                 "80+": "32",
@@ -5738,14 +5738,14 @@
             "population": "1329",
             "vaccinated": "481",
             "vaccineType": {
-                "Astrazeneca": "90",
-                "Sputnik": "74",
-                "Pfizer": "49",
-                "Moderna": "10",
-                "Johnson & Johnson's Janssen": "100",
-                "Gamaleya": "25",
-                "Novavax": "65",
-                "Sinovac": "68"
+                "Astrazeneca": 90,
+                "Sputnik": 74,
+                "Pfizer": 49,
+                "Moderna": 10,
+                "Johnson & Johnson's Janssen": 100,
+                "Gamaleya": 25,
+                "Novavax": 65,
+                "Sinovac": 68
             },
             "ageGroup": {
                 "80+": "38",
@@ -5785,14 +5785,14 @@
             "population": "125",
             "vaccinated": "51",
             "vaccineType": {
-                "Astrazeneca": "19",
-                "Sputnik": "0",
-                "Pfizer": "7",
-                "Moderna": "8",
-                "Johnson & Johnson's Janssen": "4",
-                "Gamaleya": "4",
-                "Novavax": "1",
-                "Sinovac": "8"
+                "Astrazeneca": 19,
+                "Sputnik": 0,
+                "Pfizer": 7,
+                "Moderna": 8,
+                "Johnson & Johnson's Janssen": 4,
+                "Gamaleya": 4,
+                "Novavax": 1,
+                "Sinovac": 8
             },
             "ageGroup": {
                 "80+": "9",
@@ -5828,18 +5828,18 @@
         },
         {
             "id": 124,
-            "name": "Slaughter House Area (Santo Ni\u00ef\u00bf\u00bdo Slaughter)",
+            "name": "Slaughter House Area (Santo Ni\ufffdo Slaughter)",
             "population": "1952",
             "vaccinated": "694",
             "vaccineType": {
-                "Astrazeneca": "293",
-                "Sputnik": "180",
-                "Pfizer": "9",
-                "Moderna": "100",
-                "Johnson & Johnson's Janssen": "5",
-                "Gamaleya": "39",
-                "Novavax": "23",
-                "Sinovac": "45"
+                "Astrazeneca": 293,
+                "Sputnik": 180,
+                "Pfizer": 9,
+                "Moderna": 100,
+                "Johnson & Johnson's Janssen": 5,
+                "Gamaleya": 39,
+                "Novavax": 23,
+                "Sinovac": 45
             },
             "ageGroup": {
                 "80+": "74",
@@ -5879,14 +5879,14 @@
             "population": "2393",
             "vaccinated": "1329",
             "vaccineType": {
-                "Astrazeneca": "282",
-                "Sputnik": "378",
-                "Pfizer": "297",
-                "Moderna": "52",
-                "Johnson & Johnson's Janssen": "40",
-                "Gamaleya": "133",
-                "Novavax": "62",
-                "Sinovac": "85"
+                "Astrazeneca": 282,
+                "Sputnik": 378,
+                "Pfizer": 297,
+                "Moderna": 52,
+                "Johnson & Johnson's Janssen": 40,
+                "Gamaleya": 133,
+                "Novavax": 62,
+                "Sinovac": 85
             },
             "ageGroup": {
                 "80+": "119",
@@ -5926,14 +5926,14 @@
             "population": "564",
             "vaccinated": "178",
             "vaccineType": {
-                "Astrazeneca": "3",
-                "Sputnik": "76",
-                "Pfizer": "27",
-                "Moderna": "3",
-                "Johnson & Johnson's Janssen": "34",
-                "Gamaleya": "9",
-                "Novavax": "9",
-                "Sinovac": "17"
+                "Astrazeneca": 3,
+                "Sputnik": 76,
+                "Pfizer": 27,
+                "Moderna": 3,
+                "Johnson & Johnson's Janssen": 34,
+                "Gamaleya": 9,
+                "Novavax": 9,
+                "Sinovac": 17
             },
             "ageGroup": {
                 "80+": "19",
@@ -5973,14 +5973,14 @@
             "population": "1125",
             "vaccinated": "793",
             "vaccineType": {
-                "Astrazeneca": "241",
-                "Sputnik": "234",
-                "Pfizer": "37",
-                "Moderna": "123",
-                "Johnson & Johnson's Janssen": "41",
-                "Gamaleya": "8",
-                "Novavax": "13",
-                "Sinovac": "96"
+                "Astrazeneca": 241,
+                "Sputnik": 234,
+                "Pfizer": 37,
+                "Moderna": 123,
+                "Johnson & Johnson's Janssen": 41,
+                "Gamaleya": 8,
+                "Novavax": 13,
+                "Sinovac": 96
             },
             "ageGroup": {
                 "80+": "50",
@@ -6020,14 +6020,14 @@
             "population": "2705",
             "vaccinated": "2685",
             "vaccineType": {
-                "Astrazeneca": "705",
-                "Sputnik": "7",
-                "Pfizer": "56",
-                "Moderna": "320",
-                "Johnson & Johnson's Janssen": "76",
-                "Gamaleya": "757",
-                "Novavax": "313",
-                "Sinovac": "451"
+                "Astrazeneca": 705,
+                "Sputnik": 7,
+                "Pfizer": 56,
+                "Moderna": 320,
+                "Johnson & Johnson's Janssen": 76,
+                "Gamaleya": 757,
+                "Novavax": 313,
+                "Sinovac": 451
             },
             "ageGroup": {
                 "80+": "253",
@@ -6067,14 +6067,14 @@
             "population": "2878",
             "vaccinated": "915",
             "vaccineType": {
-                "Astrazeneca": "456",
-                "Sputnik": "206",
-                "Pfizer": "105",
-                "Moderna": "9",
-                "Johnson & Johnson's Janssen": "21",
-                "Gamaleya": "45",
-                "Novavax": "34",
-                "Sinovac": "39"
+                "Astrazeneca": 456,
+                "Sputnik": 206,
+                "Pfizer": 105,
+                "Moderna": 9,
+                "Johnson & Johnson's Janssen": 21,
+                "Gamaleya": 45,
+                "Novavax": 34,
+                "Sinovac": 39
             },
             "ageGroup": {
                 "80+": "55",
