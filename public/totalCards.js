@@ -7,12 +7,22 @@ async function getTotalVaccinatedPopulation(data){
 }
 
 async function getVaccinatedPriorityGroupsPercentage(data){
-    var totalVaccinated = await getTotalVaccinatedPopulation(data);
-    var totalVaccinatedInt = parseInt(totalVaccinated[1]);
-    const { A1, A2, A3, A4, A5 } = data.category;
-    var sumVaccinatedPrioGroups = parseInt(A1) + parseInt(A2) + parseInt(A3) + parseInt(A4) + parseInt(A5);
-    var vaccinatedPrioGroupPercentage = Math.round((sumVaccinatedPrioGroups/totalVaccinatedInt)*100);
-    return ["", vaccinatedPrioGroupPercentage + "%"];
+    let totalVaccinated = data.vaccinated;
+    let categoriesTotal = data.category;
+    let totalPrioGroups = null;
+    for (let obj in categoriesTotal) {
+        if (obj === "B&C")
+            continue
+        totalPrioGroups += parseInt(categoriesTotal[obj]);
+    }
+    let percentage = ( totalPrioGroups / totalVaccinated ) * 100;
+    let other = (categoriesTotal["B&C"] / totalVaccinated) * 100;
+    // var totalVaccinated = await getTotalVaccinatedPopulation(data);
+    // var totalVaccinatedInt = parseInt(totalVaccinated[1]);
+    // const { A1, A2, A3, A4, A5 } = data.category;
+    // var sumVaccinatedPrioGroups = parseInt(A1) + parseInt(A2) + parseInt(A3) + parseInt(A4) + parseInt(A5);
+    // var vaccinatedPrioGroupPercentage = Math.round((sumVaccinatedPrioGroups/totalVaccinatedInt)*100);
+    return ["", Math.round(percentage) + "%"];
 }
 
 async function getMostVaccinatedPriorityGroup(data){
