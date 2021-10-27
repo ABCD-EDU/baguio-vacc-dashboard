@@ -1,5 +1,5 @@
 async function getBarangayNames() {
-    const res = await fetch('../res/data/test.json')
+    const res = await fetch('../res/data/test.json', { mode: 'no-cors' })
 
     const masterData = await res.json();
     const data = masterData["barangays"];
@@ -14,12 +14,6 @@ async function getTopNVaccinatedBarangays(barangayCountGiven) {
     const output = await getAllVaccinatedPerBarangay(true)
     return output.slice(0, barangayCountGiven)
 }
-
-console.log("top10");
-// console.log(getTop10PercentageBarangays(false));
-console.log(getTop10PercentageBarangaysPercentages(false));
-console.log(getTop10PercentageBarangaysVaccinated(false));
-
 
 async function getTop10PercentageBarangays(isAscending) {
     let data = await getAllBarangayData();
@@ -159,21 +153,21 @@ function sortJSONByValue(prop, isAscending) {
 
 
 async function getData() {
-    const res = await fetch('../res/data/test.json')
+    const res = await fetch('../res/data/test.json', { mode: 'no-cors' })
 
     const data = await res.json();
     return data;
 }
 
 async function getAllBarangayData() {
-    const res = await fetch('../res/data/test.json')
+    const res = await fetch('../res/data/test.json', { mode: 'no-cors' })
     const masterData = await res.json();
     const data = masterData["barangays"];
     return data;
 }
 
 async function getBarangayData(location) {
-    const res = await fetch('../res/data/test.json');
+    const res = await fetch('../res/data/test.json', { mode: 'no-cors' });
 
     const masterData = await res.json();
     const data = masterData["barangays"];
@@ -185,7 +179,7 @@ async function getBarangayData(location) {
 }
 
 async function getCityData() {
-    const res = await fetch('../res/data/test.json');
+    const res = await fetch('../res/data/test.json', { mode: 'no-cors' });
     const data = await res.json();
     delete data["barangays"];
     return data;
