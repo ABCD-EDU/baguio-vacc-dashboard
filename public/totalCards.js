@@ -1,3 +1,9 @@
+/**
+ * @author Fernandez
+ * Prepares and sets the data for cards in the website that summarizes 
+ * vaccination data of given JSON.
+ */
+
 const data = await getData();
 const allBarangayData = await getAllBarangayData();
 
@@ -16,7 +22,6 @@ async function getVaccinatedPriorityGroupsPercentage(data){
         totalPrioGroups += parseInt(categoriesTotal[obj]);
     }
     let percentage = ( totalPrioGroups / totalVaccinated ) * 100;
-    let other = (categoriesTotal["B&C"] / totalVaccinated) * 100;
     // var totalVaccinated = await getTotalVaccinatedPopulation(data);
     // var totalVaccinatedInt = parseInt(totalVaccinated[1]);
     // const { A1, A2, A3, A4, A5 } = data.category;

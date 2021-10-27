@@ -1,5 +1,5 @@
 async function getData(){
-   const res = await fetch('./res/data/test.json');
+   const res = await fetch('./res/data/baguio-city.json');
    const data = await res.json();
    return data;
 }

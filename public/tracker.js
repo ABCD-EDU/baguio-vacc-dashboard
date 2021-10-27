@@ -15,6 +15,10 @@ var topIsAscending = false;
 
 initializeBarangaySelector();
 
+/**
+ * @author Bayquen
+ * Add functionality to the buttons that affect graphs
+ */
 function onGraphButtonClick(id) {
     let ageClicked = false;
     let brandClicked = false;
@@ -72,6 +76,11 @@ function onGraphButtonClick(id) {
     }
 }
 
+/**
+ * @author Bayquen
+ * Initializes the combo box in the webpage, which is where 
+ * all of the graphs proceeding it will base its data.
+ */
 async function initializeBarangaySelector() {
     const selector = document.getElementById("barangaySelector");
     let barangays = await getBarangayNames();
@@ -85,6 +94,11 @@ async function initializeBarangaySelector() {
     onBarangayChange();
 }
 
+/**
+ * @author Bayquen
+ * Reinitializes every graph and cards in the webpage to react to the 
+ * change in barangay chosen by user
+ */
 async function onBarangayChange() {
     const barangay = document.getElementById("barangaySelector").value;
     let data = null;
@@ -107,6 +121,11 @@ async function onBarangayChange() {
     initializeTopBarangaysData(topIsNumerical, topIsAscending);
 }
 
+/**
+ * @author Bayquen
+ * Removes rendered graph data
+ * Used in refreshing the graphs when new data is to be rendered
+ */
 function removeChildrenOfGraphContainers() {
     const brgayContainer = document.getElementById("brgyContainer");
     brgayContainer.innerHTML = '';
@@ -133,7 +152,7 @@ function getMaxValue(data) {
 }
 
 /**
- * @author Arevalo, Lance Gabrielle S.
+ * @author Arevalo, Lance Gabrielle S., Bayquen
  * 
  * This function creates the bar graph for the vaccine type category.
  * It creates a container that contains the chart for vaccine:count.
@@ -183,6 +202,13 @@ function initializeVaccineTypeData(location, isNumerical, isAscending) {
         })
 }
 
+/**
+ * @author Bayquen
+ * Iniializes the graph showing the top and bottom 10 of vaccinated/population
+ * percentage in the given city.
+ * @param {*} isNumerical 
+ * @param {*} isAscending 
+ */
 async function initializeTopBarangaysData(isNumerical, isAscending) {
     let totals = null;
     if (isNumerical) {
@@ -227,7 +253,7 @@ async function initializeTopBarangaysData(isNumerical, isAscending) {
 }
 
 /**
- * @author Arevalo, Lance Gabrielle S.
+ * @author Arevalo, Lance Gabrielle S., Bayquen
  * 
  * This function creates the bar graph for the age group type category.
  * It creates a container that contains the chart for group type:count.
@@ -277,6 +303,12 @@ function initializeAgeGroupData(location, isNumerical, isAscending) {
         })
 }
 
+/**
+ * @author Bayquen
+ * @param {*} value Numerator
+ * @param {*} totalVaccinated Denominator
+ * @returns Formatted percentage based on given data
+ */
 function roundAndDivideValue(value, totalVaccinated) {
     const val = (value / totalVaccinated) * 100;
     if (val < 1 && val != 0) {
@@ -286,6 +318,11 @@ function roundAndDivideValue(value, totalVaccinated) {
     }
 }
 
+/**
+ * @author Bayquen
+ * @param {*} val percentage
+ * @returns Formatted percentage
+ */
 function roundValue(val) {
     if (val % 1 !== 0) {
         return val.toFixed(2);
@@ -389,7 +426,3 @@ window.addEventListener("resize", function () {
         bar[i].style.width = `${NEW_WIDTH}px`;
     }
 });
-
-
-initializeVaccineTypeData("Ambiong");
-initializeAgeGroupData("Ambiong");

@@ -1,6 +1,9 @@
 import json
 import csv
 
+# @autor Cayton, Bayquen
+# Mostly created by Cayton
+# Parses data.csv and total.csv to generate baguio-city.json
 
 vaccine_type_list = ["Astrazeneca", "Sputnik", "Pfizer",
                      "Moderna","Johnson & Johnson's Janssen","Gamaleya","Novavax","Sinovac"]
@@ -96,5 +99,5 @@ with open('data.csv', 'r') as file:
     
 city_data["barangays"] = data
 
-with open('test.json','w') as outfile:
+with open('baguio-city.json','w') as outfile:
     json.dump(city_data, outfile,indent=4)

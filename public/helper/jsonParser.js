@@ -1,5 +1,17 @@
+/**
+ * This javascript file is intended to be used for accessing and retrieving
+ * data from the created JSON file.
+ * 
+ */
+
+const JSON_PATH = '../res/data/baguio-city.json';
+
+/**
+ * @author Arevalo, Bayquen
+ * @returns names of all barangays
+ */
 async function getBarangayNames() {
-    const res = await fetch('../res/data/test.json', { mode: 'no-cors' })
+    const res = await fetch(JSON_PATH, { mode: 'no-cors' })
 
     const masterData = await res.json();
     const data = masterData["barangays"];
@@ -10,11 +22,22 @@ async function getBarangayNames() {
     return names
 }
 
+/**
+ * @author Cayton
+ * @param barangayCountGiven - number of barangays to return
+ * @returns top N Vaccinated barangays with all of their data
+ */
 async function getTopNVaccinatedBarangays(barangayCountGiven) {
     const output = await getAllVaccinatedPerBarangay(true)
     return output.slice(0, barangayCountGiven)
 }
 
+/**
+ * @author Bayquen
+ * Ranks barangays based on their vaccinated/total population percentage
+ * @param isAscending - Sorting of data to be returned
+ * @returns Top 10 barangays and all their data
+ */
 async function getTop10PercentageBarangays(isAscending) {
     let data = await getAllBarangayData();
     data.forEach(function (element) {
@@ -25,6 +48,13 @@ async function getTop10PercentageBarangays(isAscending) {
     return data;
 }
 
+/**
+ * @author Bayquen
+ * Ranks barangays based on their vaccinated/total population percentage
+ * but only returns the barangay's name and vaccination percentage
+ * @param isAscending - Sorting of data to be returned
+ * @returns Returns vaccination percentage of top 10 barangays
+ */
 async function getTop10PercentageBarangaysPercentages(isAscending) {
     let toReturn = {};
     const data = await getTop10PercentageBarangays(isAscending);
@@ -34,6 +64,13 @@ async function getTop10PercentageBarangaysPercentages(isAscending) {
     return toReturn;
 }
 
+/**
+ * @author Bayquen
+ * Ranks barangays based on their vaccinated/total population percentage
+ * but only returns the barangay's name and vaccination population
+ * @param isAscending - Sorting of data to be returned
+ * @returns Returns number of vaccinated population of top 10 barangays
+ */
 async function getTop10PercentageBarangaysVaccinated(isAscending) {
     let toReturn = [];
     const data = await getTop10PercentageBarangays(isAscending);
@@ -43,47 +80,7 @@ async function getTop10PercentageBarangaysVaccinated(isAscending) {
     return toReturn;
 }
 
-async function getTopNBarangaysWithVaccinatedNumber(barangayCountGiven, isAscending) {
-    let toReturn = {}
-    let output = await getAllVaccinatedPerBarangay(true);
-    output = output.slice(0, barangayCountGiven);
-    // descending
-    if (!isAscending) {
-        for (let i = 0; i < output.length; i++) {
-            const barangay = output[i];
-            toReturn[barangay.name] = barangay.vaccinated;
-        }
-    }else {
-        for (let i = output.length-1; i > -1; i--) {
-            const barangay = output[i];
-            toReturn[barangay.name] = barangay.vaccinated;
-        }
-    }
-    return toReturn;
-}
-
-async function getPopulationOfTop10VaccinatedBarangays(barangayCountGiven, isAscending) {
-    let toReturn = []
-    let output = await getAllPopulationPerBarangay(true)
-    output =  output.slice(0, barangayCountGiven)
-    console.log(output)
-    if (!isAscending) {
-        for (let i = 0; i < output.length; i++) {
-            const barangay = output[i];
-            toReturn.push(barangay.population);
-        }
-    } else {
-        for (let i = output.length - 1; i > -1; i--) {
-            const barangay = output[i];
-            toReturn.push(barangay.population);
-        }
-    }
-    console.log(toReturn)
-    return toReturn;
-}
-
 async function getAllPopulationPerBarangay(isSorted) {
-
     const brgyData = await getAllBarangayData();
     const list = []
 
@@ -130,7 +127,12 @@ async function getAllVaccinatedPerBarangay(isSorted) {
     };
 }
 
-
+/**
+ * @author Cayton
+ * @param {*} prop 
+ * @param {*} isAscending 
+ * @returns Sorted JSON object based on a property's value
+ */
 function sortJSONByValue(prop, isAscending) {
     return function (a, b) {
         if (isAscending) {
@@ -153,21 +155,21 @@ function sortJSONByValue(prop, isAscending) {
 
 
 async function getData() {
-    const res = await fetch('../res/data/test.json', { mode: 'no-cors' })
+    const res = await fetch(JSON_PATH, { mode: 'no-cors' })
 
     const data = await res.json();
     return data;
 }
 
 async function getAllBarangayData() {
-    const res = await fetch('../res/data/test.json', { mode: 'no-cors' })
+    const res = await fetch(JSON_PATH, { mode: 'no-cors' })
     const masterData = await res.json();
     const data = masterData["barangays"];
     return data;
 }
 
 async function getBarangayData(location) {
-    const res = await fetch('../res/data/test.json', { mode: 'no-cors' });
+    const res = await fetch(JSON_PATH, { mode: 'no-cors' });
 
     const masterData = await res.json();
     const data = masterData["barangays"];
@@ -178,13 +180,23 @@ async function getBarangayData(location) {
     }
 }
 
+/**
+ * @author Bayquen
+ * @returns Data of main city without the barangays
+ */
 async function getCityData() {
-    const res = await fetch('../res/data/test.json', { mode: 'no-cors' });
+    const res = await fetch(JSON_PATH, { mode: 'no-cors' });
     const data = await res.json();
     delete data["barangays"];
     return data;
 }
 
+/**
+ * @author Bayquen
+ * @param {*} location - location whose data is retrieved
+ * @param {*} isAscending 
+ * @returns JSON object of key: brand, value: quantity pair
+ */
 async function getVaccineTypeData(location, isAscending) {
     let data = null;
     if (location === "Baguio City") {
@@ -196,6 +208,12 @@ async function getVaccineTypeData(location, isAscending) {
     return data;
 }
 
+/**
+ * @author Bayquen
+ * @param {*} location - location whose data is retrieved
+ * @param {*} isAscending
+ * @returns JSON object of key: age, value: quantity pair
+ */
 async function getAgeGroupData(location, isAscending) {
     let data = null;
     if (location === "Baguio City") {
@@ -262,6 +280,12 @@ async function getMaxBarangayVaccine(location) {
     return max;
 }
 
+/**
+ * @author Cayton
+ * @param {*} object 
+ * @param {*} isAscending 
+ * @returns Sorts a javascript object based on a given property
+ */
 function sortAccordingToKeys(object, isAscending) {
     let sortable = [];
     for (let obj in object) {
