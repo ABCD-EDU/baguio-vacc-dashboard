@@ -163,7 +163,7 @@ function initializeVaccineTypeData(location, isNumerical, isAscending) {
                 
                 nameContainer.innerHTML += `${key}`;
                 if (!isNumerical) {
-                    barContainer.innerHTML += `${roundValue(value, totalVaccinated)}%`;
+                    barContainer.innerHTML += `${roundAndDivideValue(value, totalVaccinated)}%`;
                 }else {
                     barContainer.innerHTML += `${value}`;
                 }
@@ -257,7 +257,7 @@ function initializeAgeGroupData(location, isNumerical, isAscending) {
 
                 nameContainer.innerHTML += `${key}`;
                 if (!isNumerical) {
-                    barContainer.innerHTML += `${roundValue(value, totalVaccinated)}%`;
+                    barContainer.innerHTML += `${roundAndDivideValue(value, totalVaccinated)}%`;
                 } else {
                     barContainer.innerHTML += `${value}`;
                 }
@@ -277,7 +277,7 @@ function initializeAgeGroupData(location, isNumerical, isAscending) {
         })
 }
 
-function roundValue(value, totalVaccinated) {
+function roundAndDivideValue(value, totalVaccinated) {
     const val = (value / totalVaccinated) * 100;
     if (val < 1 && val != 0) {
         return val.toFixed(2);
