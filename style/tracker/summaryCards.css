@@ -33,6 +33,10 @@
 }
 
 .total-card1, .total-card2, .total-card3, .total-card4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
    height: 190px; 
    background: #FFD57B;
    color: #222222;

@@ -69,18 +69,21 @@
 
 @media (max-width: 768px) {
 
+    #topBarangaysMainContainer,
     #perBrandMainContainer,
     #perAgeGroupMainContainer {
         width: 100%;
         display: block;
     }
 
+    #topBarangayRow,
     #brgyRow,
     #ageGroupRow {
         display: block;
         align-content: center;
     }
 
+    #topBarangaysContainer,
     #ageGroupContainer,
     #brgyContainer {
         display: block;
@@ -109,6 +112,7 @@
 
 @media only screen and (max-width: 1080px) {
 
+    #topBarangaysMainContainer,
     #perBrandMainContainer,
     #perAgeGroupMainContainer {
         width: 100%;
